@@ -9,6 +9,19 @@ Notable changes to the list are recorded here. Individual link additions and fix
 - **Every month:** `scripts/check_stale.py` flags GitHub repositories that are archived, renamed, missing, or have had no push in 12 months.
 - **Every quarter:** a maintainer re-reads each chapter, removes stale entries, and records the review here.
 
+## [0.2.0] - 2026-10-11
+
+### Added
+
+- 121 entries across all chapters and the appendix (245 entries total).
+- New subsections: Official broker and exchange agent kits (1), Self-hosted research workbenches and terminals (2), Prediction-market agents (4), Tax, invoicing, and payables (6), Accounting-system MCP servers (6), Live arenas and public track records (9).
+- Country flags for region-specific data sources (for example 🇹🇷, 🇰🇷).
+
+### Changed
+
+- Moved existing entries into the new subsections: alpaca-mcp-server and okx/agent-trade-kit (1); LangAlpha, Vibe-Research, easy-stock, and Seris (2); polymarket-mcp-server (from 1 to 4); norman-mcp-server (6); live-trade-bench, Agent_Market_Arena, and alpha-arena (9).
+- Renamed "Decision, trading, and arenas" (9) to "Decision and trading benchmarks".
+
 ## [0.1.0] - 2026-10-11
 
 ### Added

@@ -29,15 +29,15 @@ Place an entry in the **single most specific** chapter:
 
 | If the resource is mainly about… | Put it in |
 | -------------------------------- | --------- |
-| Market data, filings, MCP, skills, broker data bridges | 1 |
-| Deep research / equity memos / filing QA agents | 2 |
+| Market data, filings, MCP, skills, official broker/exchange agent kits | 1 |
+| Deep research / equity memos / filing QA agents, self-hosted research workbenches | 2 |
 | Multi-agent debate, analyst teams, hedge-fund sims | 3 |
 | Order execution, portfolio agents, prediction-market trading | 4 |
 | Factor mining, strategy codegen, RD-Agent style loops | 5 |
-| Bookkeeping, reconciliation, invoices, ledgers | 6 |
+| Bookkeeping, reconciliation, invoices, tax, ledgers, accounting-system MCP | 6 |
 | AML/KYC, DD, fraud, ESG gates, action firewalls | 7 |
 | Budgets, personal net worth, consumer finance MCP | 8 |
-| Benchmarks, arenas, graders, trustworthiness | 9 |
+| Benchmarks, live arenas, public track records, graders, trustworthiness | 9 |
 | PIT backtests, replay, look-ahead / leakage control | 10 |
 | Base FinLLMs, surveys, neighboring awesome lists | Appendix |
 

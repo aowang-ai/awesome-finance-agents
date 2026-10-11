@@ -13,15 +13,15 @@ Not investment advice. Inclusion is not an endorsement.
 
 ## Chapters / 章节
 
-1. [Data and Tools](https://finance-agents.dev/chapters/1-data-and-tools) — market and filing data for agents
-2. [Investment Research](https://finance-agents.dev/chapters/2-investment-research-and-deep-research) — filings and news → source-backed memos
+1. [Data and Tools](https://finance-agents.dev/chapters/1-data-and-tools) — market and filing data, MCP servers, official broker and exchange kits, skills
+2. [Investment Research](https://finance-agents.dev/chapters/2-investment-research-and-deep-research) — filings and news → source-backed memos; self-hosted research workbenches
 3. [Multi-Agent Decisions](https://finance-agents.dev/chapters/3-multi-agent-research-and-decision-systems) — specialized agents debate and hand off
-4. [Trading and Portfolio](https://finance-agents.dev/chapters/4-trading-execution-and-portfolio-management) — signal → sized, risk-checked order
+4. [Trading and Portfolio](https://finance-agents.dev/chapters/4-trading-execution-and-portfolio-management) — signal → sized, risk-checked order; prediction-market agents
 5. [Quant Automation](https://finance-agents.dev/chapters/5-quantitative-research-automation) — factors and strategy iteration
-6. [Accounting](https://finance-agents.dev/chapters/6-finance-operations-and-accounting) — bookkeeping and reconciliation
+6. [Accounting](https://finance-agents.dev/chapters/6-finance-operations-and-accounting) — bookkeeping, tax and invoicing, accounting-system MCP
 7. [Risk and Compliance](https://finance-agents.dev/chapters/7-risk-compliance-and-audit) — AML/KYC, DD, gated actions
 8. [Personal Finance](https://finance-agents.dev/chapters/8-personal-finance) — local-first budgets and accounts
-9. [Evaluation and Arenas](https://finance-agents.dev/chapters/9-evaluation-benchmarks-and-arenas) — benchmarks and live skill
+9. [Evaluation and Arenas](https://finance-agents.dev/chapters/9-evaluation-benchmarks-and-arenas) — benchmarks, live arenas, public track records
 10. [Backtest and Leakage](https://finance-agents.dev/chapters/10-backtesting-replay-and-leakage-control) — market-time correctness
 - [Appendix](https://finance-agents.dev/appendix) — models, surveys, neighboring lists
 
