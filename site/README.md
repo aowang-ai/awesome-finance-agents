@@ -6,7 +6,7 @@ writing to `site/src/` (git-ignored).
 
 ```bash
 npm ci
-npm run docs:dev      # http://localhost:5173/awesome-finance-agents/
+npm run docs:dev      # http://localhost:5173/
 npm run docs:build    # split + count check + build into site/.vitepress/dist
 npm run docs:preview  # serve the built site
 ```

@@ -11,9 +11,9 @@ const manifest = splitReadmes()
 const en = manifest.locales.root
 const zh = manifest.locales.zh
 
-// GitHub Pages serves project sites under /<repo>/. Override with DOCS_BASE=/ for a custom domain.
-const base = process.env.DOCS_BASE || '/awesome-finance-agents/'
-const siteUrl = process.env.DOCS_SITE_URL || `https://aowang-ai.github.io${base}`
+// Served at the root of the custom domain (site/public/CNAME).
+const base = process.env.DOCS_BASE || '/'
+const siteUrl = process.env.DOCS_SITE_URL || 'https://finance-agents.dev/'
 const ogImage = `${siteUrl}og.png`
 const zhSiteTitle = 'Awesome Finance Agents（金融 Agent 精选）'
 

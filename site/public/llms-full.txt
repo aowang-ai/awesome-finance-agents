@@ -1,6 +1,6 @@
 # Awesome Finance Agents — full outline for LLMs
 
-Canonical site: https://aowang-ai.github.io/awesome-finance-agents/
+Canonical site: https://finance-agents.dev/
 GitHub README (authoritative entry list): https://github.com/aowang-ai/awesome-finance-agents/blob/main/README.md
 
 Not investment advice. Inclusion is not an endorsement.

@@ -1,4 +1,4 @@
-# https://aowang-ai.github.io/awesome-finance-agents/
+# https://finance-agents.dev/
 User-agent: *
 Allow: /
 
@@ -42,4 +42,4 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://aowang-ai.github.io/awesome-finance-agents/sitemap.xml
+Sitemap: https://finance-agents.dev/sitemap.xml
