@@ -373,6 +373,21 @@
 .VPFooter {
   border-top: 1px solid var(--vp-c-divider) !important;
 }
+/* the footer carries the one-line notice, so keep it on pages with a sidebar too */
+.VPFooter.has-sidebar {
+  display: block !important;
+}
+@media (min-width: 960px) {
+  .VPFooter.has-sidebar {
+    padding-left: calc(var(--vp-sidebar-width) + 32px) !important;
+  }
+}
+@media (min-width: 1440px) {
+  .VPFooter.has-sidebar {
+    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px) !important;
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) + 32px) !important;
+  }
+}
 .VPFooter .message,
 .VPFooter .copyright {
   font-size: 12.5px;
