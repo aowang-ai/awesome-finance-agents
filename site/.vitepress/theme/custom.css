@@ -119,14 +119,6 @@
   border-top: none !important;
   padding-top: 6px;
 }
-.afa-sidebar-note {
-  margin: 20px 0 8px;
-  padding-top: 12px;
-  border-top: 1px solid var(--vp-c-divider);
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--vp-c-text-3);
-}
 
 /* ---------- document typography ---------- */
 .vp-doc {
@@ -184,7 +176,7 @@
   background: var(--vp-c-bg-soft);
 }
 
-/* eyebrow, lead, meta, disclaimer */
+/* eyebrow, lead, meta */
 .vp-doc .afa-eyebrow {
   margin: 0 0 6px;
   font-size: 12.5px;
@@ -206,14 +198,6 @@
   font-variant-numeric: tabular-nums;
 }
 .vp-doc .afa-meta a {
-  color: var(--vp-c-text-2);
-}
-.vp-doc .afa-disclaimer-line {
-  margin: 18px 0 8px;
-  padding: 2px 0 2px 12px;
-  border-left: 2px solid var(--vp-c-border);
-  font-size: 13px;
-  line-height: 1.6;
   color: var(--vp-c-text-2);
 }
 

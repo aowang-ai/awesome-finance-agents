@@ -8,9 +8,6 @@ Site: https://finance-agents.dev/
 GitHub: https://github.com/aowang-ai/awesome-finance-agents
 Full text for models: ./llms-full.txt
 
-Not investment advice. Inclusion is not an endorsement.
-不构成投资建议。收录不代表背书。
-
 ## Chapters / 章节
 
 1. [Data and Tools](https://finance-agents.dev/chapters/1-data-and-tools) — market and filing data, MCP servers, official broker and exchange kits, skills

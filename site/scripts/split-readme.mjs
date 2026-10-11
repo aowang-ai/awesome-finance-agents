@@ -32,7 +32,6 @@ const LOCALES = [
       howTo: 'How to Use This List',
       start: 'Start reading',
       github: 'View on GitHub',
-      disclaimerTitle: 'Not investment advice',
       footnotes: 'Footnotes',
       contributing: 'Contributing',
       prev: 'Previous chapter',
@@ -70,7 +69,6 @@ const LOCALES = [
       howTo: '怎么用这份清单',
       start: '开始阅读',
       github: '在 GitHub 查看',
-      disclaimerTitle: '不构成投资建议',
       footnotes: '备注',
       contributing: '贡献',
       prev: '上一章',
@@ -241,13 +239,9 @@ function buildLocale(loc, chapterSlugs) {
       }),
     )
 
-  const disclaimer = (() => {
-    const q = preamble.find((l) => /^> \*\*/.test(l))
-    return q ? q.replace(/^>\s*/, '') : ''
-  })()
-  const tagline = plain((preamble.find((l) => /^> /.test(l) && !/^> \*\*/.test(l)) || '').replace(/^>\s*/, ''))
+  const tagline = plain((preamble.find((l) => /^> /.test(l)) || '').replace(/^>\s*/, ''))
   const name = plain(preamble.find((l) => /^# /.test(l)).replace(/^# /, '').replace(/\[!\[.*$/, ''))
-  // intro paragraphs: preamble minus title, tagline, language switch, disclaimer
+  // intro paragraphs: preamble minus title, tagline, language switch
   const intro = trimBlank(
     preamble.filter(
       (l) => !/^# /.test(l) && !/^> /.test(l) && !/README(\.zh-CN)?\.md\)/.test(l),
@@ -301,8 +295,6 @@ function buildLocale(loc, chapterSlugs) {
         .replace(/`\((sim|live|paper)\)`/g, (_, k) => badge(k)),
     )
 
-  const disclaimerText = plain(disclaimer.replace(/^\*\*[^*]+\*\*\s*/, ''))
-  const disclaimerLine = `<p class="afa-disclaimer-line"><strong>${esc(L.disclaimerTitle)}${loc.key === 'zh' ? '。' : '.'}</strong> ${esc(disclaimerText)}</p>`
   const total = pages.length
   const allEntries = pages.reduce((n, p) => n + p.entries, 0) + appendixPage.entries
 
@@ -313,7 +305,7 @@ function buildLocale(loc, chapterSlugs) {
     if (m) shortNames.set(Number(m[1]), m[2])
   }
 
-  // --- home page: title, one-line positioning, disclaimer, compact contents table.
+  // --- home page: title, one-line positioning, compact contents table.
   // The mermaid diagram is README-only; its table is folded into the contents table.
   const cell = (t) => String(t).replace(/\|/g, '\\|')
   const row = (num, name, link, q, n) => `| ${num} | [${cell(name)}](${link}) | ${cell(q)} | ${n} |`
@@ -337,8 +329,6 @@ function buildLocale(loc, chapterSlugs) {
     '',
     `<p class="afa-meta">${allEntries} ${esc(L.projects)} · ${esc(L.chaptersMeta)} · CC0 · <a href="${REPO_URL}">GitHub</a></p>`,
     '',
-    disclaimerLine,
-    '',
     `## ${L.contents} {#${ghSlug(mapSec.title)}}`,
     '',
     '<div class="afa-toc">',
@@ -361,7 +351,7 @@ function buildLocale(loc, chapterSlugs) {
   ]
   fs.writeFileSync(path.join(out, 'index.md'), home.join('\n'))
 
-  // --- chapter pages: title, meta line, one-line disclaimer, the problem as a
+  // --- chapter pages: title, meta line, the problem as a
   // lead paragraph, entry lists, pitfall as a quiet callout.
   const splitSub = (body, title) => {
     // returns [before, sectionBody, after] for "### title"
@@ -397,8 +387,6 @@ function buildLocale(loc, chapterSlugs) {
       `# ${p.title}`,
       '',
       ...(lead.length ? ['<div class="afa-lead">', '', ...rewrite(lead), '', '</div>', ''] : []),
-      disclaimerLine,
-      '',
       ...formatEntries(rewrite(demote(trimBlank(body)))),
       '',
       ...(pitfall
@@ -414,7 +402,6 @@ function buildLocale(loc, chapterSlugs) {
     file: loc.file,
     name,
     tagline,
-    disclaimer: plain(disclaimer.replace(/^\*\*[^*]+\*\*\s*/, '')),
     footnote: footSec ? plain(trimBlank(footSec.body)[0] || '') : '',
     labels: loc.labels,
     slugs,

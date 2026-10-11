@@ -4,8 +4,6 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-> **Not investment advice.** Inclusion does not mean endorsement. Many projects are research demos; paper trading and live trading are different. You are responsible for compliance, risk, and losses.
-
 This list is organized by **financial function**. Trading is one chapter; for a deeper trading-only catalog, see LLMQuant/awesome-trading-agents in the Appendix. It also covers accounting, compliance, evaluation, and backtesting/replay.
 
 Each chapter answers: what problem it solves, which open-source projects to study, and one pitfall tip. Star counts are omitted so they do not go stale. 🇨🇳 marks China A-share / Chinese-language projects; other flags mark region-specific data sources (for example 🇹🇷, 🇰🇷). `(sim)` / `(live)` / `(paper)` mark paper trading, live trading, or paper-code when known.
@@ -506,6 +504,6 @@ Contributions are welcome. Read the [contribution guidelines](CONTRIBUTING.md) f
 
 ## Footnotes
 
-Not investment advice. Inclusion is not an endorsement of any trading strategy, product, or model.
+For research and education only. Not investment advice.
 
 Published under [CC0 1.0 Universal](LICENSE).
