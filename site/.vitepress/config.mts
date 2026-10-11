@@ -51,7 +51,7 @@ export default withMermaid(
     description: en.tagline,
     head: [
       ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}logo.svg` }],
-      ['meta', { name: 'theme-color', content: '#0f766e' }],
+      ['meta', { name: 'theme-color', content: '#ffffff' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:site_name', content: en.name }],
       ['meta', { name: 'twitter:card', content: 'summary' }],
@@ -99,7 +99,6 @@ export default withMermaid(
     },
     mermaid: { theme: 'neutral' },
     themeConfig: {
-      logo: '/logo.svg',
       socialLinks: [{ icon: 'github', link: REPO_URL }],
       outline: { level: [2, 3] },
       search: {

@@ -37,6 +37,25 @@ const LOCALES = [
       contributing: 'Contributing',
       prev: 'Previous chapter',
       next: 'Next chapter',
+      problem: 'What Problem It Solves',
+      pitfall: 'Pitfall Tip',
+      contents: 'Contents',
+      about: 'About this list',
+      colNum: '#',
+      colChapter: 'Chapter',
+      colQuestion: 'Core question',
+      colEntries: 'Entries',
+      projects: 'projects',
+      chaptersMeta: '10 chapters + appendix',
+      chapterOf: (n, total) => `Chapter ${n} of ${total}`,
+      entriesN: (n) => `${n} ${n === 1 ? 'entry' : 'entries'}`,
+      edit: 'Edit on GitHub',
+      badges: {
+        cn: ['CN', 'China A-share or Chinese-language project'],
+        sim: ['sim', 'Paper / simulated trading'],
+        live: ['live', 'Can trade live'],
+        paper: ['paper', 'Research-paper code'],
+      },
     },
   },
   {
@@ -56,6 +75,25 @@ const LOCALES = [
       contributing: '贡献',
       prev: '上一章',
       next: '下一章',
+      problem: '要解决的问题',
+      pitfall: '踩坑提示',
+      contents: '目录',
+      about: '关于这份清单',
+      colNum: '#',
+      colChapter: '章节',
+      colQuestion: '核心问题',
+      colEntries: '条目',
+      projects: '个项目',
+      chaptersMeta: '10 章 + 附录',
+      chapterOf: (n, total) => `第 ${n} 章，共 ${total} 章`,
+      entriesN: (n) => `${n} 条`,
+      edit: '在 GitHub 上编辑',
+      badges: {
+        cn: ['A股/中文', 'A 股或中文项目'],
+        sim: ['模拟盘', '模拟盘 / 纸面交易'],
+        live: ['实盘', '可接实盘交易'],
+        paper: ['论文', '论文配套代码'],
+      },
     },
   },
 ]
@@ -226,85 +264,143 @@ function buildLocale(loc, chapterSlugs) {
   const out = loc.outDir
   fs.mkdirSync(path.join(out, 'chapters'), { recursive: true })
 
-  const warn = (body) => [
-    `::: warning ${loc.labels.disclaimerTitle}`,
-    plain(body.replace(/^\*\*[^*]+\*\*\s*/, '')),
-    ':::',
-  ]
+  const L = loc.labels
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+  const badge = (k) => `<span class="afa-badge afa-badge-${k}" title="${esc(L.badges[k][1])}">${esc(L.badges[k][0])}</span>`
 
-  // --- home page
-  const features = [
-    ...pages.map((p) => ({
-      title: `${p.num}. ${p.shortTitle}`,
-      details: questions.get(p.num) || `${p.entries}`,
-      link: p.link,
-    })),
-    {
-      title: appendixPage.title,
-      details: plain(trimBlank(appendixPage.body)[0] || ''),
-      link: appendixPage.link,
-    },
-  ]
+  // README list entry "- [Name](url) - 🇨🇳 desc. (sim)" -> name link + muted
+  // description + small neutral badges. Still starts with "- [Name](http"
+  // so entry counting is unchanged.
+  const ENTRY_FULL = /^(\s*)- (\[[^\]]+\]\(https?:\/\/[^)]+\))\s+-\s+(.*)$/
+  const formatEntries = (lines) => {
+    let inFence = false
+    return lines.map((l) => {
+      if (/^```/.test(l)) inFence = !inFence
+      const m = !inFence && ENTRY_FULL.exec(l)
+      if (!m) return l
+      let [, indent, link, desc] = m
+      const tags = []
+      if (desc.includes('🇨🇳')) {
+        tags.push('cn')
+        desc = desc.replace(/🇨🇳\s*/g, '')
+      }
+      const t = /\s*\(((?:sim|live|paper)(?:\/(?:sim|live|paper))*)\)\s*$/.exec(desc)
+      if (t) {
+        tags.push(...t[1].split('/'))
+        desc = desc.slice(0, t.index)
+      }
+      const badges = tags.length ? ` <span class="afa-badges">${tags.map(badge).join('')}</span>` : ''
+      return `${indent}- ${link} <span class="afa-desc">${desc.trim()}${badges}</span>`
+    })
+  }
+  // legend text in the intro: replace the emoji / code markers with the same badges
+  const badgifyLegend = (lines) =>
+    lines.map((l) =>
+      l
+        .replace(/🇨🇳/g, badge('cn'))
+        .replace(/`\((sim|live|paper)\)`/g, (_, k) => badge(k)),
+    )
+
+  const disclaimerText = plain(disclaimer.replace(/^\*\*[^*]+\*\*\s*/, ''))
+  const disclaimerLine = `<p class="afa-disclaimer-line"><strong>${esc(L.disclaimerTitle)}${loc.key === 'zh' ? '。' : '.'}</strong> ${esc(disclaimerText)}</p>`
+  const total = pages.length
+  const allEntries = pages.reduce((n, p) => n + p.entries, 0) + appendixPage.entries
+
+  // short chapter names from the map table ("| 1 | Data and Tools | ... |")
+  const shortNames = new Map()
+  for (const l of mapSec.body) {
+    const m = /^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|/.exec(l)
+    if (m) shortNames.set(Number(m[1]), m[2])
+  }
+
+  // --- home page: title, one-line positioning, disclaimer, compact contents table.
+  // The mermaid diagram is README-only; its table is folded into the contents table.
+  const cell = (t) => String(t).replace(/\|/g, '\\|')
+  const row = (num, name, link, q, n) => `| ${num} | [${cell(name)}](${link}) | ${cell(q)} | ${n} |`
   const home = [
     '---',
-    'layout: home',
     `title: ${yamlStr(name)}`,
     `titleTemplate: false`,
     `description: ${yamlStr(tagline)}`,
-    'hero:',
-    `  name: ${yamlStr(name)}`,
-    `  tagline: ${yamlStr(tagline)}`,
-    '  actions:',
-    '    - theme: brand',
-    `      text: ${yamlStr(loc.labels.start)}`,
-    `      link: ${pages[0].link}`,
-    '    - theme: alt',
-    `      text: ${yamlStr(loc.labels.github)}`,
-    `      link: ${REPO_URL}`,
-    'features:',
-    ...features.flatMap((f) => [
-      `  - title: ${yamlStr(f.title)}`,
-      `    details: ${yamlStr(f.details)}`,
-      `    link: ${f.link}`,
-    ]),
+    'aside: false',
+    'prev: false',
+    'next: false',
+    'pageClass: afa-home-page',
     '---',
     '',
-    '<div class="afa-home">',
+    `# ${name}`,
     '',
-    ...warn(disclaimer),
+    `<p class="afa-lead">${esc(tagline)}</p>`,
     '',
-    ...rewrite(intro),
+    `<p class="afa-meta">${allEntries} ${esc(L.projects)} · ${esc(L.chaptersMeta)} · CC0 · <a href="${REPO_URL}">GitHub</a></p>`,
     '',
-    `## ${mapSec.title}`,
+    disclaimerLine,
     '',
-    ...rewrite(trimBlank(mapSec.body)),
+    `## ${L.contents} {#${ghSlug(mapSec.title)}}`,
+    '',
+    '<div class="afa-toc">',
+    '',
+    `| ${L.colNum} | ${L.colChapter} | ${L.colQuestion} | ${L.colEntries} |`,
+    '| --: | --- | --- | --: |',
+    ...pages.map((p) => row(p.num, shortNames.get(p.num) || p.shortTitle, p.link, questions.get(p.num) || '', p.entries)),
+    row('', appendixPage.title, appendixPage.link, plain(trimBlank(appendixPage.body)[0] || ''), appendixPage.entries),
+    '',
+    '</div>',
+    '',
+    `## ${L.about}`,
+    '',
+    ...badgifyLegend(rewrite(intro)),
     '',
     `## ${howToSec.title}`,
     '',
     ...rewrite(trimBlank(howToSec.body)),
     '',
-    '</div>',
-    '',
   ]
   fs.writeFileSync(path.join(out, 'index.md'), home.join('\n'))
 
-  // --- chapter pages
+  // --- chapter pages: title, meta line, one-line disclaimer, the problem as a
+  // lead paragraph, entry lists, pitfall as a quiet callout.
+  const splitSub = (body, title) => {
+    // returns [before, sectionBody, after] for "### title"
+    const i = body.findIndex((l) => l.trim() === `### ${title}`)
+    if (i < 0) return [body, null, []]
+    let j = i + 1
+    while (j < body.length && !/^#{2,3} /.test(body[j])) j++
+    return [body.slice(0, i), trimBlank(body.slice(i + 1, j)), body.slice(j)]
+  }
   for (const p of [...pages, appendixPage]) {
     const desc = plain(
       trimBlank(p.body).find((l) => l.trim() && !/^#/.test(l)) || p.title,
     ).slice(0, 200)
+    let body = trimBlank(p.body)
+    let lead = []
+    const [b1, problem, a1] = splitSub(body, L.problem)
+    if (problem) {
+      lead = problem
+      body = [...b1, ...a1]
+    }
+    const [b2, pitfall, a2] = splitSub(body, L.pitfall)
+    if (pitfall) body = [...b2, ...a2]
+    const isChapter = p.slug !== 'appendix'
+    const meta = [isChapter ? L.chapterOf(p.num, total) : null, L.entriesN(p.entries)].filter(Boolean).join(' · ')
     const page = [
       '---',
       `title: ${yamlStr(p.title)}`,
       `description: ${yamlStr(desc)}`,
       '---',
       '',
+      `<p class="afa-eyebrow">${esc(meta)}</p>`,
+      '',
       `# ${p.title}`,
       '',
-      ...warn(disclaimer),
+      ...(lead.length ? ['<div class="afa-lead">', '', ...rewrite(lead), '', '</div>', ''] : []),
+      disclaimerLine,
       '',
-      ...rewrite(demote(trimBlank(p.body))),
+      ...formatEntries(rewrite(demote(trimBlank(body)))),
       '',
+      ...(pitfall
+        ? ['', `## ${L.pitfall}`, '', '<div class="afa-pitfall">', '', ...rewrite(pitfall), '', '</div>', '']
+        : []),
     ]
     const file = p.slug === 'appendix' ? 'appendix.md' : `chapters/${p.slug}.md`
     fs.writeFileSync(path.join(out, file), page.join('\n'))

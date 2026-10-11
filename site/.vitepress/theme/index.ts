@@ -1,5 +1,6 @@
 import { h } from 'vue'
-import DefaultTheme from 'vitepress/theme'
+// No bundled Inter: use the reader's system UI font (and system CJK fonts).
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import Disclaimer from './Disclaimer.vue'
 import './custom.css'
 
@@ -7,7 +8,7 @@ export default {
   extends: DefaultTheme,
   Layout: () =>
     h(DefaultTheme.Layout, null, {
-      // keep "not investment advice" visible in the sidebar on every doc page
-      'sidebar-nav-before': () => h(Disclaimer),
+      // quiet one-line reminder at the bottom of the sidebar on every doc page
+      'sidebar-nav-after': () => h(Disclaimer),
     }),
 }

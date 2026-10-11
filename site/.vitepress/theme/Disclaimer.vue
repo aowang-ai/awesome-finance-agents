@@ -4,12 +4,8 @@ const { lang } = useData()
 </script>
 
 <template>
-  <div class="afa-disclaimer" role="note">
-    <template v-if="lang === 'zh-CN'">
-      <strong>不构成投资建议。</strong>收录不代表背书；模拟盘不等于实盘。
-    </template>
-    <template v-else>
-      <strong>Not investment advice.</strong> Inclusion is not endorsement; paper trading is not live trading.
-    </template>
-  </div>
+  <p class="afa-sidebar-note" role="note">
+    <template v-if="lang === 'zh-CN'">不构成投资建议。收录不代表背书；模拟盘不等于实盘。</template>
+    <template v-else>Not investment advice. Inclusion is not endorsement; paper trading is not live trading.</template>
+  </p>
 </template>

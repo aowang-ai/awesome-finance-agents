@@ -14,3 +14,12 @@ npm run docs:preview  # serve the built site
 - Both READMEs must keep the same chapter order: Chinese pages reuse the English slugs so the language switch maps 1:1.
 - The split step fails if a new `##` section appears that it does not know how to place, or if entry counts differ between README and pages.
 - `.github/workflows/pages.yml` builds and deploys to GitHub Pages on push to `main`. Set `DOCS_BASE=/` for a custom domain.
+
+## Look and feel
+
+The theme (`site/.vitepress/theme/custom.css`) aims for an edited reference book, not a landing page:
+system fonts (no web fonts), neutral greys with one ink-blue link colour, hairline rules instead of cards,
+a plain-text home page with a contents table, and entry lists rendered as `name | description` rows.
+The split script turns README markers into small badges: 🇨🇳 → `CN`, `(sim)` / `(live)` / `(paper)` (or `sim/live`) → one badge each.
+The README's mermaid map stays README-only; on the site its table is folded into the home contents table.
+
