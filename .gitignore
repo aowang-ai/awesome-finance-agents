@@ -1,0 +1,5 @@
+node_modules/
+lychee-report.md
+stale-report.md
+.lycheecache
+.DS_Store

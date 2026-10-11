@@ -1,0 +1,28 @@
+name: Broken or outdated entry / 链接失效或内容过时
+description: Report a dead link, archived project, or better successor.
+title: "Fix: "
+labels: ["maintenance"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry / 条目
+      description: Name and URL of the current entry.
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Problem / 问题
+      options:
+        - Link is dead or redirects elsewhere
+        - Project is archived or unmaintained
+        - A better successor exists
+        - Description is wrong / marketing
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details / 说明
+      description: Include the replacement URL if you have one.

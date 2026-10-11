@@ -1,0 +1,43 @@
+name: Suggest a resource / 推荐资源
+description: Suggest an open-source finance agent, MCP/skill, benchmark, or related list.
+title: "Add: "
+labels: ["resource"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Resource name / 资源名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Canonical GitHub (or official) URL.
+    validations:
+      required: true
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: Chapter / 章节
+      options:
+        - 1. Data and Tools
+        - 2. Investment Research
+        - 3. Multi-Agent Decisions
+        - 4. Trading and Portfolio
+        - 5. Quant Automation
+        - 6. Accounting
+        - 7. Risk and Compliance
+        - 8. Personal Finance
+        - 9. Evaluation and Arenas
+        - 10. Backtest / Replay / Leakage
+        - Appendix
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs / 为什么值得收录
+      description: Which finance-agent job or reliability lesson does it teach?
+    validations:
+      required: true

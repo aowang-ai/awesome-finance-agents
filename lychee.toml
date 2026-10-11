@@ -1,0 +1,13 @@
+# Link checker configuration: https://lychee.cli.rs/
+max_concurrency = 4
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+accept = [200, 206, 429]
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+
+# Sites that block automated requests even though the pages exist.
+exclude = [
+  "^https://x\\.com/",
+  "^https://twitter\\.com/",
+]

@@ -1,0 +1,43 @@
+name: Stale repositories
+
+on:
+  schedule:
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check stale GitHub repos
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          python3 scripts/check_stale.py --readme README.md --output stale-report.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+      - name: Find an open stale report issue
+        id: find
+        if: steps.check.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          number=$(gh issue list --repo "${{ github.repository }}" --state open --label "stale report" --json number --jq '.[0].number // empty')
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+      - name: Open or update the stale report issue
+        if: steps.check.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: Stale repository report
+          content-filepath: ./stale-report.md
+          issue-number: ${{ steps.find.outputs.number }}
+          labels: stale report, automated issue
