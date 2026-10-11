@@ -317,9 +317,12 @@ function buildLocale(loc, chapterSlugs) {
   // The mermaid diagram is README-only; its table is folded into the contents table.
   const cell = (t) => String(t).replace(/\|/g, '\\|')
   const row = (num, name, link, q, n) => `| ${num} | [${cell(name)}](${link}) | ${cell(q)} | ${n} |`
+  // zh HTML <title> / H1: keep the English brand, add a Chinese gloss for SEO
+  const homeTitle =
+    loc.key === 'zh' ? 'Awesome Finance Agents（金融 Agent 精选）' : name
   const home = [
     '---',
-    `title: ${yamlStr(name)}`,
+    `title: ${yamlStr(homeTitle)}`,
     `titleTemplate: false`,
     `description: ${yamlStr(tagline)}`,
     'aside: false',
@@ -328,7 +331,7 @@ function buildLocale(loc, chapterSlugs) {
     'pageClass: afa-home-page',
     '---',
     '',
-    `# ${name}`,
+    `# ${homeTitle}`,
     '',
     `<p class="afa-lead">${esc(tagline)}</p>`,
     '',

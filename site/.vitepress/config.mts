@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { defineConfig, type DefaultTheme } from 'vitepress'
+import { defineConfig, type DefaultTheme, type HeadConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 // The READMEs are the source of truth: split them into pages every time the
 // config loads (dev, build). Output goes to site/src/ (git-ignored).
@@ -14,6 +14,22 @@ const zh = manifest.locales.zh
 // GitHub Pages serves project sites under /<repo>/. Override with DOCS_BASE=/ for a custom domain.
 const base = process.env.DOCS_BASE || '/awesome-finance-agents/'
 const siteUrl = process.env.DOCS_SITE_URL || `https://aowang-ai.github.io${base}`
+const ogImage = `${siteUrl}og.png`
+const zhSiteTitle = 'Awesome Finance Agents（金融 Agent 精选）'
+
+function pageUrl(relativePath: string): string {
+  return (
+    siteUrl +
+    relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+  )
+}
+
+function altPaths(relativePath: string): { en: string; zh: string } {
+  const isZh = relativePath.startsWith('zh/')
+  const enRel = isZh ? relativePath.slice(3) : relativePath
+  const zhRel = isZh ? relativePath : `zh/${relativePath}`
+  return { en: pageUrl(enRel), zh: pageUrl(zhRel) }
+}
 
 function sidebar(loc: typeof en, overview: string, contributing: string): DefaultTheme.SidebarItem[] {
   const chapters = loc.pages.filter((p: any) => p.slug !== 'appendix')
@@ -40,6 +56,78 @@ const footer = (loc: typeof en, license: string) => ({
   copyright: license,
 })
 
+const personOrgLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}#person`,
+      name: 'Ao Wang',
+      url: 'https://aowang.ai',
+      sameAs: ['https://github.com/aowang-ai', 'https://aowang.ai'],
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}#organization`,
+      name: 'Awesome Finance Agents',
+      url: siteUrl,
+      logo: `${siteUrl}logo.svg`,
+      sameAs: [REPO_URL],
+      founder: { '@id': `${siteUrl}#person` },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: en.name,
+      url: siteUrl,
+      description: en.tagline,
+      inLanguage: ['en-US', 'zh-CN'],
+      publisher: { '@id': `${siteUrl}#organization` },
+      author: { '@id': `${siteUrl}#person` },
+    },
+  ],
+}
+
+function collectionLd(locale: 'en' | 'zh') {
+  const loc = locale === 'zh' ? zh : en
+  const home = locale === 'zh' ? `${siteUrl}zh/` : siteUrl
+  const name = locale === 'zh' ? zhSiteTitle : en.name
+  const items = loc.pages.map((p: any, i: number) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.title,
+    url: pageUrl(
+      locale === 'zh'
+        ? p.slug === 'appendix'
+          ? 'zh/appendix.md'
+          : `zh/chapters/${p.slug}.md`
+        : p.slug === 'appendix'
+          ? 'appendix.md'
+          : `chapters/${p.slug}.md`,
+    ),
+  }))
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${home}#collection`,
+    name,
+    description: loc.tagline,
+    url: home,
+    inLanguage: locale === 'zh' ? 'zh-CN' : 'en-US',
+    isPartOf: { '@id': `${siteUrl}#website` },
+    author: { '@id': `${siteUrl}#person` },
+    publisher: { '@id': `${siteUrl}#organization` },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: locale === 'zh' ? '章节目录' : 'Chapters',
+      numberOfItems: items.length,
+      itemListElement: items,
+    },
+  }
+}
+
+const buildDay = new Date().toISOString().slice(0, 10)
+
 export default withMermaid(
   defineConfig({
     srcDir: 'src',
@@ -54,23 +142,64 @@ export default withMermaid(
       ['meta', { name: 'theme-color', content: '#ffffff' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:site_name', content: en.name }],
-      ['meta', { name: 'twitter:card', content: 'summary' }],
+      ['meta', { property: 'og:image', content: ogImage }],
+      ['meta', { property: 'og:image:width', content: '1200' }],
+      ['meta', { property: 'og:image:height', content: '630' }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:image', content: ogImage }],
+      [
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(personOrgLd),
+      ],
     ],
-    // per-page og:title / og:description / og:url
-    transformPageData(pageData, { siteConfig }) {
+    transformPageData(pageData) {
       const title = pageData.frontmatter.title || pageData.title || en.name
       const desc = pageData.frontmatter.description || pageData.description || en.tagline
-      const url = siteUrl + pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+      const url = pageUrl(pageData.relativePath)
+      const isZh = pageData.relativePath.startsWith('zh/')
       pageData.frontmatter.head ??= []
-      pageData.frontmatter.head.push(
-        ['meta', { property: 'og:title', content: title }],
-        ['meta', { property: 'og:description', content: desc }],
+      const head = pageData.frontmatter.head as HeadConfig[]
+      head.push(
+        ['meta', { property: 'og:title', content: String(title) }],
+        ['meta', { property: 'og:description', content: String(desc) }],
         ['meta', { property: 'og:url', content: url }],
-        ['meta', { property: 'og:locale', content: pageData.relativePath.startsWith('zh/') ? 'zh_CN' : 'en_US' }],
+        ['meta', { property: 'og:locale', content: isZh ? 'zh_CN' : 'en_US' }],
         ['link', { rel: 'canonical', href: url }],
       )
+      // Home CollectionPage + ItemList (10 chapters + appendix)
+      if (
+        pageData.relativePath === 'index.md' ||
+        pageData.relativePath === 'zh/index.md'
+      ) {
+        head.push([
+          'script',
+          { type: 'application/ld+json' },
+          JSON.stringify(
+            collectionLd(pageData.relativePath.startsWith('zh/') ? 'zh' : 'en'),
+          ),
+        ])
+      }
     },
-    sitemap: { hostname: siteUrl },
+    transformHead({ pageData }) {
+      // Ensure hreflang / og tags also land via transformHead for pages
+      // where frontmatter.head merging is incomplete in some VitePress paths.
+      const { en: enHref, zh: zhHref } = altPaths(pageData.relativePath)
+      return [
+        ['link', { rel: 'alternate', hreflang: 'en-US', href: enHref }],
+        ['link', { rel: 'alternate', hreflang: 'zh-CN', href: zhHref }],
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: enHref }],
+      ]
+    },
+    sitemap: {
+      hostname: siteUrl,
+      transformItems(items) {
+        return items.map((item) => ({
+          ...item,
+          lastmod: buildDay,
+        }))
+      },
+    },
     vite: {
       publicDir: path.resolve(here, '../public'),
       server: {
@@ -164,7 +293,7 @@ export default withMermaid(
         label: '简体中文',
         lang: 'zh-CN',
         link: '/zh/',
-        title: zh.name,
+        title: zhSiteTitle,
         description: zh.tagline,
         themeConfig: {
           nav: [
