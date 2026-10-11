@@ -7,3 +7,6 @@ stale-report.md
 site/src/
 site/.vitepress/cache/
 site/.vitepress/dist/
+site/.generated/
+mcp/node_modules/
+mcp/.wrangler/

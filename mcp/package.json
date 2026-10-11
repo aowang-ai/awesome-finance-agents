@@ -1,0 +1,21 @@
+{
+  "name": "awesome-finance-agents-mcp",
+  "private": true,
+  "type": "module",
+  "description": "Read-only MCP server for the Awesome Finance Agents list (Cloudflare Worker)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261011.1",
+    "typescript": "^5.9.0",
+    "wrangler": "^4.149.0"
+  }
+}

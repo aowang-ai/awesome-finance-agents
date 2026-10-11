@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "finance-agents-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "routes": [{ "pattern": "mcp.finance-agents.dev", "custom_domain": true }],
+  "vars": { "SITE_URL": "https://finance-agents.dev" },
+  // 60 requests per minute per client IP
+  "ratelimits": [{ "name": "RATE_LIMITER", "namespace_id": "1001", "simple": { "limit": 60, "period": 60 } }],
+  "observability": { "enabled": true }
+}
