@@ -133,6 +133,7 @@ Research agents read filings, transcripts, news, and data rooms, then produce so
 - [DeepEar](https://github.com/HKUSTDial/DeepEar) - 🇨🇳 Deep research and financial signal tracking framework (顺风耳).
 - [claude-equity-research](https://github.com/quant-sentiment-ai/claude-equity-research) - Claude Code plugin for institutional-style equity research workflows.
 - [easy-stock](https://github.com/jundizhou/easy-stock) - 🇨🇳 A-share analysis and AI research desktop workbench.
+- [Seris](https://github.com/aowang-ai/seris) - Desktop AI market research assistant: chat beside live charts, price alerts, and local backtests with your own model.
 
 ### Pitfall Tip
 
@@ -177,6 +178,7 @@ From signal to order: position sizing, risk budgets, broker/exchange connectors,
 - [AgenticTrading](https://github.com/Open-Finance-Lab/AgenticTrading) - Agentic trading research codebase paired with evaluation harnesses.
 - [FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading) - AI-native modular infrastructure for quantitative trading (FinRL-X).
 - [FinMem-LLM-StockTrading](https://github.com/pipiku915/FinMem-LLM-StockTrading) - Layered-memory LLM trading agent from the FinMem line of work. (paper)
+- [jev-trade](https://github.com/aowang-ai/jev-trade) - Model-driven Hyperliquid trader: one call per tick across five isolated coin sleeves, with a live desk and dry-run mode. (sim/live)
 
 ### Broker bridges and execution substrates
 

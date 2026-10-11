@@ -130,6 +130,7 @@ flowchart TB
 - [DeepEar](https://github.com/HKUSTDial/DeepEar) - 🇨🇳 深度研究与金融信号追踪框架（顺风耳）。
 - [claude-equity-research](https://github.com/quant-sentiment-ai/claude-equity-research) - 面向机构风格股票研究的 Claude Code 插件。
 - [easy-stock](https://github.com/jundizhou/easy-stock) - 🇨🇳 A 股分析与 AI 投研桌面工作台。
+- [Seris](https://github.com/aowang-ai/seris) - 桌面 AI 投研助手：在实时行情图旁对话，支持价格提醒和本地回测，可接自己的模型。
 
 ### 踩坑提示
 
@@ -174,6 +175,7 @@ flowchart TB
 - [AgenticTrading](https://github.com/Open-Finance-Lab/AgenticTrading) - 与评测 harness 配套的 agent 交易研究代码。
 - [FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading) - AI 原生的模块化量化交易基础设施（FinRL-X）。
 - [FinMem-LLM-StockTrading](https://github.com/pipiku915/FinMem-LLM-StockTrading) - FinMem 系列的分层记忆 LLM 交易 agent。(paper)
+- [jev-trade](https://github.com/aowang-ai/jev-trade) - 模型驱动的 Hyperliquid 交易机器人：五个币种独立钱包，每个 tick 决策一次，带实时看板与 dry-run 模式。(sim/live)
 
 ### 券商桥与执行底座
 
