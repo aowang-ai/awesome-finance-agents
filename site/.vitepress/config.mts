@@ -52,8 +52,12 @@ function sidebar(loc: typeof en, overview: string, contributing: string): Defaul
   ]
 }
 
+const AUTHOR_URL = 'https://aowang.ai'
 const footer = (loc: typeof en, license: string) => ({
-  message: loc.footnote,
+  message:
+    loc.key === 'zh'
+      ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护`
+      : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a>`,
   copyright: license,
 })
 
@@ -64,8 +68,9 @@ const personOrgLd = {
       '@type': 'Person',
       '@id': `${siteUrl}#person`,
       name: 'Ao Wang',
-      url: 'https://aowang.ai',
-      sameAs: ['https://github.com/aowang-ai', 'https://aowang.ai'],
+      alternateName: '王奥',
+      url: AUTHOR_URL,
+      sameAs: ['https://github.com/aowang-ai'],
     },
     {
       '@type': 'Organization',
@@ -85,6 +90,8 @@ const personOrgLd = {
       inLanguage: ['en-US', 'zh-CN'],
       publisher: { '@id': `${siteUrl}#organization` },
       author: { '@id': `${siteUrl}#person` },
+      creator: { '@id': `${siteUrl}#person` },
+      maintainer: { '@id': `${siteUrl}#person` },
     },
   ],
 }
@@ -117,6 +124,8 @@ function collectionLd(locale: 'en' | 'zh') {
     inLanguage: locale === 'zh' ? 'zh-CN' : 'en-US',
     isPartOf: { '@id': `${siteUrl}#website` },
     author: { '@id': `${siteUrl}#person` },
+    creator: { '@id': `${siteUrl}#person` },
+    maintainer: { '@id': `${siteUrl}#person` },
     publisher: { '@id': `${siteUrl}#organization` },
     mainEntity: {
       '@type': 'ItemList',
@@ -143,6 +152,7 @@ export default withMermaid(
       ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
       ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png` }],
       ['link', { rel: 'apple-touch-icon', href: `${base}apple-touch-icon.png` }],
+      ['meta', { name: 'author', content: 'Ao Wang' }],
       ['meta', { name: 'theme-color', content: '#ffffff' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:site_name', content: en.name }],

@@ -510,3 +510,5 @@ Contributions are welcome. Read the [contribution guidelines](CONTRIBUTING.md) f
 For research and education only. Not investment advice.
 
 Published under [CC0 1.0 Universal](LICENSE).
+
+Maintained by [Ao Wang](https://aowang.ai).

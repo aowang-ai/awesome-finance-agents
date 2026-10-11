@@ -507,3 +507,5 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 仅供学习研究，不构成投资建议。
 
 以 [CC0 1.0 Universal](LICENSE) 发布。
+
+由 [Ao Wang](https://aowang.ai)（王奥）维护。

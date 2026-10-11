@@ -39,4 +39,4 @@ Every page has a Markdown copy: add .md to its URL (Chinese pages under /zh/).
 
 - [Contributing](https://github.com/aowang-ai/awesome-finance-agents/blob/main/CONTRIBUTING.md)
 - License: CC0 1.0 Universal
-- Maintainer: Ao Wang (https://github.com/aowang-ai, https://aowang.ai)
+- Maintained by Ao Wang (https://aowang.ai) · GitHub: https://github.com/aowang-ai

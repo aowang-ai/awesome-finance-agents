@@ -56,6 +56,7 @@ const LOCALES = [
       edit: 'Edit on GitHub',
       useAi: 'Use with AI',
       notAdvice: 'Not investment advice. Inclusion does not mean endorsement.',
+      maintained: 'Maintained by Ao Wang (https://aowang.ai).',
       htmlVersion: 'Web version',
       badges: {
         cn: ['CN', 'China A-share or Chinese-language project'],
@@ -96,6 +97,7 @@ const LOCALES = [
       edit: '在 GitHub 上编辑',
       useAi: '在 AI 里使用',
       notAdvice: '不构成投资建议；收录不代表推荐。',
+      maintained: '由 Ao Wang（王奥，https://aowang.ai）维护。',
       htmlVersion: '网页版',
       badges: {
         cn: ['A股/中文', 'A 股或中文项目'],
@@ -400,7 +402,7 @@ function buildLocale(loc, chapterSlugs) {
     '',
     '---',
     '',
-    `${L.notAdvice} CC0 1.0.`,
+    `${L.notAdvice} CC0 1.0. ${L.maintained}`,
     '',
   ]
   const mdOut = path.join(GEN, loc.key === 'zh' ? 'zh' : '')
@@ -464,6 +466,8 @@ function buildLocale(loc, chapterSlugs) {
       '---',
       '',
       `${L.notAdvice} CC0 1.0 · ${REPO_URL}`,
+      '',
+      L.maintained,
       '',
     ]
     fs.writeFileSync(path.join(mdOut, file), pageMd.join('\n').replace(/\n{3,}/g, '\n\n'))
@@ -603,6 +607,7 @@ function writeProjectsJson(en, zh) {
     site: `${SITE_ORIGIN}/`,
     repository: REPO_URL,
     license: 'CC0-1.0',
+    maintainer: { name: 'Ao Wang', url: 'https://aowang.ai', github: 'https://github.com/aowang-ai' },
     mcp: MCP_URL,
     generated: new Date().toISOString(),
     count: projects.length,
@@ -624,7 +629,7 @@ function writeLlmsFull(en, zh) {
     '',
     `> ${en.tagline}`,
     '',
-    `Full text of ${SITE_ORIGIN}/ in English and Chinese (generated from the repository READMEs). Index: ${SITE_ORIGIN}/llms.txt. MCP: ${MCP_URL}. Not investment advice.`,
+    `Full text of ${SITE_ORIGIN}/ in English and Chinese (generated from the repository READMEs). Index: ${SITE_ORIGIN}/llms.txt. MCP: ${MCP_URL}. Maintained by Ao Wang (https://aowang.ai). Not investment advice.`,
     '',
   ]
   for (const f of [...order(en, GEN), ...order(zh, path.join(GEN, 'zh'))]) {
