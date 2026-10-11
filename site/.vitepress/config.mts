@@ -232,7 +232,7 @@ export default withMermaid(
     mermaid: { theme: 'neutral' },
     themeConfig: {
       // Short brand in the navbar; full name stays in <title>, h1 and SEO metadata.
-      logo: { src: '/logo.svg', width: 24, height: 24, alt: '' },
+      logo: { light: '/logo.svg', dark: '/logo-dark.svg', width: 24, height: 24, alt: '' },
       siteTitle: 'Finance Agents',
       socialLinks: [{ icon: 'github', link: REPO_URL }],
       outline: { level: [2, 3] },
