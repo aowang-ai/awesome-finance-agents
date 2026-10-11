@@ -129,6 +129,9 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [alpaca-skills](https://github.com/alpacahq/alpaca-skills) - Official Alpaca SKILL.md files for its Trading and Broker APIs. (sim/live)
 - [QuantConnect/mcp-server](https://github.com/QuantConnect/mcp-server) - Official QuantConnect MCP for driving projects, backtests, and live algorithms from an agent.
 - [futu-agent-hub](https://github.com/FutunnOpen/futu-agent-hub) - Official Futu skills for Futu OpenAPI, information search, and sentiment indicators.
+- [longbridge-terminal](https://github.com/longbridge/longbridge-terminal) - Official Longbridge CLI covering every Longbridge OpenAPI endpoint for HK/US quotes, options, positions, and orders, built for agent tool calls, with a TUI. (live)
+- [longbridge-mcp](https://github.com/longbridge/longbridge-mcp) - Official Longbridge MCP with 164 tools for HK/US quotes, options, orders, fundamentals, analyst ratings, and calendars over a hosted OAuth 2.1 endpoint. (live)
+- [longbridge/skills](https://github.com/longbridge/skills) - Official Longbridge agent skills (13) for market data, technical analysis, fundamentals, portfolio, and earnings, for Claude Code and Codex.
 
 ### Skills packs
 

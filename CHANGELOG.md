@@ -9,6 +9,12 @@ Notable changes to the list are recorded here. Individual link additions and fix
 - **Every month:** `scripts/check_stale.py` flags GitHub repositories that are archived, renamed, missing, or have had no push in 12 months.
 - **Every quarter:** a maintainer re-reads each chapter, removes stale entries, and records the review here.
 
+## [0.2.1] - 2026-10-11
+
+### Added
+
+- Longbridge official CLI, MCP server, and agent skills in Official broker and exchange agent kits (1); 248 entries total.
+
 ## [0.2.0] - 2026-10-11
 
 ### Added

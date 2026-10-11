@@ -126,6 +126,9 @@ flowchart TB
 - [alpaca-skills](https://github.com/alpacahq/alpaca-skills) - Alpaca 官方 SKILL.md，覆盖 Trading 与 Broker API。(sim/live)
 - [QuantConnect/mcp-server](https://github.com/QuantConnect/mcp-server) - QuantConnect 官方 MCP，可由 agent 管理项目、回测与实盘算法。
 - [futu-agent-hub](https://github.com/FutunnOpen/futu-agent-hub) - 富途官方 Skills：OpenAPI、资讯检索与情绪指标。
+- [longbridge-terminal](https://github.com/longbridge/longbridge-terminal) - 长桥官方 CLI，覆盖全部 Longbridge OpenAPI：港美股行情、期权、持仓与下单，面向 agent 工具调用，附 TUI。(live)
+- [longbridge-mcp](https://github.com/longbridge/longbridge-mcp) - 长桥官方 MCP，164 个工具，经 OAuth 2.1 托管端点提供港美股行情、期权、下单、基本面、分析师评级与日历。(live)
+- [longbridge/skills](https://github.com/longbridge/skills) - 长桥官方 agent skills（13 个）：行情、技术分析、基本面、持仓与财报等，支持 Claude Code 与 Codex。
 
 ### Skills 包
 
