@@ -41,7 +41,7 @@ Place an entry in the **single most specific** chapter:
 | PIT backtests, replay, look-ahead / leakage control | 10 |
 | Base FinLLMs, surveys, neighboring awesome lists | Appendix |
 
-Trading depth that is not differentiating for this list should prefer a link to [LLMQuant/awesome-trading-agents](https://github.com/LLMQuant/awesome-trading-agents) instead of duplicating long catalogs here.
+For long trading-only catalogs, prefer linking to [LLMQuant/awesome-trading-agents](https://github.com/LLMQuant/awesome-trading-agents) instead of duplicating them here.
 
 ## Entry Format
 

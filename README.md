@@ -1,12 +1,12 @@
 # Awesome Finance Agents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Open-source LLM agents for finance, organized by job-to-be-done — research, trading, operations, risk & compliance, personal finance — with evaluation and leakage control as first-class chapters.
+> Open-source LLM agents for finance, organized by job: research, trading, operations, risk & compliance, personal finance, evaluation, and backtesting.
 
 **English** | [简体中文](README.zh-CN.md)
 
 > **Not investment advice.** Inclusion does not mean endorsement. Many projects are research demos; paper trading and live trading are different. You are responsible for compliance, risk, and losses.
 
-Most finance agent lists are trading-only. This one is organized by **financial function and reliability**. Trading is one chapter and points to LLMQuant/awesome-trading-agents (see Appendix) for depth. Chapters that other lists skip — **accounting**, **compliance**, **evaluation**, and **leakage-safe backtest/replay** — are covered here on purpose.
+This list is organized by **financial function**. Trading is one chapter; for a deeper trading-only catalog, see LLMQuant/awesome-trading-agents in the Appendix. It also covers accounting, compliance, evaluation, and backtesting/replay.
 
 Each chapter answers: what problem it solves, which open-source projects to study, and one pitfall tip. Star counts are omitted so they do not go stale. 🇨🇳 marks China A-share / Chinese-language projects. `(sim)` / `(live)` / `(paper)` mark paper trading, live trading, or paper-code when known.
 
@@ -73,7 +73,7 @@ flowchart TB
 
 **Building a trading agent.** Read 1 → 3/4 → 10 → 9, then use the trading-only list linked in the Appendix for more depth.
 
-**Ops / compliance / personal finance.** Chapters 6, 7, and 8 are thin on purpose — they are the differentiating coverage.
+**Ops / compliance / personal finance.** Start with chapters 6, 7, and 8.
 
 **Interview or design review.** Use each chapter's pitfall tip as a failure-mode checklist.
 
@@ -214,7 +214,7 @@ Factor factories overfit fast. Demand walk-forward or purged CV, and keep a hold
 
 ### What Problem It Solves
 
-Agents for bookkeeping, reconciliation, invoice review, and reporting. Still a thin open-source niche — that is why this chapter exists.
+Agents for bookkeeping, reconciliation, invoice review, and reporting.
 
 ### Ledgers and agent accountants
 
