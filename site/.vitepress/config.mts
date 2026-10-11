@@ -138,7 +138,10 @@ export default withMermaid(
     title: en.name,
     description: en.tagline,
     head: [
-      ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}logo.svg` }],
+      ['link', { rel: 'icon', href: `${base}favicon.ico`, sizes: '48x48' }],
+      ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
+      ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png` }],
+      ['link', { rel: 'apple-touch-icon', href: `${base}apple-touch-icon.png` }],
       ['meta', { name: 'theme-color', content: '#ffffff' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:site_name', content: en.name }],
@@ -228,6 +231,9 @@ export default withMermaid(
     },
     mermaid: { theme: 'neutral' },
     themeConfig: {
+      // Short brand in the navbar; full name stays in <title>, h1 and SEO metadata.
+      logo: { src: '/logo.svg', width: 24, height: 24, alt: '' },
+      siteTitle: 'Finance Agents',
       socialLinks: [{ icon: 'github', link: REPO_URL }],
       outline: { level: [2, 3] },
       search: {
@@ -279,6 +285,7 @@ export default withMermaid(
         title: en.name,
         description: en.tagline,
         themeConfig: {
+          siteTitle: 'Finance Agents',
           nav: [
             { text: 'Chapters', link: en.pages[0].link },
             { text: 'Appendix', link: '/appendix' },
@@ -296,6 +303,7 @@ export default withMermaid(
         title: zhSiteTitle,
         description: zh.tagline,
         themeConfig: {
+          siteTitle: 'Finance Agents',
           nav: [
             { text: '章节', link: zh.pages[0].link },
             { text: '附录', link: '/zh/appendix' },
