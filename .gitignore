@@ -3,3 +3,7 @@ lychee-report.md
 stale-report.md
 .lycheecache
 .DS_Store
+# VitePress site (pages are generated from the READMEs)
+site/src/
+site/.vitepress/cache/
+site/.vitepress/dist/

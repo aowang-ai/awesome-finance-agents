@@ -1,0 +1,20 @@
+{
+  "name": "awesome-finance-agents-site",
+  "private": true,
+  "type": "module",
+  "description": "VitePress site generated from README.md / README.zh-CN.md",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "docs:split": "node site/scripts/split-readme.mjs --check",
+    "docs:dev": "npm run docs:split && vitepress dev site",
+    "docs:build": "npm run docs:split && vitepress build site",
+    "docs:preview": "vitepress preview site"
+  },
+  "devDependencies": {
+    "mermaid": "^11.17.2",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  }
+}
