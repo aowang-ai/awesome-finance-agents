@@ -117,6 +117,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [alpha_vantage_mcp](https://github.com/alphavantage/alpha_vantage_mcp) - Official Alpha Vantage MCP server for equities, FX, crypto, and economic indicators.
 - [Financial-Modeling-Prep-MCP-Server](https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server) - MCP implementation of the Financial Modeling Prep API (statements, ratios, estimates, filings).
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - MCP server for FRED (Federal Reserve Economic Data) macro series.
+- [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - Read-only funding, bank and indicative BTC liquidity research via free anonymous MCP, with persistent Python sessions and Python/JavaScript source-status streams that preserve source dates, restrictions and missing values.
 
 ### Official broker and exchange agent kits
 
