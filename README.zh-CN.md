@@ -114,6 +114,7 @@ flowchart TB
 - [alpha_vantage_mcp](https://github.com/alphavantage/alpha_vantage_mcp) - Alpha Vantage 官方 MCP 服务，覆盖股票、外汇、加密与宏观指标。
 - [Financial-Modeling-Prep-MCP-Server](https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server) - Financial Modeling Prep API 的 MCP 实现（财报、比率、预期、文件）。
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - FRED（美联储经济数据）宏观序列的 MCP 服务。
+- [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - 通过免费、免账户的 MCP 提供只读资金市场、银行与参考性 BTC 流动性研究，支持持久化 Python 会话及 Python/JavaScript 数据源状态流，并保留数据源日期、使用限制和缺失值。
 
 ### 官方券商与交易所 agent 工具包
 
