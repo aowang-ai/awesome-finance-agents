@@ -245,6 +245,8 @@ flowchart TB
 - [nof1.ai](https://github.com/195440/nof1.ai) - nof1.ai 自主 LLM 交易 agent 的开源复刻。(sim/live)
 - [OpenTrade](https://github.com/OpenTradeOSS/OpenTrade) - macOS 应用，让 Claude Code/Codex 经 Robinhood 官方 MCP 交易，带审批与限额。(live)
 - [hummingbot/condor](https://github.com/hummingbot/condor) - Hummingbot 官方的 Telegram 控制端，经 Hummingbot API 监控与运行 AI 交易 agent。(live)
+- [WyckoffTradingAgent](https://github.com/YoungCan-Wang/WyckoffTradingAgent) - 🇨🇳 威科夫量价交易 agent 与 A 股筛股工具，带 CLI 工作流和 MCP 工具。
+- [FriesTrader](https://github.com/YizhiSong/FriesTrader) - 通过 Robinhood 官方 agentic-trading MCP 真实下单的交易 agent，风控规则由机械规则执行，模型无法覆盖。(live)
 
 ### 预测市场 agent
 

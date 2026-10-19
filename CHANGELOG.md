@@ -9,6 +9,12 @@ Notable changes to the list are recorded here. Individual link additions and fix
 - **Every month:** `scripts/check_stale.py` flags GitHub repositories that are archived, renamed, missing, or have had no push in 12 months.
 - **Every quarter:** a maintainer re-reads each chapter, removes stale entries, and records the review here.
 
+## [0.2.2] - 2026-10-19
+
+### Added
+
+- WyckoffTradingAgent and FriesTrader in LLM trading agents (2); 250 entries total.
+
 ## [0.2.1] - 2026-10-11
 
 ### Added

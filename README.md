@@ -248,6 +248,8 @@ From signal to order: position sizing, risk budgets, broker/exchange connectors,
 - [nof1.ai](https://github.com/195440/nof1.ai) - Open re-implementation of the nof1.ai autonomous LLM trading agent. (sim/live)
 - [OpenTrade](https://github.com/OpenTradeOSS/OpenTrade) - macOS harness letting Claude Code/Codex agents trade via Robinhood's official MCP, with approvals and limits. (live)
 - [hummingbot/condor](https://github.com/hummingbot/condor) - Hummingbot's Telegram harness for monitoring and running AI trading agents via the Hummingbot API. (live)
+- [WyckoffTradingAgent](https://github.com/YoungCan-Wang/WyckoffTradingAgent) - 🇨🇳 Wyckoff volume-price trading agent and A-share stock screener with CLI workflows and MCP tools.
+- [FriesTrader](https://github.com/YizhiSong/FriesTrader) - Robinhood trading agent placing real orders through Robinhood's agentic-trading MCP, under mechanical risk rules the model cannot override. (live)
 
 ### Prediction-market agents
 
