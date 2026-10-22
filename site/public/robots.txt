@@ -42,4 +42,5 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
+# sitemap.xml is a urlset of every HTML page (both languages), not a sitemap index.
 Sitemap: https://finance-agents.dev/sitemap.xml

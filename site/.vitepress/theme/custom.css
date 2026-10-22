@@ -200,6 +200,15 @@
 .vp-doc .afa-meta a {
   color: var(--vp-c-text-2);
 }
+.vp-doc .afa-related {
+  margin: 2.75rem 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vp-c-text-3);
+}
+.vp-doc .afa-related a {
+  color: var(--vp-c-text-2);
+}
 
 /* ---------- entry lists: name | description, hairline rows ---------- */
 .vp-doc ul:has(> li > .afa-desc) {
@@ -412,6 +421,52 @@
 }
 .vp-doc .afa-toc th:last-child {
   color: var(--vp-c-text-3);
+}
+
+/* fact tables: hairline rows, no cards. Wide comparisons scroll. */
+.vp-doc .afa-facts {
+  overflow-x: auto;
+  margin: 8px 0 0;
+}
+.vp-doc .afa-facts table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.vp-doc .afa-facts tr {
+  background: transparent !important;
+  border-top: 1px solid var(--afa-rule);
+}
+.vp-doc .afa-facts tbody tr:last-child {
+  border-bottom: 1px solid var(--afa-rule);
+}
+.vp-doc .afa-facts th,
+.vp-doc .afa-facts td {
+  border: none;
+  padding: 8px 16px 8px 0;
+  vertical-align: top;
+  text-align: left;
+  background: transparent;
+  font-weight: 400;
+  color: var(--vp-c-text-1);
+  white-space: nowrap;
+}
+.vp-doc .afa-facts th {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+  background: transparent;
+}
+.vp-doc .afa-kv td:first-child {
+  width: 11rem;
+  color: var(--vp-c-text-3);
+}
+.vp-doc .afa-kv td:last-child {
+  white-space: normal;
 }
 
 /* ---------- "Copy page" menu (top right of the doc column) ---------- */

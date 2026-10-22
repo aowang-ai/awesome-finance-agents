@@ -1,8 +1,12 @@
 # Site
 
 The website is generated from `README.md` (English, `/`) and `README.zh-CN.md` (Chinese, `/zh/`).
-**Edit the READMEs only** — `site/scripts/split-readme.mjs` splits them into one page per chapter at build time,
+Chapter pages come from those READMEs. `site/scripts/split-readme.mjs` splits them into one page per chapter at build time,
 writing to `site/src/` (git-ignored).
+
+Category notes, project pages, and comparisons are also generated, from `site/content/guides.mjs` plus `site/data/repo-facts.json`.
+They are listed on `/guides` (Chinese: `/zh/guides`). The top nav and the chapter sidebar stay on chapters and the appendix; guide pages use a sidebar of their own.
+Edit that copy and the fact snapshot; do not edit `site/src/` by hand.
 
 ```bash
 npm ci

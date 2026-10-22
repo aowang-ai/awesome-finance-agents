@@ -11,22 +11,63 @@ Every page has a Markdown copy: add .md to its URL (Chinese pages under /zh/).
 
 ## Chapters / 章节
 
-1. [Data and Tools](https://finance-agents.dev/chapters/1-data-and-tools.md) — market and filing data, MCP servers, official broker and exchange kits, skills
-2. [Investment Research](https://finance-agents.dev/chapters/2-investment-research-and-deep-research.md) — filings and news → source-backed memos; self-hosted research workbenches
-3. [Multi-Agent Decisions](https://finance-agents.dev/chapters/3-multi-agent-research-and-decision-systems.md) — specialized agents debate and hand off
-4. [Trading and Portfolio](https://finance-agents.dev/chapters/4-trading-execution-and-portfolio-management.md) — signal → sized, risk-checked order; prediction-market agents
-5. [Quant Automation](https://finance-agents.dev/chapters/5-quantitative-research-automation.md) — factors and strategy iteration
-6. [Accounting](https://finance-agents.dev/chapters/6-finance-operations-and-accounting.md) — bookkeeping, tax and invoicing, accounting-system MCP
-7. [Risk and Compliance](https://finance-agents.dev/chapters/7-risk-compliance-and-audit.md) — AML/KYC, DD, gated actions
-8. [Personal Finance](https://finance-agents.dev/chapters/8-personal-finance.md) — local-first budgets and accounts
-9. [Evaluation and Arenas](https://finance-agents.dev/chapters/9-evaluation-benchmarks-and-arenas.md) — benchmarks, live arenas, public track records
-10. [Backtest and Leakage](https://finance-agents.dev/chapters/10-backtesting-replay-and-leakage-control.md) — market-time correctness
-- [Appendix](https://finance-agents.dev/appendix.md) — models, surveys, neighboring lists
+1. [Data and Tools](https://finance-agents.dev/chapters/1-data-and-tools.md) · [中文](https://finance-agents.dev/zh/chapters/1-data-and-tools.md) — market and filing data, MCP servers, official broker and exchange kits, skills
+2. [Investment Research and Deep Research](https://finance-agents.dev/chapters/2-investment-research-and-deep-research.md) · [中文](https://finance-agents.dev/zh/chapters/2-investment-research-and-deep-research.md) — filings and news → source-backed memos; self-hosted research workbenches
+3. [Multi-Agent Research and Decision Systems](https://finance-agents.dev/chapters/3-multi-agent-research-and-decision-systems.md) · [中文](https://finance-agents.dev/zh/chapters/3-multi-agent-research-and-decision-systems.md) — specialized agents debate and hand off
+4. [Trading Execution and Portfolio Management](https://finance-agents.dev/chapters/4-trading-execution-and-portfolio-management.md) · [中文](https://finance-agents.dev/zh/chapters/4-trading-execution-and-portfolio-management.md) — signal → sized, risk-checked order; prediction-market agents
+5. [Quantitative Research Automation](https://finance-agents.dev/chapters/5-quantitative-research-automation.md) · [中文](https://finance-agents.dev/zh/chapters/5-quantitative-research-automation.md) — factors and strategy iteration
+6. [Finance Operations and Accounting](https://finance-agents.dev/chapters/6-finance-operations-and-accounting.md) · [中文](https://finance-agents.dev/zh/chapters/6-finance-operations-and-accounting.md) — bookkeeping, tax and invoicing, accounting-system MCP
+7. [Risk, Compliance, and Audit](https://finance-agents.dev/chapters/7-risk-compliance-and-audit.md) · [中文](https://finance-agents.dev/zh/chapters/7-risk-compliance-and-audit.md) — AML/KYC, DD, gated actions
+8. [Personal Finance](https://finance-agents.dev/chapters/8-personal-finance.md) · [中文](https://finance-agents.dev/zh/chapters/8-personal-finance.md) — local-first budgets and accounts
+9. [Evaluation Benchmarks and Arenas](https://finance-agents.dev/chapters/9-evaluation-benchmarks-and-arenas.md) · [中文](https://finance-agents.dev/zh/chapters/9-evaluation-benchmarks-and-arenas.md) — benchmarks, live arenas, public track records
+10. [Backtesting, Replay, and Leakage Control](https://finance-agents.dev/chapters/10-backtesting-replay-and-leakage-control.md) · [中文](https://finance-agents.dev/zh/chapters/10-backtesting-replay-and-leakage-control.md) — market-time correctness
+- [Appendix](https://finance-agents.dev/appendix.md) · [中文](https://finance-agents.dev/zh/appendix.md) — models, surveys, neighboring lists
+
+## Guides / 指南
+
+- [Guides](https://finance-agents.dev/guides/index.md) · [指南](https://finance-agents.dev/zh/guides/index.md) — index of comparisons, project pages, and category notes. HTML: https://finance-agents.dev/guides/ and https://finance-agents.dev/zh/guides/.
+
+## Category notes / 分类导读
+
+- [Data and Tools](https://finance-agents.dev/categories/data-and-tools.md) · [中文](https://finance-agents.dev/zh/categories/data-and-tools.md) — Reading note for chapter 1: market and filing data, MCP servers, official broker kits, and skill packs.
+- [Investment Research](https://finance-agents.dev/categories/investment-research.md) · [中文](https://finance-agents.dev/zh/categories/investment-research.md) — Reading note for chapter 2: research agents and self-hosted workbenches that turn filings and news into memos.
+- [Multi-Agent Decisions](https://finance-agents.dev/categories/multi-agent-decisions.md) · [中文](https://finance-agents.dev/zh/categories/multi-agent-decisions.md) — Reading note for chapter 3: multi-agent desks that debate and hand off a decision.
+- [Trading and Portfolio](https://finance-agents.dev/categories/trading-and-portfolio.md) · [中文](https://finance-agents.dev/zh/categories/trading-and-portfolio.md) — Reading note for chapter 4: from a signal to a sized order, plus prediction markets and broker bridges.
+- [Quant Automation](https://finance-agents.dev/categories/quant-automation.md) · [中文](https://finance-agents.dev/zh/categories/quant-automation.md) — Reading note for chapter 5: agents that mine factors, write strategy code, and iterate backtests.
+- [Accounting](https://finance-agents.dev/categories/accounting.md) · [中文](https://finance-agents.dev/zh/categories/accounting.md) — Reading note for chapter 6: ledgers, tax and invoicing, and accounting-system MCP servers.
+- [Risk and Compliance](https://finance-agents.dev/categories/risk-and-compliance.md) · [中文](https://finance-agents.dev/zh/categories/risk-and-compliance.md) — Reading note for chapter 7: AML/KYC, due diligence, and firewalls in front of irreversible actions.
+- [Personal Finance](https://finance-agents.dev/categories/personal-finance.md) · [中文](https://finance-agents.dev/zh/categories/personal-finance.md) — Reading note for chapter 8: local-first budgets and the bridges agents use to read them.
+- [Evaluation and Arenas](https://finance-agents.dev/categories/evaluation.md) · [中文](https://finance-agents.dev/zh/categories/evaluation.md) — Reading note for chapter 9: benchmarks, live arenas, and public track records for finance agents.
+- [Backtesting and Leakage](https://finance-agents.dev/categories/backtesting.md) · [中文](https://finance-agents.dev/zh/categories/backtesting.md) — Reading note for chapter 10: point-in-time data, replay, and look-ahead control for agent loops.
+
+## Project pages / 项目页
+
+- [OpenBB](https://finance-agents.dev/projects/openbb.md) · [中文](https://finance-agents.dev/zh/projects/openbb.md) — What the OpenBB repository is, which directories it ships, and the GitHub facts recorded on 2026-10-22.
+- [AKShare](https://finance-agents.dev/projects/akshare.md) · [中文](https://finance-agents.dev/zh/projects/akshare.md) — What the AKShare Python data library covers, and the GitHub facts recorded on 2026-10-22.
+- [Dexter](https://finance-agents.dev/projects/dexter.md) · [中文](https://finance-agents.dev/zh/projects/dexter.md) — What the Dexter research agent repository contains, and the GitHub facts recorded on 2026-10-22.
+- [FinRobot](https://finance-agents.dev/projects/finrobot.md) · [中文](https://finance-agents.dev/zh/projects/finrobot.md) — What the FinRobot agent platform repository contains, and the GitHub facts recorded on 2026-10-22.
+- [TradingAgents](https://finance-agents.dev/projects/tradingagents.md) · [中文](https://finance-agents.dev/zh/projects/tradingagents.md) — What the TradingAgents multi-agent framework contains, and the GitHub facts recorded on 2026-10-22.
+- [ai-hedge-fund](https://finance-agents.dev/projects/ai-hedge-fund.md) · [中文](https://finance-agents.dev/zh/projects/ai-hedge-fund.md) — What the ai-hedge-fund simulation contains, and the GitHub facts recorded on 2026-10-22.
+- [nofx](https://finance-agents.dev/projects/nofx.md) · [中文](https://finance-agents.dev/zh/projects/nofx.md) — What the nofx trading terminal repository contains, and the GitHub facts recorded on 2026-10-22.
+- [FinRL-Trading](https://finance-agents.dev/projects/finrl-trading.md) · [中文](https://finance-agents.dev/zh/projects/finrl-trading.md) — What the FinRL-Trading (FinRL-X) repository contains, and the GitHub facts recorded on 2026-10-22.
+- [Qlib](https://finance-agents.dev/projects/qlib.md) · [中文](https://finance-agents.dev/zh/projects/qlib.md) — What the Qlib quant platform is, and the GitHub facts recorded on 2026-10-22.
+- [RD-Agent](https://finance-agents.dev/projects/rd-agent.md) · [中文](https://finance-agents.dev/zh/projects/rd-agent.md) — What the RD-Agent research loop covers in quant scenarios, and the GitHub facts recorded on 2026-10-22.
+- [Beancount](https://finance-agents.dev/projects/beancount.md) · [中文](https://finance-agents.dev/zh/projects/beancount.md) — What the Beancount ledger is, and the GitHub facts recorded on 2026-10-22.
+- [Actual](https://finance-agents.dev/projects/actual.md) · [中文](https://finance-agents.dev/zh/projects/actual.md) — What the Actual budget app is, and the GitHub facts recorded on 2026-10-22.
+- [FinGPT](https://finance-agents.dev/projects/fingpt.md) · [中文](https://finance-agents.dev/zh/projects/fingpt.md) — What the FinGPT financial-LLM repository contains, and the GitHub facts recorded on 2026-10-22.
+- [FinRL](https://finance-agents.dev/projects/finrl.md) · [中文](https://finance-agents.dev/zh/projects/finrl.md) — What the FinRL reinforcement-learning repository contains, and the GitHub facts recorded on 2026-10-22.
+- [NautilusTrader](https://finance-agents.dev/projects/nautilus-trader.md) · [中文](https://finance-agents.dev/zh/projects/nautilus-trader.md) — What the NautilusTrader engine is, and the GitHub facts recorded on 2026-10-22.
+
+## Comparisons / 对照
+
+- [FinGPT vs TradingAgents](https://finance-agents.dev/compare/fingpt-vs-tradingagents.md) · [中文](https://finance-agents.dev/zh/compare/fingpt-vs-tradingagents.md) — FinGPT is a financial LLM repository. TradingAgents is a multi-agent trading framework. Repository facts from the GitHub API on 2026-10-22.
+- [Best open-source trading agents](https://finance-agents.dev/compare/open-source-trading-agents.md) · [中文](https://finance-agents.dev/zh/compare/open-source-trading-agents.md) — Chapter 3 and 4 trading-agent repositories ordered by GitHub stars on 2026-10-22, plus the execution engines filed beside them.
+- [Open-source financial research/report agents compared](https://finance-agents.dev/compare/financial-research-agents.md) · [中文](https://finance-agents.dev/zh/compare/financial-research-agents.md) — Research and report agents from chapter 2, plus two workbenches, with GitHub facts from 2026-10-22.
 
 ## Use with AI / 在 AI 里使用
 
 - [Home (Markdown)](https://finance-agents.dev/index.md) / [中文首页](https://finance-agents.dev/zh/index.md)
-- [projects.json](https://finance-agents.dev/projects.json): every entry with chapter, section, English and Chinese descriptions, and tags
+- [projects.json](https://finance-agents.dev/projects.json): every entry with chapter, section, English and Chinese descriptions, and tags. Entries that have a project page also include page_en and page_zh.
 - MCP (read-only, Streamable HTTP, no auth): https://mcp.finance-agents.dev/mcp — tools: search_projects, list_chapters, get_chapter, get_project
 - Claude Code: `claude mcp add --transport http finance-agents https://mcp.finance-agents.dev/mcp`
 

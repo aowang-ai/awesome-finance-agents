@@ -10,4 +10,7 @@ user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 exclude = [
   "^https://x\\.com/",
   "^https://twitter\\.com/",
+  # Same-site guide URLs. They 404 until this revision is deployed.
+  # The VitePress build rewrites them to root-relative links and fails on a miss.
+  "^https://finance-agents\\.dev/(zh/)?(projects|categories|compare)/",
 ]

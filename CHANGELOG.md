@@ -9,6 +9,13 @@ Notable changes to the list are recorded here. Individual link additions and fix
 - **Every month:** `scripts/check_stale.py` flags GitHub repositories that are archived, renamed, missing, or have had no push in 12 months.
 - **Every quarter:** a maintainer re-reads each chapter, removes stale entries, and records the review here.
 
+## [Unreleased]
+
+### Added
+
+- Site guides in English and Chinese: 10 category notes, 15 project pages, and 3 comparison pages. Repository figures are GitHub API values from 2026-10-22.
+- A guides index at `/guides` and `/zh/guides`. Category, project, and comparison pages stay out of the top nav and the chapter sidebar.
+
 ## [0.2.2] - 2026-10-19
 
 ### Added

@@ -6,11 +6,13 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 // config loads (dev, build). Output goes to site/src/ (git-ignored).
 import fs from 'node:fs'
 import { splitReadmes, REPO_URL, ROOT, GEN } from '../scripts/split-readme.mjs'
+import { pageSchema, finalizeSitemap } from '../scripts/extra-pages.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const manifest = splitReadmes()
 const en = manifest.locales.root
 const zh = manifest.locales.zh
+const guides = manifest.guides
 
 // Served at the root of the custom domain (site/public/CNAME).
 const base = process.env.DOCS_BASE || '/'
@@ -32,7 +34,11 @@ function altPaths(relativePath: string): { en: string; zh: string } {
   return { en: pageUrl(enRel), zh: pageUrl(zhRel) }
 }
 
-function sidebar(loc: typeof en, overview: string, contributing: string): DefaultTheme.SidebarItem[] {
+function guideItems(group: { title: { en: string; zh: string }; link: { en: string; zh: string } }[], lang: 'en' | 'zh') {
+  return group.map((g) => ({ text: g.title[lang], link: g.link[lang] }))
+}
+
+function chapterSidebar(loc: typeof en, overview: string, contributing: string): DefaultTheme.SidebarItem[] {
   const chapters = loc.pages.filter((p: any) => p.slug !== 'appendix')
   const appendix = loc.pages.find((p: any) => p.slug === 'appendix')
   return [
@@ -52,14 +58,64 @@ function sidebar(loc: typeof en, overview: string, contributing: string): Defaul
   ]
 }
 
+function guideSidebar(lang: 'en' | 'zh'): DefaultTheme.SidebarItem[] {
+  const home = lang === 'zh' ? '/zh/guides/' : '/guides/'
+  return [
+    { text: lang === 'zh' ? '指南' : 'Guides', link: home },
+    {
+      text: lang === 'zh' ? '对照' : 'Comparisons',
+      items: guideItems(guides.comparisons, lang),
+    },
+    {
+      text: lang === 'zh' ? '项目' : 'Projects',
+      items: guideItems(guides.projects, lang),
+    },
+    {
+      text: lang === 'zh' ? '分类' : 'Categories',
+      items: guideItems(guides.categories, lang),
+    },
+  ]
+}
+
+// Path prefixes are matched against the page relative path. Longer prefixes
+// win, so guide routes keep their own sidebar and chapter/home routes keep
+// the chapter list.
+function sidebars(loc: typeof en, overview: string, contributing: string): DefaultTheme.Sidebar {
+  const lang = loc.key === 'zh' ? 'zh' : 'en'
+  const chapters = chapterSidebar(loc, overview, contributing)
+  const notes = guideSidebar(lang)
+  if (lang === 'zh') {
+    return {
+      '/zh/guides/': notes,
+      '/zh/categories/': notes,
+      '/zh/projects/': notes,
+      '/zh/compare/': notes,
+      '/zh/': chapters,
+    }
+  }
+  return {
+    '/guides/': notes,
+    '/categories/': notes,
+    '/projects/': notes,
+    '/compare/': notes,
+    '/': chapters,
+  }
+}
+
 const AUTHOR_URL = 'https://aowang.ai'
-const footer = (loc: typeof en, license: string) => ({
-  message:
+const footer = (loc: typeof en, license: string) => {
+  const guidesLink =
     loc.key === 'zh'
-      ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护`
-      : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a>`,
-  copyright: license,
-})
+      ? '<a href="/zh/guides/">指南</a>'
+      : '<a href="/guides/">Guides</a>'
+  return {
+    message:
+      loc.key === 'zh'
+        ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护 · ${guidesLink}`
+        : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a> · ${guidesLink}`,
+    copyright: license,
+  }
+}
 
 const personOrgLd = {
   '@context': 'https://schema.org',
@@ -194,6 +250,10 @@ export default withMermaid(
           ),
         ])
       }
+      const ld = pageSchema(pageData, siteUrl)
+      if (ld) {
+        head.push(['script', { type: 'application/ld+json' }, JSON.stringify(ld)])
+      }
     },
     transformHead({ pageData }) {
       // Ensure hreflang / og tags also land via transformHead for pages
@@ -208,16 +268,23 @@ export default withMermaid(
       ]
     },
     // Copy the per-page Markdown, projects.json and llms-full.txt into the build.
-    buildEnd(siteConfig) {
+    async buildEnd(siteConfig) {
       fs.cpSync(GEN, siteConfig.outDir, { recursive: true })
+      await finalizeSitemap(siteConfig.outDir)
     },
     sitemap: {
       hostname: siteUrl,
       transformItems(items) {
-        return items.map((item) => ({
-          ...item,
-          lastmod: buildDay,
-        }))
+        return items
+          .filter((item) => !String(item.url || '').includes('404'))
+          .map((item) => {
+            const links = Array.isArray(item.links) ? item.links.map((l) => ({ ...l })) : undefined
+            if (links && !links.some((l) => l.lang === 'x-default')) {
+              const enLink = links.find((l) => l.lang === 'en-US') || links[0]
+              links.push({ lang: 'x-default', url: enLink.url })
+            }
+            return { ...item, lastmod: buildDay, ...(links ? { links } : {}) }
+          })
       },
     },
     vite: {
@@ -318,7 +385,7 @@ export default withMermaid(
             { text: 'Appendix', link: '/appendix' },
             { text: 'Contribute', link: `${REPO_URL}/blob/main/CONTRIBUTING.md` },
           ],
-          sidebar: sidebar(en, 'Overview', 'Contributing'),
+          sidebar: sidebars(en, 'Overview', 'Contributing'),
           footer: footer(en, 'Published under CC0 1.0 Universal'),
           docFooter: { prev: en.labels.prev, next: en.labels.next },
         },
@@ -336,7 +403,7 @@ export default withMermaid(
             { text: '附录', link: '/zh/appendix' },
             { text: '参与贡献', link: `${REPO_URL}/blob/main/CONTRIBUTING.md` },
           ],
-          sidebar: sidebar(zh, '概览', '贡献指南'),
+          sidebar: sidebars(zh, '概览', '贡献指南'),
           footer: footer(zh, '以 CC0 1.0 Universal 发布'),
           docFooter: { prev: zh.labels.prev, next: zh.labels.next },
           outline: { level: [2, 3], label: '本页目录' },
