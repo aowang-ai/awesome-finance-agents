@@ -80,6 +80,8 @@ flowchart TB
 
 金融 agent 的上限取决于它能调用的数据和工具。本章收录行情、财报、券商桥，以及面向 MCP 的 Skills 包。
 
+相关页面：[数据与工具](https://finance-agents.dev/zh/categories/data-and-tools)、[OpenBB](https://finance-agents.dev/zh/projects/openbb)、[AKShare](https://finance-agents.dev/zh/projects/akshare)。
+
 ### 平台与行情数据
 
 - [OpenBB](https://github.com/openbq-org/OpenBB) - 面向分析师、量化和 AI agent 的开放数据平台，覆盖股票、期权、加密和宏观。
@@ -153,6 +155,8 @@ flowchart TB
 
 投研 agent 阅读财报、电话会、新闻和资料室，产出可溯源的投资备忘录。难点是每一条数字和结论都要有出处。
 
+相关页面：[投研与深度研究](https://finance-agents.dev/zh/categories/investment-research)、[Dexter](https://finance-agents.dev/zh/projects/dexter)、[FinRobot](https://finance-agents.dev/zh/projects/finrobot)、[开源金融研究与报告 agent 对照](https://finance-agents.dev/zh/compare/financial-research-agents)。
+
 ### 开源投研 agent
 
 - [dexter](https://github.com/virattt/dexter) - 带工具调用和结构化报告的自主深度金融研究 agent。
@@ -197,6 +201,8 @@ flowchart TB
 
 这类系统模拟分析师团队：专长 agent 辩论、交接并形成决策。更适合研究角色结构，而不是开箱即用的 alpha。
 
+相关页面：[多 agent 决策](https://finance-agents.dev/zh/categories/multi-agent-decisions)、[TradingAgents](https://finance-agents.dev/zh/projects/tradingagents)、[ai-hedge-fund](https://finance-agents.dev/zh/projects/ai-hedge-fund)、[FinGPT vs TradingAgents](https://finance-agents.dev/zh/compare/fingpt-vs-tradingagents)。
+
 ### 代表性多 agent 系统
 
 - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - 带分析师、交易员、风控角色的多智能体 LLM 交易框架。
@@ -227,6 +233,8 @@ flowchart TB
 ### 要解决的问题
 
 从信号到订单：仓位、风险预算、券商/交易所连接，以及组合分析。更完整的交易向清单见附录中的 LLMQuant/awesome-trading-agents。
+
+相关页面：[交易与组合](https://finance-agents.dev/zh/categories/trading-and-portfolio)、[nofx](https://finance-agents.dev/zh/projects/nofx)、[FinRL-Trading](https://finance-agents.dev/zh/projects/finrl-trading)、[开源交易 agent 对照](https://finance-agents.dev/zh/compare/open-source-trading-agents)。
 
 ### LLM 交易 agent
 
@@ -278,6 +286,8 @@ flowchart TB
 
 挖掘因子、写策略代码、跑回测并迭代的 agent，最接近「自主量化研究员」。
 
+相关页面：[量化研究自动化](https://finance-agents.dev/zh/categories/quant-automation)、[Qlib](https://finance-agents.dev/zh/projects/qlib)、[RD-Agent](https://finance-agents.dev/zh/projects/rd-agent)。
+
 ### 研究自动化系统
 
 - [qlib](https://github.com/microsoft/qlib) - 面向 AI 的量化平台，常作因子与模型研究 agent 的底座。
@@ -313,6 +323,8 @@ flowchart TB
 
 记账、对账、发票、税务与报表类 agent，以及接入会计系统的 MCP。
 
+相关页面：[财务与会计](https://finance-agents.dev/zh/categories/accounting)、[Beancount](https://finance-agents.dev/zh/projects/beancount)。
+
 ### 账本与会计 agent
 
 - [beancount](https://github.com/beancount/beancount) - 复式明文记账账本，常被记账 agent 当作写入目标。
@@ -347,6 +359,8 @@ flowchart TB
 
 AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（下单、支付、写账）前面的 action firewall。
 
+相关页面：[风控与合规](https://finance-agents.dev/zh/categories/risk-and-compliance)。
+
 ### 尽调、AML/KYC 与防火墙
 
 - [due-diligence-agents](https://github.com/zoharbabin/due-diligence-agents) - 多智能体的并购 / 企业尽调工作流。
@@ -368,6 +382,8 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 ### 要解决的问题
 
 预算、消费分析、净资产跟踪，以及 agent 可通过 MCP/Skills 接入的本地优先理财应用。
+
+相关页面：[个人理财](https://finance-agents.dev/zh/categories/personal-finance)、[Actual](https://finance-agents.dev/zh/projects/actual)。
 
 ### 应用与 MCP 桥
 
@@ -396,6 +412,8 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 ### 要解决的问题
 
 衡量研究问答、交易决策、安全性和实盘竞技场表现。没有评测，金融 agent 就只是演示。
+
+相关页面：[评测与竞技场](https://finance-agents.dev/zh/categories/evaluation)。
 
 ### 研究与开卷问答
 
@@ -448,6 +466,8 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 
 金融专属可靠性层：时点数据、前视偏差控制、确定性回放和真实成本模型。通用 agent 持久执行放在 agent-infra 类清单；本章只谈市场时间正确性。
 
+相关页面：[回测与防泄漏](https://finance-agents.dev/zh/categories/backtesting)、[NautilusTrader](https://finance-agents.dev/zh/projects/nautilus-trader)。
+
 ### Harness 与引擎
 
 - [TraderHarness](https://github.com/HephaestLab/TraderHarness) - ⭐ 面向 LLM 交易者的抗污染时点回测与回放 harness。
@@ -467,6 +487,8 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 ## 附录
 
 模型、综述和相邻清单：有用的上下文，但本身不都是 agent。
+
+相关页面：[FinGPT](https://finance-agents.dev/zh/projects/fingpt)、[FinRL](https://finance-agents.dev/zh/projects/finrl)。
 
 ### 金融大模型与相关模型
 

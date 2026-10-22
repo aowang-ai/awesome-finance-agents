@@ -42,6 +42,8 @@ interface Project {
   description_en: string
   description_zh: string
   tags: string[]
+  page_en?: string
+  page_zh?: string
 }
 interface Data {
   generated: string
@@ -115,7 +117,10 @@ function searchProjects(data: Data, query: string, chapter?: string, limit = 10)
 }
 
 const view = (p: Project, lang?: Lang) => {
-  const base = { name: p.name, url: p.url, chapter: p.chapter, tags: p.tags }
+  const pages = lang === 'en' ? (p.page_en ? { page: p.page_en } : {})
+    : lang === 'zh' ? (p.page_zh ? { page: p.page_zh } : {})
+    : { ...(p.page_en ? { page_en: p.page_en } : {}), ...(p.page_zh ? { page_zh: p.page_zh } : {}) }
+  const base = { name: p.name, url: p.url, chapter: p.chapter, tags: p.tags, ...pages }
   if (lang === 'en') return { ...base, chapter_title: p.chapter_title_en, section: p.section, description: p.description_en }
   if (lang === 'zh') return { ...base, chapter_title: p.chapter_title_zh, section: p.section_zh, description: p.description_zh }
   return { ...base, chapter_title_en: p.chapter_title_en, section: p.section, description_en: p.description_en, description_zh: p.description_zh }

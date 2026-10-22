@@ -12,6 +12,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { writeGuides, guideRels } from './extra-pages.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 export const ROOT = path.resolve(here, '../..')
@@ -241,6 +242,7 @@ function buildLocale(loc, chapterSlugs) {
   const rewrite = (lines) =>
     lines.map((l) =>
       l.replace(/\]\(([^)\s]+)\)/g, (all, target) => {
+        if (target.startsWith(`${SITE_ORIGIN}/`)) return `](${target.slice(SITE_ORIGIN.length)})`
         if (/^(https?:|mailto:)/.test(target)) return all
         if (target.startsWith('#')) {
           const to = anchors.get(decodeURIComponent(target.slice(1)))
@@ -419,7 +421,9 @@ function buildLocale(loc, chapterSlugs) {
     while (j < body.length && !/^#{2,3} /.test(body[j])) j++
     return [body.slice(0, i), trimBlank(body.slice(i + 1, j)), body.slice(j)]
   }
-  for (const p of [...pages, appendixPage]) {
+  const sequence = [...pages, appendixPage]
+  for (let idx = 0; idx < sequence.length; idx++) {
+    const p = sequence[idx]
     const desc = plain(
       trimBlank(p.body).find((l) => l.trim() && !/^#/.test(l)) || p.title,
     ).slice(0, 200)
@@ -434,10 +438,16 @@ function buildLocale(loc, chapterSlugs) {
     if (pitfall) body = [...b2, ...a2]
     const isChapter = p.slug !== 'appendix'
     const meta = [isChapter ? L.chapterOf(p.num, total) : null, L.entriesN(p.entries)].filter(Boolean).join(' · ')
+    const navField = (key, item) =>
+      item
+        ? `${key}:\n  text: ${yamlStr(item.title)}\n  link: ${yamlStr(item.link)}`
+        : `${key}: false`
     const page = [
       '---',
       `title: ${yamlStr(p.title)}`,
       `description: ${yamlStr(desc)}`,
+      navField('prev', sequence[idx - 1]),
+      navField('next', sequence[idx + 1]),
       '---',
       '',
       `<p class="afa-eyebrow">${esc(meta)}</p>`,
@@ -540,8 +550,11 @@ function useWithAi(key) {
       ? `- **llms.txt**：[${SITE_ORIGIN}/llms.txt](${SITE_ORIGIN}/llms.txt) 是索引，[llms-full.txt](${SITE_ORIGIN}/llms-full.txt) 是中英文全文。`
       : `- **llms.txt**: [${SITE_ORIGIN}/llms.txt](${SITE_ORIGIN}/llms.txt) is the index; [llms-full.txt](${SITE_ORIGIN}/llms-full.txt) has the full text in English and Chinese.`,
     zh
-      ? `- **JSON**：[${SITE_ORIGIN}/projects.json](${SITE_ORIGIN}/projects.json)，每条项目的章节、分组、中英文描述和标签。`
-      : `- **JSON**: [${SITE_ORIGIN}/projects.json](${SITE_ORIGIN}/projects.json) lists every entry with chapter, section, English and Chinese descriptions, and tags.`,
+      ? `- **JSON**：[${SITE_ORIGIN}/projects.json](${SITE_ORIGIN}/projects.json)，每条项目的章节、分组、中英文描述和标签。有项目页的条目另外带 \`page_en\` / \`page_zh\`。`
+      : `- **JSON**: [${SITE_ORIGIN}/projects.json](${SITE_ORIGIN}/projects.json) lists every entry with chapter, section, English and Chinese descriptions, and tags. Entries with a project page also include \`page_en\` and \`page_zh\`.`,
+    zh
+      ? `- **导读**：对照、分类和项目页列在 [llms.txt](${SITE_ORIGIN}/llms.txt)，每一页同样有 \`.md\`。`
+      : `- **Guides**: comparison, category, and project pages are listed in [llms.txt](${SITE_ORIGIN}/llms.txt). Each has a \`.md\` copy, same as the chapters.`,
     zh
       ? `- **MCP**（只读，无需鉴权）：\`${MCP_URL}\`。工具有 \`search_projects\`（中英文关键词）、\`list_chapters\`、\`get_chapter\`、\`get_project\`。`
       : `- **MCP** (read-only, no auth): \`${MCP_URL}\`. Tools: \`search_projects\` (English or Chinese keywords), \`list_chapters\`, \`get_chapter\`, \`get_project\`.`,
@@ -564,7 +577,7 @@ function useWithAi(key) {
   ]
 }
 
-function writeProjectsJson(en, zh) {
+function writeProjectsJson(en, zh, pageByUrl) {
   const zhByKey = new Map(zh.entries.map((e) => [`${e.chapter}|${e.url}`, e]))
   const zhByUrl = new Map(zh.entries.map((e) => [e.url, e]))
   const zhPage = new Map(zh.pages.map((p) => [p.slug, p]))
@@ -589,6 +602,7 @@ function writeProjectsJson(en, zh) {
   const chTitleZh = new Map(chapters.map((c) => [c.id, c.title_zh]))
   const projects = en.entries.map((e) => {
     const z = zhByKey.get(`${e.chapter}|${e.url}`) || zhByUrl.get(e.url)
+    const page = pageByUrl?.get(String(e.url).replace(/\/$/, '').toLowerCase())
     return {
       name: e.name,
       url: e.url,
@@ -600,6 +614,7 @@ function writeProjectsJson(en, zh) {
       description_en: e.description,
       description_zh: z?.description || '',
       tags: [...new Set([...e.tags, ...(z?.tags || [])])],
+      ...(page || {}),
     }
   })
   const data = {
@@ -619,10 +634,11 @@ function writeProjectsJson(en, zh) {
 }
 
 // llms-full.txt: every Markdown page, English then Chinese.
-function writeLlmsFull(en, zh) {
+function writeLlmsFull(en, zh, rels = []) {
   const order = (loc, dir) => [
     path.join(dir, 'index.md'),
     ...loc.pages.map((p) => path.join(dir, p.slug === 'appendix' ? 'appendix.md' : `chapters/${p.slug}.md`)),
+    ...rels.map((rel) => path.join(dir, rel)),
   ]
   const parts = [
     `# ${en.name}`,
@@ -645,13 +661,14 @@ export function splitReadmes() {
   fs.mkdirSync(GEN, { recursive: true })
   const enFull = buildLocale(LOCALES[0])
   const zhFull = buildLocale(LOCALES[1], enFull.slugs)
-  const projects = writeProjectsJson(enFull, zhFull)
-  writeLlmsFull(enFull, zhFull)
+  const guides = writeGuides({ src: SRC, gen: GEN, en: enFull, zh: zhFull })
+  const projects = writeProjectsJson(enFull, zhFull, guides.pageByUrl)
+  writeLlmsFull(enFull, zhFull, guideRels())
   const strip = ({ entries, questions, appendixLead, ...rest }) => rest
   const en = strip(enFull)
   const zh = strip(zhFull)
   if (projects.count !== enFull.readmeEntries) throw new Error(`projects.json has ${projects.count} entries, README has ${enFull.readmeEntries}`)
-  const manifest = { generatedAt: new Date().toISOString(), locales: { root: en, zh } }
+  const manifest = { generatedAt: new Date().toISOString(), locales: { root: en, zh }, guides: guides.guideNav }
   fs.writeFileSync(path.join(SRC, 'manifest.json'), JSON.stringify(manifest, null, 2))
   fs.writeFileSync(
     path.join(SRC, 'README.md'),

@@ -1,0 +1,1956 @@
+{
+  "fetched_at": "2026-10-22",
+  "source": "GitHub GraphQL API (stargazerCount, forkCount, licenseInfo, primaryLanguage, languages, repositoryTopics, defaultBranchRef target commit) and, where listed, dependency files read the same day. Numbers are the API values on that date.",
+  "repos": {
+    "openbq-org/OpenBB": {
+      "nameWithOwner": "openbq-org/OpenBB",
+      "url": "https://github.com/openbq-org/OpenBB",
+      "description": "Open Data Platform for analysts, quants and AI agents.",
+      "stars": 74538,
+      "forks": 7745,
+      "created": "2020-12-20",
+      "pushed": "2026-10-18",
+      "archived": false,
+      "homepage": "https://openbb.co",
+      "branch": "develop",
+      "commit": {
+        "sha": "78020ee4b864ab50b8c1f56373877c2b4e7fb623",
+        "short": "78020ee",
+        "date": "2026-10-18",
+        "headline": "fix(fred): drop the 5-year TIPS maturity that FRED no longer publishe…",
+        "url": "https://github.com/openbq-org/OpenBB/commit/78020ee4b864ab50b8c1f56373877c2b4e7fb623"
+      },
+      "license_spdx": "NOASSERTION",
+      "license": {
+        "short_en": "Apache-2.0 in LICENSE; API: NOASSERTION",
+        "short_zh": "LICENSE 写明 Apache-2.0；API 为 NOASSERTION",
+        "note_en": "The LICENSE file says every file in the repository is under the Apache License, Version 2.0. GitHub's license API returns SPDX NOASSERTION (\"Other\").",
+        "note_zh": "LICENSE 文件写明仓库内全部文件使用 Apache License 2.0。GitHub license API 返回的 SPDX 是 NOASSERTION（Other）。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python"
+      ],
+      "topics": [
+        "python",
+        "machine-learning",
+        "finance",
+        "stocks",
+        "quantitative-finance",
+        "economics",
+        "crypto",
+        "openbb",
+        "ai",
+        "derivatives",
+        "equity",
+        "fixed-income",
+        "options"
+      ],
+      "deps": [],
+      "root": [
+        "cli",
+        "desktop",
+        "openbb_platform"
+      ],
+      "go_mod": ""
+    },
+    "akfamily/akshare": {
+      "nameWithOwner": "akfamily/akshare",
+      "url": "https://github.com/akfamily/akshare",
+      "description": "AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",
+      "stars": 23037,
+      "forks": 3552,
+      "created": "2019-10-01",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://akshare.akfamily.xyz",
+      "branch": "main",
+      "commit": {
+        "sha": "fe10d1decb705e5f43cc8ca3339ca39e580fb8f4",
+        "short": "fe10d1d",
+        "date": "2026-10-13",
+        "headline": "Dev (#7440)",
+        "url": "https://github.com/akfamily/akshare/commit/fe10d1decb705e5f43cc8ca3339ca39e580fb8f4"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "Dockerfile"
+      ],
+      "topics": [
+        "futures",
+        "financial-data",
+        "data-science",
+        "quant",
+        "fundamental",
+        "akshare",
+        "option",
+        "stock",
+        "data",
+        "datasets",
+        "bond",
+        "asset-pricing",
+        "academic",
+        "currency",
+        "finance",
+        "finance-api",
+        "economic-data",
+        "economics",
+        "data-analysis"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "beautifulsoup4",
+            "lxml",
+            "pandas",
+            "requests",
+            "curl_cffi",
+            "html5lib",
+            "xlrd",
+            "urllib3",
+            "tqdm",
+            "openpyxl",
+            "jsonpath",
+            "tabulate",
+            "decorator"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "virattt/dexter": {
+      "nameWithOwner": "virattt/dexter",
+      "url": "https://github.com/virattt/dexter",
+      "description": "An autonomous agent for deep financial research",
+      "stars": 27706,
+      "forks": 3418,
+      "created": "2025-10-14",
+      "pushed": "2026-09-23",
+      "archived": false,
+      "homepage": "",
+      "branch": "main",
+      "commit": {
+        "sha": "534f6be455523c5926eba72bdaf4f914555be5c9",
+        "short": "534f6be",
+        "date": "2026-09-23",
+        "headline": "Bump @langchain/anthropic to 1.5.11 for Claude 5 thinking support",
+        "url": "https://github.com/virattt/dexter/commit/534f6be455523c5926eba72bdaf4f914555be5c9"
+      },
+      "license_spdx": null,
+      "license": {
+        "short_en": "No LICENSE file; README says MIT",
+        "short_zh": "无 LICENSE 文件；README 写 MIT",
+        "note_en": "The GitHub license API returns 404 (no detected license file). The README section \"License\" states that the project is licensed under the MIT License.",
+        "note_zh": "GitHub license API 返回 404（未检测到 LICENSE 文件）。README 的 License 一节写明项目使用 MIT License。"
+      },
+      "language": "TypeScript",
+      "languages": [
+        "TypeScript",
+        "HTML",
+        "Shell",
+        "JavaScript"
+      ],
+      "topics": [],
+      "deps": [
+        {
+          "file": "package.json",
+          "packages": [
+            "@langchain/anthropic",
+            "@langchain/core",
+            "@langchain/exa",
+            "@langchain/google-genai",
+            "@langchain/ollama",
+            "@langchain/openai",
+            "@langchain/tavily",
+            "better-sqlite3",
+            "playwright",
+            "zod"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "AI4Finance-Foundation/FinRobot": {
+      "nameWithOwner": "AI4Finance-Foundation/FinRobot",
+      "url": "https://github.com/AI4Finance-Foundation/FinRobot",
+      "description": "FinRobot: An Open-Source AI Agent Platform for Financial Applications using Large Language Models",
+      "stars": 8264,
+      "forks": 1395,
+      "created": "2024-02-27",
+      "pushed": "2026-09-28",
+      "archived": false,
+      "homepage": "https://finrobot.ai",
+      "branch": "master",
+      "commit": {
+        "sha": "2717499b8e30f242640af08c4ad9afd1113c2d45",
+        "short": "2717499",
+        "date": "2026-09-28",
+        "headline": "docs: lead with decision intelligence and the four-part principle",
+        "url": "https://github.com/AI4Finance-Foundation/FinRobot/commit/2717499b8e30f242640af08c4ad9afd1113c2d45"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Jupyter Notebook",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Shell",
+        "JavaScript",
+        "Rust"
+      ],
+      "topics": [
+        "aiagent",
+        "fingpt",
+        "chatgpt",
+        "finance",
+        "large-language-models",
+        "multimodal-deep-learning",
+        "prompt-engineering",
+        "robo-advisor"
+      ],
+      "deps": [],
+      "root": [
+        "finrobot_autogen",
+        "finrobot_desktop",
+        "finrobot_equity"
+      ],
+      "go_mod": ""
+    },
+    "TauricResearch/TradingAgents": {
+      "nameWithOwner": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "stars": 112764,
+      "forks": 21808,
+      "created": "2024-12-28",
+      "pushed": "2026-10-16",
+      "archived": false,
+      "homepage": "https://arxiv.org/pdf/2412.20138",
+      "branch": "main",
+      "commit": {
+        "sha": "e8f5503e9b86d5c2710b0c76b1f686703968c9df",
+        "short": "e8f5503",
+        "date": "2026-10-16",
+        "headline": "Merge pull request #1536 from TauricResearch/v0.7.0",
+        "url": "https://github.com/TauricResearch/TradingAgents/commit/e8f5503e9b86d5c2710b0c76b1f686703968c9df"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Dockerfile"
+      ],
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "langchain-core",
+            "langchain-anthropic",
+            "langchain-google-genai",
+            "langchain-openai",
+            "langgraph",
+            "langgraph-checkpoint-sqlite",
+            "pandas",
+            "yfinance",
+            "stockstats",
+            "typer"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "virattt/ai-hedge-fund": {
+      "nameWithOwner": "virattt/ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "description": "An AI Hedge Fund Team",
+      "stars": 64139,
+      "forks": 11259,
+      "created": "2024-11-29",
+      "pushed": "2026-10-19",
+      "archived": false,
+      "homepage": "",
+      "branch": "main",
+      "commit": {
+        "sha": "4e1657ddc689e3939c481a8f0955444b10f02dc9",
+        "short": "4e1657d",
+        "date": "2026-10-19",
+        "headline": "Bump version to 2.6.0",
+        "url": "https://github.com/virattt/ai-hedge-fund/commit/4e1657ddc689e3939c481a8f0955444b10f02dc9"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Makefile"
+      ],
+      "topics": [],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "langchain-anthropic",
+            "langchain-openai",
+            "langchain-deepseek",
+            "langchain-google-genai",
+            "langchain-xai",
+            "pandas",
+            "numpy",
+            "pydantic",
+            "textual"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "NoFxAiOS/nofx": {
+      "nameWithOwner": "NoFxAiOS/nofx",
+      "url": "https://github.com/NoFxAiOS/nofx",
+      "description": "Your AI trading terminal assistant for US stocks, commodities, forex, and crypto.",
+      "stars": 13128,
+      "forks": 3065,
+      "created": "2025-10-28",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://vergex.trade/explore",
+      "branch": "dev",
+      "commit": {
+        "sha": "4a5e9ac2a13e6696a276440a3243b2055206512c",
+        "short": "4a5e9ac",
+        "date": "2026-10-21",
+        "headline": "fix(deps): patch redirect handling and Vite security advisories",
+        "url": "https://github.com/NoFxAiOS/nofx/commit/4a5e9ac2a13e6696a276440a3243b2055206512c"
+      },
+      "license_spdx": "AGPL-3.0",
+      "license": {
+        "short_en": "AGPL-3.0",
+        "short_zh": "AGPL-3.0",
+        "note_en": "GitHub's license API reports SPDX AGPL-3.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 AGPL-3.0。"
+      },
+      "language": "Go",
+      "languages": [
+        "Go",
+        "TypeScript",
+        "CSS",
+        "JavaScript",
+        "Shell",
+        "Python",
+        "Makefile",
+        "HTML"
+      ],
+      "topics": [
+        "ai-trading",
+        "agentictrading",
+        "ai",
+        "trading",
+        "arbitrage",
+        "binance",
+        "bitcoin",
+        "exchange",
+        "hyperliquid",
+        "perp-dex",
+        "forex",
+        "metals",
+        "stocks",
+        "x402",
+        "x402-agent",
+        "commodities",
+        "us-stocks"
+      ],
+      "deps": [
+        {
+          "file": "go.mod",
+          "packages": [
+            "github.com/gin-gonic/gin",
+            "github.com/adshao/go-binance/v2",
+            "github.com/bybit-exchange/bybit.go.api",
+            "github.com/sonirico/go-hyperliquid",
+            "github.com/ethereum/go-ethereum",
+            "github.com/lib/pq"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": "go 1.26.10"
+    },
+    "AI4Finance-Foundation/FinRL-Trading": {
+      "nameWithOwner": "AI4Finance-Foundation/FinRL-Trading",
+      "url": "https://github.com/AI4Finance-Foundation/FinRL-Trading",
+      "description": "FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading",
+      "stars": 3845,
+      "forks": 1123,
+      "created": "2020-07-26",
+      "pushed": "2026-09-18",
+      "archived": false,
+      "homepage": "https://ai4finance.org",
+      "branch": "master",
+      "commit": {
+        "sha": "4409abe925c904e570be78ebfb5e77ac3491dff8",
+        "short": "4409abe",
+        "date": "2026-09-18",
+        "headline": "Merge pull request #95 from emt-Q/fix/ml-strategy-apply-risk-limits",
+        "url": "https://github.com/AI4Finance-Foundation/FinRL-Trading/commit/4409abe925c904e570be78ebfb5e77ac3491dff8"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Shell",
+        "Dockerfile"
+      ],
+      "topics": [
+        "deep-reinforcement-learning",
+        "stock-trading",
+        "a2c-algorithm",
+        "ppo",
+        "ddpg",
+        "ensemble-strategy",
+        "stock-trading-strategy",
+        "automated-stock-trading",
+        "sharpe-ratio",
+        "finrl",
+        "portfolio",
+        "portfolio-allocation",
+        "stock-selection",
+        "finrl-x"
+      ],
+      "deps": [
+        {
+          "file": "requirements.txt",
+          "packages": [
+            "numpy",
+            "pandas",
+            "scikit-learn",
+            "lightgbm",
+            "xgboost",
+            "yfinance",
+            "alpaca-py",
+            "openai",
+            "streamlit",
+            "torch",
+            "finnhub"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "microsoft/qlib": {
+      "nameWithOwner": "microsoft/qlib",
+      "url": "https://github.com/microsoft/qlib",
+      "description": "Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process.",
+      "stars": 49590,
+      "forks": 7829,
+      "created": "2020-08-14",
+      "pushed": "2026-10-22",
+      "archived": false,
+      "homepage": "https://qlib.readthedocs.io/en/latest/",
+      "branch": "main",
+      "commit": {
+        "sha": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+        "short": "5435523",
+        "date": "2026-10-08",
+        "headline": "fix(security): constrain config-driven code execution (#2340)",
+        "url": "https://github.com/microsoft/qlib/commit/54355232463878d2eebb91fe0ee5fa7fa1f5976c"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Cython",
+        "Makefile",
+        "Shell",
+        "JavaScript",
+        "Dockerfile"
+      ],
+      "topics": [
+        "quantitative-finance",
+        "machine-learning",
+        "stock-data",
+        "platform",
+        "finance",
+        "algorithmic-trading",
+        "python",
+        "investment",
+        "quant",
+        "quantitative-trading",
+        "quant-dataset",
+        "quant-models",
+        "auto-quant",
+        "fintech",
+        "research-paper",
+        "paper",
+        "research",
+        "deep-learning"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "numpy",
+            "pandas",
+            "mlflow",
+            "lightgbm",
+            "gym",
+            "cvxpy",
+            "redis",
+            "pymongo",
+            "loguru",
+            "pyyaml"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "microsoft/RD-Agent": {
+      "nameWithOwner": "microsoft/RD-Agent",
+      "url": "https://github.com/microsoft/RD-Agent",
+      "description": "Research and development (R&D) is crucial for the enhancement of industrial productivity, especially in the AI era, where the core aspects of R&D are mainly focused on data and models. We are committed to automating these high-value generic R&D processes through R&D-Agent, which lets AI drive data-driven AI. 🔗https://aka.ms/RD-Agent-Tech-Report",
+      "stars": 15019,
+      "forks": 1981,
+      "created": "2024-04-03",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://rdagent.azurewebsites.net/",
+      "branch": "main",
+      "commit": {
+        "sha": "484776c211e4fbbeef03e0ec00d6bbee7362a4f4",
+        "short": "484776c",
+        "date": "2026-09-23",
+        "headline": "chore(main): release 1.0.0 (#1286)",
+        "url": "https://github.com/microsoft/RD-Agent/commit/484776c211e4fbbeef03e0ec00d6bbee7362a4f4"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Vue",
+        "Jupyter Notebook",
+        "Shell",
+        "JavaScript",
+        "CSS",
+        "Makefile",
+        "Dockerfile"
+      ],
+      "topics": [
+        "agent",
+        "ai",
+        "automation",
+        "data-mining",
+        "data-science",
+        "development",
+        "llm",
+        "research"
+      ],
+      "deps": [
+        {
+          "file": "requirements.txt",
+          "packages": [
+            "openai",
+            "litellm",
+            "langchain",
+            "langchain-community",
+            "pandas",
+            "numpy",
+            "scikit-learn",
+            "pyarrow",
+            "docker",
+            "pydantic-settings"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "beancount/beancount": {
+      "nameWithOwner": "beancount/beancount",
+      "url": "https://github.com/beancount/beancount",
+      "description": "Beancount: Double-Entry Accounting from Text Files.",
+      "stars": 6109,
+      "forks": 481,
+      "created": "2020-05-22",
+      "pushed": "2026-08-23",
+      "archived": false,
+      "homepage": "http://beancount.github.io/",
+      "branch": "master",
+      "commit": {
+        "sha": "9747213802acb733ce53acc6e963f5961f47d6cd",
+        "short": "9747213",
+        "date": "2026-08-23",
+        "headline": "fix: echapper les caracteres speciaux dans has_component",
+        "url": "https://github.com/beancount/beancount/commit/9747213802acb733ce53acc6e963f5961f47d6cd"
+      },
+      "license_spdx": "GPL-2.0",
+      "license": {
+        "short_en": "GPL-2.0",
+        "short_zh": "GPL-2.0",
+        "note_en": "GitHub's license API reports SPDX GPL-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 GPL-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "HTML",
+        "C",
+        "Meson",
+        "Makefile",
+        "C++",
+        "Shell",
+        "CSS"
+      ],
+      "topics": [
+        "beancount"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "click",
+            "python-dateutil",
+            "regex"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "actualbudget/actual": {
+      "nameWithOwner": "actualbudget/actual",
+      "url": "https://github.com/actualbudget/actual",
+      "description": "A local-first personal finance app",
+      "stars": 29666,
+      "forks": 3190,
+      "created": "2022-04-29",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://actualbudget.org",
+      "branch": "master",
+      "commit": {
+        "sha": "d1a536f35c5a114eda0582d5a1d744a9103cc90e",
+        "short": "d1a536f",
+        "date": "2026-10-21",
+        "headline": "bump node and electron (#9298)",
+        "url": "https://github.com/actualbudget/actual/commit/d1a536f35c5a114eda0582d5a1d744a9103cc90e"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "TypeScript",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "Shell",
+        "Dockerfile",
+        "HTML",
+        "PEG.js",
+        "Swift"
+      ],
+      "topics": [
+        "budgeting",
+        "finance",
+        "money",
+        "personal-finance"
+      ],
+      "deps": [],
+      "root": [
+        "packages"
+      ],
+      "go_mod": ""
+    },
+    "AI4Finance-Foundation/FinGPT": {
+      "nameWithOwner": "AI4Finance-Foundation/FinGPT",
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+      "description": "FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.",
+      "stars": 21447,
+      "forks": 3037,
+      "created": "2023-02-11",
+      "pushed": "2026-09-23",
+      "archived": false,
+      "homepage": "https://fingpt.io",
+      "branch": "master",
+      "commit": {
+        "sha": "fdb04c9a273d1ccc3764b09b8e3ed1e708e57566",
+        "short": "fdb04c9",
+        "date": "2026-09-23",
+        "headline": "Merge pull request #278 from jellyfishing2346/documentation-improvements",
+        "url": "https://github.com/AI4Finance-Foundation/FinGPT/commit/fdb04c9a273d1ccc3764b09b8e3ed1e708e57566"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Jupyter Notebook",
+      "languages": [
+        "Jupyter Notebook",
+        "Python",
+        "Shell",
+        "TypeScript",
+        "PLpgSQL",
+        "Dockerfile"
+      ],
+      "topics": [
+        "chatgpt",
+        "finance",
+        "fintech",
+        "large-language-models",
+        "machine-learning",
+        "nlp",
+        "prompt-engineering",
+        "pytorch",
+        "reinforcement-learning",
+        "robo-advisor",
+        "sentiment-analysis",
+        "technical-analysis",
+        "fingpt"
+      ],
+      "deps": [
+        {
+          "file": "requirements.txt",
+          "packages": [
+            "numpy",
+            "pandas",
+            "tushare",
+            "transformers",
+            "peft",
+            "sentencepiece",
+            "accelerate",
+            "torch",
+            "datasets",
+            "bitsandbytes"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "AI4Finance-Foundation/FinRL": {
+      "nameWithOwner": "AI4Finance-Foundation/FinRL",
+      "url": "https://github.com/AI4Finance-Foundation/FinRL",
+      "description": "FinRL®:  Financial Reinforcement Learning. 🔥",
+      "stars": 16782,
+      "forks": 3575,
+      "created": "2020-07-26",
+      "pushed": "2026-10-20",
+      "archived": false,
+      "homepage": "https://finrl.ai",
+      "branch": "master",
+      "commit": {
+        "sha": "c0018c25de864157dc8470f0047b0d10ec721715",
+        "short": "c0018c2",
+        "date": "2026-10-20",
+        "headline": "Merge pull request #1462 from Arc000007/codex/finrl-dow-survivorship-…",
+        "url": "https://github.com/AI4Finance-Foundation/FinRL/commit/c0018c25de864157dc8470f0047b0d10ec721715"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Jupyter Notebook",
+      "languages": [
+        "Jupyter Notebook",
+        "Python",
+        "Dockerfile",
+        "Shell"
+      ],
+      "topics": [
+        "deep-reinforcement-learning",
+        "drl-trading-agents",
+        "stock-trading",
+        "drl-algorithms",
+        "pythorch",
+        "tensorflow2",
+        "drl-framework",
+        "multi-agent-learning",
+        "finance",
+        "stock-markets",
+        "trading-tasks",
+        "openai-gym",
+        "fintech",
+        "algorithmic-trading"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "stable-baselines3",
+            "sb3-contrib",
+            "ray",
+            "ccxt",
+            "alpaca-py",
+            "yfinance",
+            "elegantrl",
+            "pyfolio-reloaded",
+            "stockstats"
+          ]
+        },
+        {
+          "file": "requirements.txt",
+          "packages": [
+            "gymnasium",
+            "stable-baselines3",
+            "ccxt",
+            "alpaca-py",
+            "yfinance"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "nautechsystems/nautilus_trader": {
+      "nameWithOwner": "nautechsystems/nautilus_trader",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+      "stars": 30589,
+      "forks": 4121,
+      "created": "2018-06-25",
+      "pushed": "2026-10-22",
+      "archived": false,
+      "homepage": "https://nautilustrader.io",
+      "branch": "develop",
+      "commit": {
+        "sha": "a51ae015c150ef68f62d9295e3efa9534f492a4a",
+        "short": "a51ae01",
+        "date": "2026-10-22",
+        "headline": "Fix Derive simulation lint and Hyperliquid test waits",
+        "url": "https://github.com/nautechsystems/nautilus_trader/commit/a51ae015c150ef68f62d9295e3efa9534f492a4a"
+      },
+      "license_spdx": "LGPL-3.0",
+      "license": {
+        "short_en": "LGPL-3.0",
+        "short_zh": "LGPL-3.0",
+        "note_en": "GitHub's license API reports SPDX LGPL-3.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 LGPL-3.0。"
+      },
+      "language": "Rust",
+      "languages": [
+        "Rust",
+        "Python",
+        "Shell",
+        "Makefile",
+        "PLpgSQL",
+        "Dockerfile",
+        "JavaScript"
+      ],
+      "topics": [
+        "algorithmic-trading-engine",
+        "trading-platform",
+        "crypto-trading",
+        "artificial-intelligence",
+        "machine-learning",
+        "trading",
+        "python",
+        "equity-trading",
+        "forex",
+        "futures-trading",
+        "sports-betting",
+        "rust",
+        "options-trading"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "RUC-NLPIR/FinSight": {
+      "nameWithOwner": "RUC-NLPIR/FinSight",
+      "url": "https://github.com/RUC-NLPIR/FinSight",
+      "description": "[ACL 2026 Main, SAC Highlight] FinSight: Towards Real-World Financial Deep Research. 🎯One ticker, one click, one publication-ready report.",
+      "stars": 276,
+      "forks": 54,
+      "created": "2025-12-13",
+      "pushed": "2026-04-06",
+      "archived": false,
+      "homepage": "",
+      "branch": "main",
+      "commit": {
+        "sha": "8fc5bce28ac201c713219a47d30367c6a84342f4",
+        "short": "8fc5bce",
+        "date": "2026-02-13",
+        "headline": "Merge branch 'main' of https://github.com/RUC-NLPIR/FinSight",
+        "url": "https://github.com/RUC-NLPIR/FinSight/commit/8fc5bce28ac201c713219a47d30367c6a84342f4"
+      },
+      "license_spdx": "GPL-3.0",
+      "license": {
+        "short_en": "GPL-3.0",
+        "short_zh": "GPL-3.0",
+        "note_en": "GitHub's license API reports SPDX GPL-3.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 GPL-3.0。"
+      },
+      "language": "Jupyter Notebook",
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "topics": [
+        "agent",
+        "code-agent",
+        "deepresearch",
+        "finance-ai",
+        "financial",
+        "financial-analysis",
+        "llm",
+        "multi-agent-system",
+        "rag"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "virattt/ai-financial-agent": {
+      "nameWithOwner": "virattt/ai-financial-agent",
+      "url": "https://github.com/virattt/ai-financial-agent",
+      "description": "A financial agent for investment research",
+      "stars": 2034,
+      "forks": 408,
+      "created": "2024-12-20",
+      "pushed": "2025-08-19",
+      "archived": false,
+      "homepage": "https://chat.financialdatasets.ai",
+      "branch": "main",
+      "commit": {
+        "sha": "836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1",
+        "short": "836d30b",
+        "date": "2025-08-19",
+        "headline": "Update prompt",
+        "url": "https://github.com/virattt/ai-financial-agent/commit/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1"
+      },
+      "license_spdx": "NOASSERTION",
+      "license": {
+        "short_en": "Apache-2.0 text; API: NOASSERTION",
+        "short_zh": "LICENSE 为 Apache-2.0 文本；API 为 NOASSERTION",
+        "note_en": "The LICENSE file is the Apache License 2.0 text and its copyright line reads \"Copyright 2024 Vercel, Inc.\" GitHub's license API returns SPDX NOASSERTION.",
+        "note_zh": "LICENSE 文件是 Apache License 2.0 文本，版权行写着 Copyright 2024 Vercel, Inc.。GitHub license API 返回的 SPDX 是 NOASSERTION。"
+      },
+      "language": "TypeScript",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS"
+      ],
+      "topics": [],
+      "deps": [
+        {
+          "file": "package.json",
+          "packages": [
+            "ai",
+            "@ai-sdk/openai"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "ginlix-ai/LangAlpha": {
+      "nameWithOwner": "ginlix-ai/LangAlpha",
+      "url": "https://github.com/ginlix-ai/LangAlpha",
+      "description": "Claude Code for Financial Market",
+      "stars": 1982,
+      "forks": 325,
+      "created": "2026-01-18",
+      "pushed": "2026-10-22",
+      "archived": false,
+      "homepage": "https://langalpha.ai",
+      "branch": "main",
+      "commit": {
+        "sha": "8b74cf2a4023f79e8232ddbdf0fcf02ba7951df1",
+        "short": "8b74cf2",
+        "date": "2026-10-22",
+        "headline": "feat(observability): stamp cost, tool outcomes and providers on runs …",
+        "url": "https://github.com/ginlix-ai/LangAlpha/commit/8b74cf2a4023f79e8232ddbdf0fcf02ba7951df1"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "Jinja",
+        "Shell"
+      ],
+      "topics": [
+        "agent",
+        "investment",
+        "langchain",
+        "langraph",
+        "llm",
+        "mcp",
+        "skills",
+        "trading"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "langchain",
+            "langchain-core",
+            "langchain-openai",
+            "langchain-anthropic",
+            "langgraph",
+            "openai"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "HKUDS/AI-Trader": {
+      "nameWithOwner": "HKUDS/AI-Trader",
+      "url": "https://github.com/HKUDS/AI-Trader",
+      "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"  ",
+      "stars": 22916,
+      "forks": 3457,
+      "created": "2025-10-23",
+      "pushed": "2026-06-11",
+      "archived": false,
+      "homepage": "https://ai4trade.ai",
+      "branch": "main",
+      "commit": {
+        "sha": "d03ff6c056b32ced735adf7c19ed8175adb1c8df",
+        "short": "d03ff6c",
+        "date": "2026-06-11",
+        "headline": "Merge pull request #255 from HKUDS/codex/ignore-research-local",
+        "url": "https://github.com/HKUDS/AI-Trader/commit/d03ff6c056b32ced735adf7c19ed8175adb1c8df"
+      },
+      "license_spdx": null,
+      "license": {
+        "short_en": "No LICENSE file detected",
+        "short_zh": "未检测到 LICENSE 文件",
+        "note_en": "The GitHub license API returns 404. No LICENSE file was detected for this repository on the fetch date.",
+        "note_zh": "GitHub license API 返回 404。抓取当日未检测到 LICENSE 文件。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "TypeScript",
+        "CSS",
+        "HTML"
+      ],
+      "topics": [],
+      "deps": [
+        {
+          "file": "service/requirements.txt",
+          "packages": [
+            "fastapi",
+            "uvicorn",
+            "pydantic",
+            "yfinance",
+            "openrouter",
+            "web3",
+            "redis",
+            "psycopg"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "Drakkar-Software/OctoBot": {
+      "nameWithOwner": "Drakkar-Software/OctoBot",
+      "url": "https://github.com/Drakkar-Software/OctoBot",
+      "description": "Free open source crypto trading bot to automate AI, Grid, DCA and TradingView strategies on Binance, Hyperliquid and 15+ exchanges, with a simple interface.",
+      "stars": 6837,
+      "forks": 1309,
+      "created": "2018-02-23",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://www.octobot.cloud",
+      "branch": "master",
+      "commit": {
+        "sha": "c45fdc2c95c5bd3d649251fa90c327e2e8f86b00",
+        "short": "c45fdc2",
+        "date": "2026-10-07",
+        "headline": "Merge pull request #3725 from Drakkar-Software/dev",
+        "url": "https://github.com/Drakkar-Software/OctoBot/commit/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00"
+      },
+      "license_spdx": "GPL-3.0",
+      "license": {
+        "short_en": "GPL-3.0",
+        "short_zh": "GPL-3.0",
+        "note_en": "GitHub's license API reports SPDX GPL-3.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 GPL-3.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "TypeScript",
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "Shell"
+      ],
+      "topics": [
+        "trading-bot",
+        "python",
+        "bitcoin",
+        "ai-trading",
+        "backtest",
+        "binance-api",
+        "coinbase-bot",
+        "cryptocurrencies",
+        "free",
+        "hyperliquid-trading-bot",
+        "paper-trading",
+        "solana",
+        "telegrambot",
+        "tradingview-pinescript-signal-alert-bot"
+      ],
+      "deps": [
+        {
+          "file": "requirements.txt",
+          "packages": [
+            "requests",
+            "aiohttp",
+            "websockets",
+            "supabase",
+            "pgpy"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "hsliuping/TradingAgents-CN": {
+      "nameWithOwner": "hsliuping/TradingAgents-CN",
+      "url": "https://github.com/hsliuping/TradingAgents-CN",
+      "description": "基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版",
+      "stars": 32404,
+      "forks": 6752,
+      "created": "2025-06-26",
+      "pushed": "2026-09-22",
+      "archived": false,
+      "homepage": "",
+      "branch": "v3.0",
+      "commit": {
+        "sha": "51060a7682cf51810b4bc3a704829438d18cd8dc",
+        "short": "51060a7",
+        "date": "2026-09-22",
+        "headline": "feat: TradingAgents-CN v3.0.0 社区版首发（Community Edition）",
+        "url": "https://github.com/hsliuping/TradingAgents-CN/commit/51060a7682cf51810b4bc3a704829438d18cd8dc"
+      },
+      "license_spdx": "NOASSERTION",
+      "license": {
+        "short_en": "Hybrid; API: NOASSERTION",
+        "short_zh": "混合授权；API 为 NOASSERTION",
+        "note_en": "The LICENSE file describes a hybrid: Apache-2.0 for tradingagents/, cli/, docs/, tests/, web/, and root config files; a source-available proprietary license for app/, frontend/, and core/. GitHub's license API returns SPDX NOASSERTION.",
+        "note_zh": "LICENSE 描述的是混合授权：tradingagents/、cli/、docs/、tests/、web/ 和根目录配置为 Apache-2.0；app/、frontend/、core/ 为源码可见的专有许可。GitHub license API 返回的 SPDX 是 NOASSERTION。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Vue",
+        "PowerShell",
+        "TypeScript",
+        "Shell",
+        "Batchfile"
+      ],
+      "topics": [],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "fastapi",
+            "uvicorn",
+            "pydantic",
+            "motor",
+            "pymongo",
+            "redis"
+          ]
+        },
+        {
+          "file": "requirements.txt",
+          "packages": [
+            "langchain-openai",
+            "langgraph",
+            "akshare",
+            "tushare",
+            "baostock",
+            "yfinance",
+            "finnhub-python"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "HKUDS/Vibe-Trading": {
+      "nameWithOwner": "HKUDS/Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "stars": 36286,
+      "forks": 5872,
+      "created": "2026-04-01",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://vibetrading.wiki/",
+      "branch": "main",
+      "commit": {
+        "sha": "11cff3f3a2d89605c89148b03dcc2dd0fcfb60db",
+        "short": "11cff3f",
+        "date": "2026-10-21",
+        "headline": "fix(channels): keep multi-paragraph teams quotes out of the user repl…",
+        "url": "https://github.com/HKUDS/Vibe-Trading/commit/11cff3f3a2d89605c89148b03dcc2dd0fcfb60db"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PowerShell"
+      ],
+      "topics": [
+        "backtesting",
+        "multi-agent",
+        "quantitative-finance",
+        "trading",
+        "ai-agent",
+        "algorithmic-trading",
+        "fintech",
+        "llm",
+        "mcp",
+        "python"
+      ],
+      "deps": [
+        {
+          "file": "pyproject.toml",
+          "packages": [
+            "langchain",
+            "langchain-core",
+            "langchain-openai",
+            "langgraph",
+            "pandas",
+            "numpy",
+            "duckdb",
+            "scikit-learn"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "TraderAlice/OpenAlice": {
+      "nameWithOwner": "TraderAlice/OpenAlice",
+      "url": "https://github.com/TraderAlice/OpenAlice",
+      "description": "Your one-person Wall Street. An AI trading agent covering equities, crypto, commodities, forex, and macro — from research through position entry, ongoing management, to exit.",
+      "stars": 7355,
+      "forks": 1153,
+      "created": "2026-02-18",
+      "pushed": "2026-10-22",
+      "archived": false,
+      "homepage": "https://openalice.ai",
+      "branch": "master",
+      "commit": {
+        "sha": "57b2f811e9a1a07f6fe9b86b68857e324f610d37",
+        "short": "57b2f81",
+        "date": "2026-10-22",
+        "headline": "feat(inbox): mark all existing unread updates as read (#1789)",
+        "url": "https://github.com/TraderAlice/OpenAlice/commit/57b2f811e9a1a07f6fe9b86b68857e324f610d37"
+      },
+      "license_spdx": "AGPL-3.0",
+      "license": {
+        "short_en": "AGPL-3.0",
+        "short_zh": "AGPL-3.0",
+        "note_en": "GitHub's license API reports SPDX AGPL-3.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 AGPL-3.0。"
+      },
+      "language": "TypeScript",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "CSS",
+        "HTML",
+        "Shell"
+      ],
+      "topics": [],
+      "deps": [
+        {
+          "file": "package.json",
+          "packages": [
+            "@anthropic-ai/sdk",
+            "@modelcontextprotocol/sdk",
+            "openai",
+            "hono",
+            "ai",
+            "zod"
+          ]
+        }
+      ],
+      "root": [],
+      "go_mod": ""
+    },
+    "freqtrade/freqtrade": {
+      "nameWithOwner": "freqtrade/freqtrade",
+      "url": "https://github.com/freqtrade/freqtrade",
+      "description": "Free, open source crypto trading bot",
+      "stars": 55740,
+      "forks": 11544,
+      "created": "2017-05-17",
+      "pushed": "2026-10-22",
+      "archived": false,
+      "homepage": "https://www.freqtrade.io",
+      "branch": "develop",
+      "commit": {
+        "sha": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+        "short": "c051e90",
+        "date": "2026-10-22",
+        "headline": "Merge pull request #13704 from freqtrade/renovate/pypi-certifi-vulner…",
+        "url": "https://github.com/freqtrade/freqtrade/commit/c051e9065c5b677f03817dd1f83cb980af1ed684"
+      },
+      "license_spdx": "GPL-3.0",
+      "license": {
+        "short_en": "GPL-3.0",
+        "short_zh": "GPL-3.0",
+        "note_en": "GitHub's license API reports SPDX GPL-3.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 GPL-3.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Jinja",
+        "PowerShell",
+        "Jupyter Notebook",
+        "Shell",
+        "Dockerfile"
+      ],
+      "topics": [
+        "python",
+        "cryptocurrencies",
+        "trading-bot",
+        "telegram-bot",
+        "bitcoin",
+        "trade",
+        "cryptocurrency",
+        "algorithmic-trading",
+        "freqtrade"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "hummingbot/hummingbot": {
+      "nameWithOwner": "hummingbot/hummingbot",
+      "url": "https://github.com/hummingbot/hummingbot",
+      "description": "Open source software that helps you create and deploy high-frequency crypto trading bots",
+      "stars": 20626,
+      "forks": 5035,
+      "created": "2019-04-02",
+      "pushed": "2026-10-20",
+      "archived": false,
+      "homepage": "https://hummingbot.org",
+      "branch": "master",
+      "commit": {
+        "sha": "9af100d6822da7d2d0291a906c730ef172284ee2",
+        "short": "9af100d",
+        "date": "2026-09-22",
+        "headline": "Merge pull request #8467 from hummingbot/staging",
+        "url": "https://github.com/hummingbot/hummingbot/commit/9af100d6822da7d2d0291a906c730ef172284ee2"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Cython",
+        "C++",
+        "Shell",
+        "Makefile",
+        "Dockerfile"
+      ],
+      "topics": [
+        "arbitrage",
+        "crypto",
+        "trading",
+        "python",
+        "algotrading",
+        "hft",
+        "backtesting",
+        "orderbook",
+        "market-making",
+        "ai-agents",
+        "binance",
+        "bitcoin",
+        "cryptocurrency",
+        "defi",
+        "ethereum"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "ValueCell-ai/valuecell": {
+      "nameWithOwner": "ValueCell-ai/valuecell",
+      "url": "https://github.com/ValueCell-ai/valuecell",
+      "description": "ValueCell is a community-driven, multi-agent platform for financial applications.",
+      "stars": 11027,
+      "forks": 1803,
+      "created": "2025-09-01",
+      "pushed": "2026-03-09",
+      "archived": false,
+      "homepage": "https://valuecell.ai",
+      "branch": "main",
+      "commit": {
+        "sha": "9793e9c0563fbf56fc096757d8bb80e209ac7aab",
+        "short": "9793e9c",
+        "date": "2026-02-11",
+        "headline": "revert(sign-path) (#605)",
+        "url": "https://github.com/ValueCell-ai/valuecell/commit/9793e9c0563fbf56fc096757d8bb80e209ac7aab"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "TypeScript",
+        "Rust",
+        "PowerShell",
+        "Shell",
+        "CSS"
+      ],
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "assitant",
+        "crypto",
+        "equity",
+        "finance",
+        "investment",
+        "mcp",
+        "python",
+        "react",
+        "stock-market"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "Fincept-Corporation/FinceptTerminal": {
+      "nameWithOwner": "Fincept-Corporation/FinceptTerminal",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
+      "stars": 32901,
+      "forks": 4685,
+      "created": "2024-08-29",
+      "pushed": "2026-10-13",
+      "archived": false,
+      "homepage": "https://fincept.in",
+      "branch": "main",
+      "commit": {
+        "sha": "3d8617cae3f13c93874d4bee4fb0f2846e9c83bc",
+        "short": "3d8617c",
+        "date": "2026-10-13",
+        "headline": "chore(release): update README download links and updates.json for v4.5.1",
+        "url": "https://github.com/Fincept-Corporation/FinceptTerminal/commit/3d8617cae3f13c93874d4bee4fb0f2846e9c83bc"
+      },
+      "license_spdx": "NOASSERTION",
+      "license": {
+        "short_en": "AGPL-3.0 text; API: NOASSERTION",
+        "short_zh": "LICENSE 为 AGPL-3.0 文本；API 为 NOASSERTION",
+        "note_en": "The LICENSE file is the GNU Affero General Public License version 3 text (copyright line: 2025-2026 Fincept Corporation). GitHub's license API returns SPDX NOASSERTION.",
+        "note_zh": "LICENSE 文件是 GNU Affero General Public License 第 3 版文本（版权行：2025-2026 Fincept Corporation）。GitHub license API 返回的 SPDX 是 NOASSERTION。"
+      },
+      "language": "C++",
+      "languages": [
+        "C++",
+        "Python",
+        "CMake",
+        "Jupyter Notebook",
+        "PowerShell",
+        "HTML"
+      ],
+      "topics": [
+        "bloomberg-terminal",
+        "finance",
+        "financial-markets",
+        "investment",
+        "investment-research",
+        "machine-learning",
+        "python",
+        "quantitative-finance",
+        "stock-market",
+        "opensource",
+        "good-first-issue",
+        "ai-agents",
+        "algorithmic-trading",
+        "cpp",
+        "fintech"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "patronus-ai/financebench": {
+      "nameWithOwner": "patronus-ai/financebench",
+      "url": "https://github.com/patronus-ai/financebench",
+      "description": "",
+      "stars": 382,
+      "forks": 4,
+      "created": "2023-11-15",
+      "pushed": "2024-12-03",
+      "archived": false,
+      "homepage": "",
+      "branch": "main",
+      "commit": {
+        "sha": "cc39aeb4afdf33909ee1412188bf89035950c2eb",
+        "short": "cc39aeb",
+        "date": "2024-12-03",
+        "headline": "Merge pull request #10 from patronus-ai/pdf",
+        "url": "https://github.com/patronus-ai/financebench/commit/cc39aeb4afdf33909ee1412188bf89035950c2eb"
+      },
+      "license_spdx": null,
+      "license": {
+        "short_en": "No LICENSE file detected",
+        "short_zh": "未检测到 LICENSE 文件",
+        "note_en": "The GitHub license API returns 404. No LICENSE file was detected on the fetch date.",
+        "note_zh": "GitHub license API 返回 404。抓取当日未检测到 LICENSE 文件。"
+      },
+      "language": "Jupyter Notebook",
+      "languages": [
+        "Jupyter Notebook"
+      ],
+      "topics": [],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "The-FinAI/PIXIU": {
+      "nameWithOwner": "The-FinAI/PIXIU",
+      "url": "https://github.com/The-FinAI/PIXIU",
+      "description": "This repository introduces PIXIU, an open-source resource featuring the first financial large language models (LLMs), instruction tuning data, and evaluation benchmarks to holistically assess financial LLMs. Our goal is to continually push forward the open-source development of financial artificial intelligence (AI).",
+      "stars": 894,
+      "forks": 126,
+      "created": "2023-06-02",
+      "pushed": "2026-10-08",
+      "archived": false,
+      "homepage": "https://huggingface.co/collections/TheFinAI/finben-and-pixiu-english-financial-evaluation-658f515911f68f12ea193194",
+      "branch": "main",
+      "commit": {
+        "sha": "860d6a085378ee0bd2c21287d978f00393f17aaa",
+        "short": "860d6a0",
+        "date": "2026-10-08",
+        "headline": "Read Hugging Face token from HF_TOKEN instead of hardcoding it",
+        "url": "https://github.com/The-FinAI/PIXIU/commit/860d6a085378ee0bd2c21287d978f00393f17aaa"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Jupyter Notebook",
+      "languages": [
+        "Jupyter Notebook",
+        "Python",
+        "Shell"
+      ],
+      "topics": [
+        "aifinance",
+        "fintech",
+        "llama",
+        "machine-learning",
+        "named-entity-recognition",
+        "natural-language-processing",
+        "nlp",
+        "question-answering",
+        "sentiment-analysis",
+        "stock-price-prediction",
+        "text-classification",
+        "chatgpt",
+        "gpt-4",
+        "large-language-models",
+        "pixiu"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "cordum-io/cordum": {
+      "nameWithOwner": "cordum-io/cordum",
+      "url": "https://github.com/cordum-io/cordum",
+      "description": "The action firewall for AI agents. Enforce policy and human approval before risky tool calls, shell commands, workflows, and production changes, with auditable evidence.",
+      "stars": 511,
+      "forks": 34,
+      "created": "2026-01-11",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "",
+      "branch": "main",
+      "commit": {
+        "sha": "e5111643ee2e31d4467a518f972a6222fc3e151c",
+        "short": "e511164",
+        "date": "2026-10-17",
+        "headline": "chore(deps): fold dependabot action bumps #470-#473 (#474)",
+        "url": "https://github.com/cordum-io/cordum/commit/e5111643ee2e31d4467a518f972a6222fc3e151c"
+      },
+      "license_spdx": "NOASSERTION",
+      "license": {
+        "short_en": "SPDX NOASSERTION",
+        "short_zh": "SPDX NOASSERTION",
+        "note_en": "GitHub's license API returns SPDX NOASSERTION (\"Other\"). The LICENSE file was not classified further on this fetch.",
+        "note_zh": "GitHub license API 返回 SPDX NOASSERTION（Other）。这次抓取没有再细分 LICENSE 文件。"
+      },
+      "language": "Go",
+      "languages": [
+        "Go",
+        "TypeScript",
+        "Python",
+        "Shell",
+        "JavaScript",
+        "PowerShell"
+      ],
+      "topics": [
+        "ai-orchestration",
+        "ai-safety",
+        "autonomous-agents",
+        "governance",
+        "llm-agents",
+        "workflow-engine",
+        "agent-framework",
+        "agentic-ai",
+        "ai-agent",
+        "ai-governance",
+        "audit-trail",
+        "control-plane",
+        "devops",
+        "human-in-the-loop",
+        "llm"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "tomcustos/tcaml-framework": {
+      "nameWithOwner": "tomcustos/tcaml-framework",
+      "url": "https://github.com/tomcustos/tcaml-framework",
+      "description": "Open AML agent framework for local, human-supervised AML/KYC/KYB workflows",
+      "stars": 2,
+      "forks": 0,
+      "created": "2026-07-05",
+      "pushed": "2026-07-05",
+      "archived": false,
+      "homepage": "https://wiki.tomcustos.com",
+      "branch": "main",
+      "commit": {
+        "sha": "cf370f16527c535c8c003b32301836731b24e41e",
+        "short": "cf370f1",
+        "date": "2026-07-05",
+        "headline": "Add pytest and orchestrator checks to CI validation workflow",
+        "url": "https://github.com/tomcustos/tcaml-framework/commit/cf370f16527c535c8c003b32301836731b24e41e"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python"
+      ],
+      "topics": [
+        "adverse-media",
+        "aml",
+        "aml-agent",
+        "aml-compliance",
+        "anti-money-laundering",
+        "antimoneylaundering",
+        "cdd",
+        "compliance-automation",
+        "edd",
+        "financial-crime",
+        "kyb",
+        "kyc",
+        "llm-agent",
+        "pep-screening",
+        "risk-assessment"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "dgunning/edgartools": {
+      "nameWithOwner": "dgunning/edgartools",
+      "url": "https://github.com/dgunning/edgartools",
+      "description": "Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV — clean API, well-typed, MIT-licensed.",
+      "stars": 2806,
+      "forks": 515,
+      "created": "2022-12-24",
+      "pushed": "2026-10-22",
+      "archived": false,
+      "homepage": "https://edgartools.readthedocs.io/",
+      "branch": "main",
+      "commit": {
+        "sha": "50813f0c18aa45da1f2189b8dd3e81c7778fca4d",
+        "short": "50813f0",
+        "date": "2026-10-22",
+        "headline": "chore!: remove the 16 flat edgar.offerings.* back-compat stubs (edgar…",
+        "url": "https://github.com/dgunning/edgartools/commit/50813f0c18aa45da1f2189b8dd3e81c7778fca4d"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "HTML",
+        "Shell",
+        "Jupyter Notebook",
+        "Tape",
+        "Dockerfile"
+      ],
+      "topics": [
+        "10-k",
+        "10-q",
+        "balance-sheet",
+        "edgar",
+        "filings",
+        "financials",
+        "insider-trading",
+        "sec",
+        "xbrl",
+        "13-f",
+        "form-4",
+        "income-statement",
+        "cashflow-statement",
+        "company",
+        "cusip"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "QuantConnect/Lean": {
+      "nameWithOwner": "QuantConnect/Lean",
+      "url": "https://github.com/QuantConnect/Lean",
+      "description": "Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",
+      "stars": 22145,
+      "forks": 5337,
+      "created": "2014-11-28",
+      "pushed": "2026-10-21",
+      "archived": false,
+      "homepage": "https://lean.io",
+      "branch": "master",
+      "commit": {
+        "sha": "f3d841e60dfd010ee5fc293ea893e56952484108",
+        "short": "f3d841e",
+        "date": "2026-10-21",
+        "headline": "Add packet type",
+        "url": "https://github.com/QuantConnect/Lean/commit/f3d841e60dfd010ee5fc293ea893e56952484108"
+      },
+      "license_spdx": "Apache-2.0",
+      "license": {
+        "short_en": "Apache-2.0",
+        "short_zh": "Apache-2.0",
+        "note_en": "GitHub's license API reports SPDX Apache-2.0.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 Apache-2.0。"
+      },
+      "language": "C#",
+      "languages": [
+        "C#",
+        "Python",
+        "Jupyter Notebook",
+        "HTML",
+        "CSS",
+        "Shell"
+      ],
+      "topics": [
+        "c-sharp",
+        "algorithmic-trading-engine",
+        "quantconnect",
+        "lean-engine",
+        "finance",
+        "algorithm",
+        "options",
+        "trading-algorithms",
+        "trading-platform",
+        "trading-strategies",
+        "trading-bot",
+        "python",
+        "stock-indicators",
+        "forex",
+        "trading"
+      ],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "Open-Finance-Lab/AgenticTrading": {
+      "nameWithOwner": "Open-Finance-Lab/AgenticTrading",
+      "url": "https://github.com/Open-Finance-Lab/AgenticTrading",
+      "description": "",
+      "stars": 783,
+      "forks": 160,
+      "created": "2025-05-21",
+      "pushed": "2026-10-17",
+      "archived": false,
+      "homepage": "https://agentic-trading-lab.vercel.app/",
+      "branch": "main",
+      "commit": {
+        "sha": "0cf397c45b12aa59e8faf52b0d6531c4528d5706",
+        "short": "0cf397c",
+        "date": "2026-10-16",
+        "headline": "Merge pull request #644 from Open-Finance-Lab/feat/admin-trace-backte…",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/commit/0cf397c45b12aa59e8faf52b0d6531c4528d5706"
+      },
+      "license_spdx": "NOASSERTION",
+      "license": {
+        "short_en": "SPDX NOASSERTION",
+        "short_zh": "SPDX NOASSERTION",
+        "note_en": "GitHub's license API returns SPDX NOASSERTION (\"Other\"). The LICENSE file was not classified further on this fetch.",
+        "note_zh": "GitHub license API 返回 SPDX NOASSERTION（Other）。这次抓取没有再细分 LICENSE 文件。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "CSS",
+        "Jupyter Notebook",
+        "HTML",
+        "TypeScript"
+      ],
+      "topics": [],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    },
+    "pipiku915/FinMem-LLM-StockTrading": {
+      "nameWithOwner": "pipiku915/FinMem-LLM-StockTrading",
+      "url": "https://github.com/pipiku915/FinMem-LLM-StockTrading",
+      "description": "FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design",
+      "stars": 963,
+      "forks": 195,
+      "created": "2023-12-01",
+      "pushed": "2024-08-18",
+      "archived": false,
+      "homepage": "",
+      "branch": "main",
+      "commit": {
+        "sha": "be814aa47970de9bf2fdd6a1d5a60ae5cf361b46",
+        "short": "be814aa",
+        "date": "2024-08-18",
+        "headline": "Update reflection.py",
+        "url": "https://github.com/pipiku915/FinMem-LLM-StockTrading/commit/be814aa47970de9bf2fdd6a1d5a60ae5cf361b46"
+      },
+      "license_spdx": "MIT",
+      "license": {
+        "short_en": "MIT",
+        "short_zh": "MIT",
+        "note_en": "GitHub's license API reports SPDX MIT.",
+        "note_zh": "GitHub license API 报告的 SPDX 是 MIT。"
+      },
+      "language": "Python",
+      "languages": [
+        "Python",
+        "Shell",
+        "Dockerfile"
+      ],
+      "topics": [],
+      "deps": [],
+      "root": [],
+      "go_mod": ""
+    }
+  }
+}

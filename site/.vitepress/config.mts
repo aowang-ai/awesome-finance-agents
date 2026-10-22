@@ -6,11 +6,13 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 // config loads (dev, build). Output goes to site/src/ (git-ignored).
 import fs from 'node:fs'
 import { splitReadmes, REPO_URL, ROOT, GEN } from '../scripts/split-readme.mjs'
+import { pageSchema, finalizeSitemap } from '../scripts/extra-pages.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const manifest = splitReadmes()
 const en = manifest.locales.root
 const zh = manifest.locales.zh
+const guides = manifest.guides
 
 // Served at the root of the custom domain (site/public/CNAME).
 const base = process.env.DOCS_BASE || '/'
@@ -32,7 +34,12 @@ function altPaths(relativePath: string): { en: string; zh: string } {
   return { en: pageUrl(enRel), zh: pageUrl(zhRel) }
 }
 
+function guideItems(group: { title: { en: string; zh: string }; link: { en: string; zh: string } }[], lang: 'en' | 'zh') {
+  return group.map((g) => ({ text: g.title[lang], link: g.link[lang] }))
+}
+
 function sidebar(loc: typeof en, overview: string, contributing: string): DefaultTheme.SidebarItem[] {
+  const lang = loc.key === 'zh' ? 'zh' : 'en'
   const chapters = loc.pages.filter((p: any) => p.slug !== 'appendix')
   const appendix = loc.pages.find((p: any) => p.slug === 'appendix')
   return [
@@ -40,6 +47,18 @@ function sidebar(loc: typeof en, overview: string, contributing: string): Defaul
     {
       text: loc.key === 'zh' ? '章节' : 'Chapters',
       items: chapters.map((p: any) => ({ text: p.title, link: p.link })),
+    },
+    {
+      text: loc.key === 'zh' ? '分类' : 'Categories',
+      items: guideItems(guides.categories, lang),
+    },
+    {
+      text: loc.key === 'zh' ? '项目' : 'Projects',
+      items: guideItems(guides.projects, lang),
+    },
+    {
+      text: loc.key === 'zh' ? '对照' : 'Comparisons',
+      items: guideItems(guides.comparisons, lang),
     },
     {
       text: loc.key === 'zh' ? '更多' : 'More',
@@ -194,6 +213,10 @@ export default withMermaid(
           ),
         ])
       }
+      const ld = pageSchema(pageData, siteUrl)
+      if (ld) {
+        head.push(['script', { type: 'application/ld+json' }, JSON.stringify(ld)])
+      }
     },
     transformHead({ pageData }) {
       // Ensure hreflang / og tags also land via transformHead for pages
@@ -208,16 +231,23 @@ export default withMermaid(
       ]
     },
     // Copy the per-page Markdown, projects.json and llms-full.txt into the build.
-    buildEnd(siteConfig) {
+    async buildEnd(siteConfig) {
       fs.cpSync(GEN, siteConfig.outDir, { recursive: true })
+      await finalizeSitemap(siteConfig.outDir)
     },
     sitemap: {
       hostname: siteUrl,
       transformItems(items) {
-        return items.map((item) => ({
-          ...item,
-          lastmod: buildDay,
-        }))
+        return items
+          .filter((item) => !String(item.url || '').includes('404'))
+          .map((item) => {
+            const links = Array.isArray(item.links) ? item.links.map((l) => ({ ...l })) : undefined
+            if (links && !links.some((l) => l.lang === 'x-default')) {
+              const enLink = links.find((l) => l.lang === 'en-US') || links[0]
+              links.push({ lang: 'x-default', url: enLink.url })
+            }
+            return { ...item, lastmod: buildDay, ...(links ? { links } : {}) }
+          })
       },
     },
     vite: {
@@ -315,6 +345,9 @@ export default withMermaid(
           siteTitle: 'Finance Agents',
           nav: [
             { text: 'Chapters', link: en.pages[0].link },
+            { text: 'Categories', items: guideItems(guides.categories, 'en') },
+            { text: 'Projects', items: guideItems(guides.projects, 'en') },
+            { text: 'Compare', items: guideItems(guides.comparisons, 'en') },
             { text: 'Appendix', link: '/appendix' },
             { text: 'Contribute', link: `${REPO_URL}/blob/main/CONTRIBUTING.md` },
           ],
@@ -333,6 +366,9 @@ export default withMermaid(
           siteTitle: 'Finance Agents',
           nav: [
             { text: '章节', link: zh.pages[0].link },
+            { text: '分类', items: guideItems(guides.categories, 'zh') },
+            { text: '项目', items: guideItems(guides.projects, 'zh') },
+            { text: '对照', items: guideItems(guides.comparisons, 'zh') },
             { text: '附录', link: '/zh/appendix' },
             { text: '参与贡献', link: `${REPO_URL}/blob/main/CONTRIBUTING.md` },
           ],
