@@ -330,7 +330,8 @@ function pagePair(src, gen, rel, fm, title, eyebrow, body, lang) {
     body.trim(),
     '',
   ].join('\n')
-  const web = `${SITE_ORIGIN}${prefix(lang)}/${rel.replace(/\.md$/, '')}`
+  const webPath = `${prefix(lang)}/${rel}`.replace(/\/index\.md$/, '/').replace(/\.md$/, '')
+  const web = `${SITE_ORIGIN}${webPath}`
   const md = [
     `# ${title}`,
     '',
@@ -453,42 +454,44 @@ function fm(title, description, extra = []) {
   return [`title: ${yamlStr(title)}`, `description: ${yamlStr(description)}`, ...extra]
 }
 
-function guidesBlock(lang) {
+function renderGuidesIndex(lang) {
   const t = L(lang)
+  const home = lang === 'zh' ? '/zh/' : '/'
+  const homeLabel = lang === 'zh' ? '概览' : 'Overview'
   const lead = lang === 'zh'
-    ? '对照、分类导读和项目页。章节页仍是完整条目列表。仓库数字来自 GitHub API，日期写在各页上。'
-    : 'Comparisons, category notes, and project pages. Chapter pages remain the full entry lists. Repository figures are from the GitHub API and dated on each page.'
-  const cmp = COMPARISONS.map((c) => `- [${c.title[lang]}](${hrefCompare(c.slug, lang)})`).join('\n')
-  const cats = CATEGORIES.map((c) => `- [${c.title[lang]}](${hrefCategory(c.slug, lang)})`).join('\n')
-  const projs = PROJECTS.map((p) => `- [${p.name}](${hrefProject(p.slug, lang)})`).join('\n')
-  return [
-    `## ${t.guides}`,
-    '',
+    ? `对照、分类导读和项目页。章节页仍是完整条目列表。目录在[${homeLabel}](${home})。`
+    : `Comparisons, category notes, and project pages. Chapter pages remain the full entry lists. The contents table is on the [${homeLabel}](${home}).`
+  const cmp = COMPARISONS.map((c) => `- [${c.title[lang]}](${hrefCompare(c.slug, lang)}) — ${c.description[lang]}`).join('\n')
+  const projs = PROJECTS.map((p) => `- [${p.name}](${hrefProject(p.slug, lang)}) — ${p.description[lang]}`).join('\n')
+  const cats = CATEGORIES.map((c) => `- [${c.title[lang]}](${hrefCategory(c.slug, lang)}) — ${c.description[lang]}`).join('\n')
+  const body = [
     lead,
     '',
-    `### ${t.comparisons}`,
+    `## ${t.comparisons}`,
     '',
     cmp,
     '',
-    `### ${t.catNotes}`,
-    '',
-    cats,
-    '',
-    `### ${t.projPages}`,
+    `## ${t.projPages}`,
     '',
     projs,
     '',
+    `## ${t.catNotes}`,
+    '',
+    cats,
   ].join('\n')
+  return {
+    title: lang === 'zh' ? '指南' : 'Guides',
+    description: lang === 'zh'
+      ? '对照、项目页和分类导读的索引。章节页仍是完整条目列表。'
+      : 'Index of comparisons, project pages, and category notes. Chapter pages remain the full entry lists.',
+    eyebrow: lang === 'zh' ? '索引' : 'Index',
+    body,
+  }
 }
 
-function patchHome(file, lang) {
-  const marker = lang === 'zh' ? '## 在 AI 里使用' : '## Use with AI'
-  const text = fs.readFileSync(file, 'utf8')
-  if (text.includes(`## ${L(lang).guides}\n`)) return
-  const i = text.indexOf(marker)
-  if (i < 0) throw new Error(`home marker missing in ${file}`)
-  const next = text.slice(0, i) + guidesBlock(lang) + '\n' + text.slice(i)
-  fs.writeFileSync(file, next)
+function sitePath(rel) {
+  const bare = rel.replace(/\.md$/, '').replace(/\/index$/, '')
+  return bare ? `/${bare}` : '/'
 }
 
 const CHAPTER_BLURBS = [
@@ -539,6 +542,10 @@ function writeLlmsTxt(gen, en, zh) {
     ...chapterLines,
     `- [Appendix](${SITE_ORIGIN}${appendix.link}.md) · [中文](${SITE_ORIGIN}${appendixZh.link}.md) — models, surveys, neighboring lists`,
     '',
+    '## Guides / 指南',
+    '',
+    `- [Guides](${SITE_ORIGIN}/guides/index.md) · [指南](${SITE_ORIGIN}/zh/guides/index.md) — index of comparisons, project pages, and category notes. HTML: ${SITE_ORIGIN}/guides/ and ${SITE_ORIGIN}/zh/guides/.`,
+    '',
     '## Category notes / 分类导读',
     '',
     ...catLines,
@@ -574,9 +581,17 @@ function writeLlmsTxt(gen, en, zh) {
   writeFile(path.join(gen, 'llms.txt'), text)
 }
 
+const PAGES_PER_LANG = 41
+
 export function writeGuides({ src, gen, en, zh }) {
-  const rels = []
+  const rels = ['guides/index.md']
   for (const lang of ['en', 'zh']) {
+    const index = renderGuidesIndex(lang)
+    pagePair(
+      src, gen, 'guides/index.md',
+      fm(index.title, index.description, ['kind: guides']),
+      index.title, index.eyebrow, index.body, lang,
+    )
     for (const c of CATEGORIES) {
       const rel = `categories/${c.slug}.md`
       const page = renderCategory(c, lang)
@@ -606,20 +621,13 @@ export function writeGuides({ src, gen, en, zh }) {
     }
   }
 
-  for (const lang of ['en', 'zh']) {
-    const base = lang === 'zh' ? path.join(src, 'zh') : src
-    const gbase = lang === 'zh' ? path.join(gen, 'zh') : gen
-    patchHome(path.join(base, 'index.md'), lang)
-    patchHome(path.join(gbase, 'index.md'), lang)
-  }
-
   const paths = []
   for (const loc of [en, zh]) {
     paths.push(loc.key === 'zh' ? '/zh/' : '/')
     for (const p of loc.pages) paths.push(p.link)
   }
   for (const rel of rels) {
-    const bare = '/' + rel.replace(/\.md$/, '')
+    const bare = sitePath(rel)
     paths.push(bare)
     paths.push('/zh' + bare)
   }
@@ -643,8 +651,8 @@ export function writeGuides({ src, gen, en, zh }) {
 
   const enCount = countMd(src)
   const zhCount = countMd(path.join(src, 'zh'))
-  if (enCount !== 40 || zhCount !== 40) {
-    throw new Error(`expected 40 pages per language, got en=${enCount} zh=${zhCount}`)
+  if (enCount !== PAGES_PER_LANG || zhCount !== PAGES_PER_LANG) {
+    throw new Error(`expected ${PAGES_PER_LANG} pages per language, got en=${enCount} zh=${zhCount}`)
   }
   return { rels, pageByUrl, guideNav }
 }
@@ -662,6 +670,7 @@ function countMd(dir) {
 
 export function guideRels() {
   return [
+    'guides/index.md',
     ...CATEGORIES.map((c) => `categories/${c.slug}.md`),
     ...PROJECTS.map((p) => `projects/${p.slug}.md`),
     ...COMPARISONS.map((c) => `compare/${c.slug}.md`),
@@ -700,6 +709,19 @@ export function pageSchema(pageData, siteUrl) {
     }
     if (r.license_spdx && r.license_spdx !== 'NOASSERTION') node.license = `https://spdx.org/licenses/${r.license_spdx}.html`
     return node
+  }
+  if (bare === 'guides/index.md') {
+    const pre = isZh ? '/zh' : ''
+    const items = []
+    const push = (name, href) => items.push({ '@type': 'ListItem', position: items.length + 1, name, url: `${origin}${href}` })
+    for (const c of COMPARISONS) push(isZh ? c.title.zh : c.title.en, `${pre}/compare/${c.slug}`)
+    for (const p of PROJECTS) push(p.name, `${pre}/projects/${p.slug}`)
+    for (const c of CATEGORIES) push(isZh ? c.title.zh : c.title.en, `${pre}/categories/${c.slug}`)
+    return {
+      ...base,
+      '@type': 'CollectionPage',
+      mainEntity: { '@type': 'ItemList', name: isZh ? '指南' : 'Guides', numberOfItems: items.length, itemListElement: items },
+    }
   }
   if (bare.startsWith('projects/')) {
     const slug = bare.slice('projects/'.length, -3)

@@ -83,8 +83,6 @@ This is a shortlist, not a catalog. Links were checked when added; CI runs aweso
 
 A finance agent is only as good as the data and tools it can call. This chapter covers market data, filings, broker bridges, and skill packs that expose those capabilities to MCP-aware agents.
 
-Related pages: [Data and Tools](https://finance-agents.dev/categories/data-and-tools), [OpenBB](https://finance-agents.dev/projects/openbb), [AKShare](https://finance-agents.dev/projects/akshare).
-
 ### Platforms and market data
 
 - [OpenBB](https://github.com/openbq-org/OpenBB) - Open data platform for analysts, quants, and AI agents across equities, options, crypto, and macro.
@@ -158,8 +156,6 @@ Prefer point-in-time and timestamped sources. Do not let the model invent ticker
 
 Research agents read filings, transcripts, news, and data rooms, then produce source-backed investment memos. The hard part is grounding every number and claim.
 
-Related pages: [Investment Research](https://finance-agents.dev/categories/investment-research), [Dexter](https://finance-agents.dev/projects/dexter), [FinRobot](https://finance-agents.dev/projects/finrobot), [Open-source financial research/report agents compared](https://finance-agents.dev/compare/financial-research-agents).
-
 ### Open-source research agents
 
 - [dexter](https://github.com/virattt/dexter) - Autonomous deep financial research agent with tool use and structured reports.
@@ -204,8 +200,6 @@ Require citations to filing sections or URLs. Reject answers that invent financi
 
 These systems simulate an analyst team: specialized agents debate, hand off, and reach a decision. Useful for exploring role structure, not as out-of-the-box alpha.
 
-Related pages: [Multi-Agent Decisions](https://finance-agents.dev/categories/multi-agent-decisions), [TradingAgents](https://finance-agents.dev/projects/tradingagents), [ai-hedge-fund](https://finance-agents.dev/projects/ai-hedge-fund), [FinGPT vs TradingAgents](https://finance-agents.dev/compare/fingpt-vs-tradingagents).
-
 ### Flagship multi-agent systems
 
 - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - Multi-agent LLM trading framework with analyst, trader, and risk roles.
@@ -236,8 +230,6 @@ Debate does not equal correctness. Watch for shared context contamination across
 ### What Problem It Solves
 
 From signal to order: position sizing, risk budgets, broker/exchange connectors, and portfolio analytics. For a broader trading-only catalog, see LLMQuant/awesome-trading-agents in the Appendix.
-
-Related pages: [Trading and Portfolio](https://finance-agents.dev/categories/trading-and-portfolio), [nofx](https://finance-agents.dev/projects/nofx), [FinRL-Trading](https://finance-agents.dev/projects/finrl-trading), [Best open-source trading agents](https://finance-agents.dev/compare/open-source-trading-agents).
 
 ### LLM trading agents
 
@@ -289,8 +281,6 @@ Separate paper from live. Never give an agent unbounded live order permission. M
 
 Agents that mine factors, write strategy code, run backtests, and iterate. Closest thing to an autonomous quant researcher.
 
-Related pages: [Quant Automation](https://finance-agents.dev/categories/quant-automation), [Qlib](https://finance-agents.dev/projects/qlib), [RD-Agent](https://finance-agents.dev/projects/rd-agent).
-
 ### Research automation systems
 
 - [qlib](https://github.com/microsoft/qlib) - AI-oriented quant platform; common substrate for factor and model research agents.
@@ -326,8 +316,6 @@ Factor factories overfit fast. Demand walk-forward or purged CV, and keep a hold
 
 Agents for bookkeeping, reconciliation, invoices, tax, and reporting, plus MCP access to accounting systems.
 
-Related pages: [Accounting](https://finance-agents.dev/categories/accounting), [Beancount](https://finance-agents.dev/projects/beancount).
-
 ### Ledgers and agent accountants
 
 - [beancount](https://github.com/beancount/beancount) - Double-entry plaintext accounting ledger; common target for bookkeeping agents.
@@ -362,8 +350,6 @@ Accounting agents must be append-only or approval-gated. Never let an agent sile
 
 AML/KYC, fraud triage, due diligence, ESG review, and action firewalls that sit in front of irreversible agent actions (orders, payments, ledger writes).
 
-Related pages: [Risk and Compliance](https://finance-agents.dev/categories/risk-and-compliance).
-
 ### Due diligence, AML/KYC, and firewalls
 
 - [due-diligence-agents](https://github.com/zoharbabin/due-diligence-agents) - Multi-agent M&A / corporate due diligence workflows.
@@ -385,8 +371,6 @@ Compliance agents should propose, not auto-clear. Keep human gates and an immuta
 ### What Problem It Solves
 
 Budgeting, spending analysis, net-worth tracking, and local-first finance apps that agents can connect to via MCP or skills.
-
-Related pages: [Personal Finance](https://finance-agents.dev/categories/personal-finance), [Actual](https://finance-agents.dev/projects/actual).
 
 ### Apps and MCP bridges
 
@@ -415,8 +399,6 @@ Prefer local-first or read-only MCP access to bank data. Never store raw banking
 ### What Problem It Solves
 
 Measure research QA, trading decisions, safety, and live arena performance. Without evals, finance agents are demos.
-
-Related pages: [Evaluation and Arenas](https://finance-agents.dev/categories/evaluation).
 
 ### Research and open-book QA
 
@@ -469,8 +451,6 @@ Leaderboard PnL without costs, latency, or leakage controls is not evidence. Pre
 
 Finance-specific reliability layer: point-in-time data, look-ahead bias control, deterministic replay, and realistic cost models. General agent durability belongs in agent-infra style lists; this chapter is market-time correctness.
 
-Related pages: [Backtesting and Leakage](https://finance-agents.dev/categories/backtesting), [NautilusTrader](https://finance-agents.dev/projects/nautilus-trader).
-
 ### Harnesses and engines
 
 - [TraderHarness](https://github.com/HephaestLab/TraderHarness) - ⭐ Contamination-resistant point-in-time backtest and replay for LLM traders.
@@ -490,8 +470,6 @@ If your backtest can see tomorrow's close, your agent is cheating. Prefer PIT da
 ## Appendix
 
 Models, surveys, and neighboring lists that are useful context but not always "agents" themselves.
-
-Related pages: [FinGPT](https://finance-agents.dev/projects/fingpt), [FinRL](https://finance-agents.dev/projects/finrl).
 
 ### Financial LLMs and related models
 

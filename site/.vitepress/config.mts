@@ -38,8 +38,7 @@ function guideItems(group: { title: { en: string; zh: string }; link: { en: stri
   return group.map((g) => ({ text: g.title[lang], link: g.link[lang] }))
 }
 
-function sidebar(loc: typeof en, overview: string, contributing: string): DefaultTheme.SidebarItem[] {
-  const lang = loc.key === 'zh' ? 'zh' : 'en'
+function chapterSidebar(loc: typeof en, overview: string, contributing: string): DefaultTheme.SidebarItem[] {
   const chapters = loc.pages.filter((p: any) => p.slug !== 'appendix')
   const appendix = loc.pages.find((p: any) => p.slug === 'appendix')
   return [
@@ -47,18 +46,6 @@ function sidebar(loc: typeof en, overview: string, contributing: string): Defaul
     {
       text: loc.key === 'zh' ? '章节' : 'Chapters',
       items: chapters.map((p: any) => ({ text: p.title, link: p.link })),
-    },
-    {
-      text: loc.key === 'zh' ? '分类' : 'Categories',
-      items: guideItems(guides.categories, lang),
-    },
-    {
-      text: loc.key === 'zh' ? '项目' : 'Projects',
-      items: guideItems(guides.projects, lang),
-    },
-    {
-      text: loc.key === 'zh' ? '对照' : 'Comparisons',
-      items: guideItems(guides.comparisons, lang),
     },
     {
       text: loc.key === 'zh' ? '更多' : 'More',
@@ -71,14 +58,64 @@ function sidebar(loc: typeof en, overview: string, contributing: string): Defaul
   ]
 }
 
+function guideSidebar(lang: 'en' | 'zh'): DefaultTheme.SidebarItem[] {
+  const home = lang === 'zh' ? '/zh/guides/' : '/guides/'
+  return [
+    { text: lang === 'zh' ? '指南' : 'Guides', link: home },
+    {
+      text: lang === 'zh' ? '对照' : 'Comparisons',
+      items: guideItems(guides.comparisons, lang),
+    },
+    {
+      text: lang === 'zh' ? '项目' : 'Projects',
+      items: guideItems(guides.projects, lang),
+    },
+    {
+      text: lang === 'zh' ? '分类' : 'Categories',
+      items: guideItems(guides.categories, lang),
+    },
+  ]
+}
+
+// Path prefixes are matched against the page relative path. Longer prefixes
+// win, so guide routes keep their own sidebar and chapter/home routes keep
+// the chapter list.
+function sidebars(loc: typeof en, overview: string, contributing: string): DefaultTheme.Sidebar {
+  const lang = loc.key === 'zh' ? 'zh' : 'en'
+  const chapters = chapterSidebar(loc, overview, contributing)
+  const notes = guideSidebar(lang)
+  if (lang === 'zh') {
+    return {
+      '/zh/guides/': notes,
+      '/zh/categories/': notes,
+      '/zh/projects/': notes,
+      '/zh/compare/': notes,
+      '/zh/': chapters,
+    }
+  }
+  return {
+    '/guides/': notes,
+    '/categories/': notes,
+    '/projects/': notes,
+    '/compare/': notes,
+    '/': chapters,
+  }
+}
+
 const AUTHOR_URL = 'https://aowang.ai'
-const footer = (loc: typeof en, license: string) => ({
-  message:
+const footer = (loc: typeof en, license: string) => {
+  const guidesLink =
     loc.key === 'zh'
-      ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护`
-      : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a>`,
-  copyright: license,
-})
+      ? '<a href="/zh/guides/">指南</a>'
+      : '<a href="/guides/">Guides</a>'
+  return {
+    message:
+      loc.key === 'zh'
+        ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护 · ${guidesLink}`
+        : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a> · ${guidesLink}`,
+    copyright: license,
+  }
+}
 
 const personOrgLd = {
   '@context': 'https://schema.org',
@@ -345,13 +382,10 @@ export default withMermaid(
           siteTitle: 'Finance Agents',
           nav: [
             { text: 'Chapters', link: en.pages[0].link },
-            { text: 'Categories', items: guideItems(guides.categories, 'en') },
-            { text: 'Projects', items: guideItems(guides.projects, 'en') },
-            { text: 'Compare', items: guideItems(guides.comparisons, 'en') },
             { text: 'Appendix', link: '/appendix' },
             { text: 'Contribute', link: `${REPO_URL}/blob/main/CONTRIBUTING.md` },
           ],
-          sidebar: sidebar(en, 'Overview', 'Contributing'),
+          sidebar: sidebars(en, 'Overview', 'Contributing'),
           footer: footer(en, 'Published under CC0 1.0 Universal'),
           docFooter: { prev: en.labels.prev, next: en.labels.next },
         },
@@ -366,13 +400,10 @@ export default withMermaid(
           siteTitle: 'Finance Agents',
           nav: [
             { text: '章节', link: zh.pages[0].link },
-            { text: '分类', items: guideItems(guides.categories, 'zh') },
-            { text: '项目', items: guideItems(guides.projects, 'zh') },
-            { text: '对照', items: guideItems(guides.comparisons, 'zh') },
             { text: '附录', link: '/zh/appendix' },
             { text: '参与贡献', link: `${REPO_URL}/blob/main/CONTRIBUTING.md` },
           ],
-          sidebar: sidebar(zh, '概览', '贡献指南'),
+          sidebar: sidebars(zh, '概览', '贡献指南'),
           footer: footer(zh, '以 CC0 1.0 Universal 发布'),
           docFooter: { prev: zh.labels.prev, next: zh.labels.next },
           outline: { level: [2, 3], label: '本页目录' },

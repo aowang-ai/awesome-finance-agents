@@ -23,6 +23,10 @@ Every page has a Markdown copy: add .md to its URL (Chinese pages under /zh/).
 10. [Backtesting, Replay, and Leakage Control](https://finance-agents.dev/chapters/10-backtesting-replay-and-leakage-control.md) · [中文](https://finance-agents.dev/zh/chapters/10-backtesting-replay-and-leakage-control.md) — market-time correctness
 - [Appendix](https://finance-agents.dev/appendix.md) · [中文](https://finance-agents.dev/zh/appendix.md) — models, surveys, neighboring lists
 
+## Guides / 指南
+
+- [Guides](https://finance-agents.dev/guides/index.md) · [指南](https://finance-agents.dev/zh/guides/index.md) — index of comparisons, project pages, and category notes. HTML: https://finance-agents.dev/guides/ and https://finance-agents.dev/zh/guides/.
+
 ## Category notes / 分类导读
 
 - [Data and Tools](https://finance-agents.dev/categories/data-and-tools.md) · [中文](https://finance-agents.dev/zh/categories/data-and-tools.md) — Reading note for chapter 1: market and filing data, MCP servers, official broker kits, and skill packs.

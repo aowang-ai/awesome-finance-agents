@@ -59,6 +59,8 @@ const LOCALES = [
       notAdvice: 'Not investment advice. Inclusion does not mean endorsement.',
       maintained: 'Maintained by Ao Wang (https://aowang.ai).',
       htmlVersion: 'Web version',
+      related: 'Related:',
+      guides: 'Guides',
       badges: {
         cn: ['CN', 'China A-share or Chinese-language project'],
         sim: ['sim', 'Paper / simulated trading'],
@@ -100,6 +102,8 @@ const LOCALES = [
       notAdvice: '不构成投资建议；收录不代表推荐。',
       maintained: '由 Ao Wang（王奥，https://aowang.ai）维护。',
       htmlVersion: '网页版',
+      related: '相关：',
+      guides: '指南',
       badges: {
         cn: ['A股/中文', 'A 股或中文项目'],
         sim: ['模拟盘', '模拟盘 / 纸面交易'],
@@ -369,7 +373,7 @@ function buildLocale(loc, chapterSlugs) {
     '',
     `## ${L.useAi} {#use-with-ai}`,
     '',
-    ...useAi,
+    ...rewrite(useAi),
     '',
   ]
   fs.writeFileSync(path.join(out, 'index.md'), home.join('\n'))
@@ -460,6 +464,8 @@ function buildLocale(loc, chapterSlugs) {
       ...(pitfall
         ? ['', `## ${L.pitfall}`, '', '<div class="afa-pitfall">', '', ...rewrite(pitfall), '', '</div>', '']
         : []),
+      '',
+      `<p class="afa-related">${esc(L.related)} <a href="${loc.prefix === '/zh/' ? '/zh/guides/' : '/guides/'}">${esc(L.guides)}</a></p>`,
     ]
     const file = p.slug === 'appendix' ? 'appendix.md' : `chapters/${p.slug}.md`
     fs.writeFileSync(path.join(out, file), page.join('\n'))
@@ -473,6 +479,8 @@ function buildLocale(loc, chapterSlugs) {
       ...abs(rewrite(demote(trimBlank(body)))),
       '',
       ...(pitfall ? [`## ${L.pitfall}`, '', ...abs(rewrite(pitfall)), ''] : []),
+      `${L.related} [${L.guides}](${SITE_ORIGIN}${loc.prefix === '/zh/' ? '/zh/guides/' : '/guides/'})`,
+      '',
       '---',
       '',
       `${L.notAdvice} CC0 1.0 · ${REPO_URL}`,
@@ -553,8 +561,8 @@ function useWithAi(key) {
       ? `- **JSON**：[${SITE_ORIGIN}/projects.json](${SITE_ORIGIN}/projects.json)，每条项目的章节、分组、中英文描述和标签。有项目页的条目另外带 \`page_en\` / \`page_zh\`。`
       : `- **JSON**: [${SITE_ORIGIN}/projects.json](${SITE_ORIGIN}/projects.json) lists every entry with chapter, section, English and Chinese descriptions, and tags. Entries with a project page also include \`page_en\` and \`page_zh\`.`,
     zh
-      ? `- **导读**：对照、分类和项目页列在 [llms.txt](${SITE_ORIGIN}/llms.txt)，每一页同样有 \`.md\`。`
-      : `- **Guides**: comparison, category, and project pages are listed in [llms.txt](${SITE_ORIGIN}/llms.txt). Each has a \`.md\` copy, same as the chapters.`,
+      ? `- **指南**：[${SITE_ORIGIN}/zh/guides/](${SITE_ORIGIN}/zh/guides/) 列出对照、分类导读和项目页。每一页同样有 \`.md\`。`
+      : `- **Guides**: [${SITE_ORIGIN}/guides/](${SITE_ORIGIN}/guides/) lists comparison, category, and project pages. Each has a \`.md\` copy.`,
     zh
       ? `- **MCP**（只读，无需鉴权）：\`${MCP_URL}\`。工具有 \`search_projects\`（中英文关键词）、\`list_chapters\`、\`get_chapter\`、\`get_project\`。`
       : `- **MCP** (read-only, no auth): \`${MCP_URL}\`. Tools: \`search_projects\` (English or Chinese keywords), \`list_chapters\`, \`get_chapter\`, \`get_project\`.`,

@@ -14,6 +14,7 @@ Notable changes to the list are recorded here. Individual link additions and fix
 ### Added
 
 - Site guides in English and Chinese: 10 category notes, 15 project pages, and 3 comparison pages. Repository figures are GitHub API values from 2026-10-22.
+- A guides index at `/guides` and `/zh/guides`. Category, project, and comparison pages stay out of the top nav and the chapter sidebar.
 
 ## [0.2.2] - 2026-10-19
 

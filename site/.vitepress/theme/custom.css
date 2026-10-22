@@ -200,6 +200,15 @@
 .vp-doc .afa-meta a {
   color: var(--vp-c-text-2);
 }
+.vp-doc .afa-related {
+  margin: 2.75rem 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vp-c-text-3);
+}
+.vp-doc .afa-related a {
+  color: var(--vp-c-text-2);
+}
 
 /* ---------- entry lists: name | description, hairline rows ---------- */
 .vp-doc ul:has(> li > .afa-desc) {
