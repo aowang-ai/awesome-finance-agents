@@ -118,6 +118,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [Financial-Modeling-Prep-MCP-Server](https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server) - MCP implementation of the Financial Modeling Prep API (statements, ratios, estimates, filings).
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - MCP server for FRED (Federal Reserve Economic Data) macro series.
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - Free, read-only MCP server and Python SDK for money-market, bank and BTC liquidity data, with source links, dates and units on every row.
+- [Finance MCP](https://finance-mcp.com) - Hosted MCP server where agents discover, inspect, and run finance data tools for OKX, Deribit, SEC EDGAR, FMP, FRED, and Polymarket, over OAuth or an API key.
 
 ### Official broker and exchange agent kits
 
