@@ -204,6 +204,7 @@ export default withMermaid(
     title: en.name,
     description: en.tagline,
     head: [
+      ['script', { defer: '', 'data-website-id': '2f3v3k5x3b0w201m', src: 'https://analytics.paperlist.ai/js/script.js' }],
       ['link', { rel: 'icon', href: `${base}favicon.ico`, sizes: '48x48' }],
       ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
       ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png` }],
