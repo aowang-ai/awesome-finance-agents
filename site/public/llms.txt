@@ -76,6 +76,10 @@ Every page has a Markdown copy: add .md to its URL (Chinese pages under /zh/).
 - English: https://github.com/aowang-ai/awesome-finance-agents/blob/main/README.md
 - 中文: https://github.com/aowang-ai/awesome-finance-agents/blob/main/README.zh-CN.md
 
+## Related
+
+- [Finance MCP](https://finance-mcp.com): hosted MCP server with 13 finance data tools, by the same maintainer
+
 ## Optional
 
 - [Contributing](https://github.com/aowang-ai/awesome-finance-agents/blob/main/CONTRIBUTING.md)

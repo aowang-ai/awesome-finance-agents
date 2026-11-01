@@ -115,7 +115,7 @@ flowchart TB
 - [Financial-Modeling-Prep-MCP-Server](https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server) - Financial Modeling Prep API 的 MCP 实现（财报、比率、预期、文件）。
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - FRED（美联储经济数据）宏观序列的 MCP 服务。
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - 免费只读的 MCP 服务与 Python SDK，提供货币市场、银行与 BTC 流动性数据，每条数据附带来源链接、日期和单位。
-- [Finance MCP](https://finance-mcp.com) - 托管 MCP 服务，agent 可发现、查看并调用金融数据工具，覆盖 OKX、Deribit、SEC EDGAR、FMP、FRED 和 Polymarket，支持 OAuth 或 API key 接入。
+- [Finance MCP](https://finance-mcp.com) - 托管 MCP 服务，提供 13 个金融数据工具，覆盖美股、美国宏观、加密现货、期权、SEC 文件与财务数据和预测市场，数据来自 OKX、Deribit、SEC EDGAR、FMP、FRED、Polymarket、Tiingo 和 Finnhub。支持 OAuth 或 API key 接入。从不收费，每个账号送 1,000 免费积分。
 
 ### 官方券商与交易所 agent 工具包
 

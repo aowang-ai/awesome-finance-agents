@@ -108,11 +108,12 @@ const footer = (loc: typeof en, license: string) => {
     loc.key === 'zh'
       ? '<a href="/zh/guides/">指南</a>'
       : '<a href="/guides/">Guides</a>'
+  const mcpLink = '<a href="https://finance-mcp.com">Finance MCP</a>'
   return {
     message:
       loc.key === 'zh'
-        ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护 · ${guidesLink}`
-        : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a> · ${guidesLink}`,
+        ? `${loc.footnote} · 由 <a href="${AUTHOR_URL}">Ao Wang</a> 维护 · ${guidesLink} · ${mcpLink}`
+        : `${loc.footnote} · Maintained by <a href="${AUTHOR_URL}">Ao Wang</a> · ${guidesLink} · ${mcpLink}`,
     copyright: license,
   }
 }

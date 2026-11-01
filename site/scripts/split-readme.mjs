@@ -653,7 +653,7 @@ function writeLlmsFull(en, zh, rels = []) {
     '',
     `> ${en.tagline}`,
     '',
-    `Full text of ${SITE_ORIGIN}/ in English and Chinese (generated from the repository READMEs). Index: ${SITE_ORIGIN}/llms.txt. MCP: ${MCP_URL}. Maintained by Ao Wang (https://aowang.ai). Not investment advice.`,
+    `Full text of ${SITE_ORIGIN}/ in English and Chinese (generated from the repository READMEs). Index: ${SITE_ORIGIN}/llms.txt. MCP: ${MCP_URL}. Related: Finance MCP (https://finance-mcp.com), a hosted MCP server with 13 finance data tools. Maintained by Ao Wang (https://aowang.ai). Not investment advice.`,
     '',
   ]
   for (const f of [...order(en, GEN), ...order(zh, path.join(GEN, 'zh'))]) {
