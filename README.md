@@ -221,6 +221,7 @@ These systems simulate an analyst team: specialized agents debate, hand off, and
 - [trading-agents-java](https://github.com/BlackmodeN/trading-agents-java) - 🇨🇳 Spring AI multi-agent research desk with debate, daily position reviews, and vector memory.
 - [AlpacaTradingAgent](https://github.com/huygiatrng/AlpacaTradingAgent) - TradingAgents-style multi-agent framework wired to Alpaca for paper/live orders. (sim/live)
 - [FinCon](https://github.com/The-FinAI/FinCon) - Manager-analyst multi-agent system with conceptual verbal reinforcement (NeurIPS 2024). (paper)
+- [BetterTradingAgents](https://github.com/kingabzpro/BetterTradingAgents) - Multi-agent stock research with analyst debate, backtesting, risk controls, and paper trading. (sim)
 
 ### Pitfall Tip
 

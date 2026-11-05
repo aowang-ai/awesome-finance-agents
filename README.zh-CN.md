@@ -218,6 +218,7 @@ flowchart TB
 - [trading-agents-java](https://github.com/BlackmodeN/trading-agents-java) - 🇨🇳 Spring AI 多 agent 投研：辩论决策、每日持仓复盘与向量记忆。
 - [AlpacaTradingAgent](https://github.com/huygiatrng/AlpacaTradingAgent) - TradingAgents 式多 agent 框架，接 Alpaca 模拟/实盘下单。(sim/live)
 - [FinCon](https://github.com/The-FinAI/FinCon) - 经理-分析师多 agent 结构与概念化语言强化（NeurIPS 2024）。(paper)
+- [BetterTradingAgents](https://github.com/kingabzpro/BetterTradingAgents) - 多 agent 股票研究，支持分析师辩论、回测、风险控制和模拟交易。(sim)
 
 ### 踩坑提示
 
