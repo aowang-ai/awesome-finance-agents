@@ -305,6 +305,8 @@ flowchart TB
 - [quantitative-signal-discovery-agent](https://github.com/NVIDIA-AI-Blueprints/quantitative-signal-discovery-agent) - NVIDIA 官方示例：LLM 闭环生成、编码并评估 alpha 信号。
 - [AlphaQuanter](https://github.com/horizon-llm/AlphaQuanter) - 工具编排的 agent 强化学习交易框架（ACL 2026）。(paper)
 
+- [AgonAlpha](https://github.com/AutoResearch-Factory/AgonAlpha) - 带对抗评审与并行预算分配的多 agent LLM 因子挖掘系统；WorldQuant BRAIN 60 次提交中 17 个 SPECTACULAR（Fitness 9.50，Sharpe 3.48）。(paper)
+
 ### 踩坑提示
 
 因子工厂很容易过拟合。要求走步向前验证或 purged CV，并留一份 agent 永远看不到的 holdout。
