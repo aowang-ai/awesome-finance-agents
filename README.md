@@ -184,6 +184,7 @@ Research agents read filings, transcripts, news, and data rooms, then produce so
 - [easy-stock](https://github.com/jundizhou/easy-stock) - 🇨🇳 A-share analysis and AI research desktop workbench.
 - [Seris](https://github.com/aowang-ai/seris) - Desktop AI market research assistant: chat beside live charts, price alerts, and local backtests with your own model.
 - [FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) - Open-source finance terminal (AGPL) with market analytics, built-in AI research agents, and broker/backtest hooks.
+- [FastTrade AI](https://github.com/kingabzpro/FastTrade-AI) - Web research workspace that turns Alpaca IEX or Yahoo candles into LLM BUY/HOLD/SELL preferences behind deterministic risk checks, with a budgeted batch API and reproducible checksummed backtests; never places orders.
 - [go-stock](https://github.com/ArvinLovegood/go-stock) - 🇨🇳 Local-first desktop AI stock analysis for A/HK/US: quotes, news and fund-flow analysis, screening, alerts.
 - [tick-stock-panel](https://github.com/shy3130/tick-stock-panel) - 🇨🇳 Self-hosted A-share workbench: LLM-assisted strategy building, monitoring, backtests, and reviews.
 - [PanWatch](https://github.com/TNT-Likely/PanWatch) - 🇨🇳 AI stock monitoring for A/HK/US built on TradingAgents, with portfolio insights and alerts.
