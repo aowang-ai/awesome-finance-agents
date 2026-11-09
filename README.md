@@ -124,6 +124,8 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - Free, read-only MCP server and Python SDK for money-market, bank and BTC liquidity data, with source links, dates and units on every row.
 - [Finance MCP](https://finance-mcp.com) - Hosted MCP server with 13 finance data tools for US stocks, US macro, crypto spot, options, SEC filings and fundamentals, and prediction markets, from OKX, Deribit, SEC EDGAR, FMP, FRED, Polymarket, Tiingo, and Finnhub. Connect over OAuth or an API key. Never charges money; each account gets 1,000 free credits.
 
+- [DC Hub](https://github.com/azmartone67/dchub-mcp-server) - Remote MCP for US electricity, power-grid and data-center market intelligence: daily Data Center Power Index (DCPI) across 300+ markets, live ISO feeds, free to start at https://dchub.cloud/mcp (94 tools).
+
 ### Official broker and exchange agent kits
 
 - [alpaca-mcp-server](https://github.com/alpacahq/alpaca-mcp-server) - Official Alpaca MCP for stocks, ETFs, options, and crypto with paper trading. (sim)

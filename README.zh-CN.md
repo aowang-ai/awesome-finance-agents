@@ -120,6 +120,7 @@ flowchart TB
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - FRED（美联储经济数据）宏观序列的 MCP 服务。
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - 免费只读的 MCP 服务与 Python SDK，提供货币市场、银行与 BTC 流动性数据，每条数据附带来源链接、日期和单位。
 - [Finance MCP](https://finance-mcp.com) - 托管 MCP 服务，提供 13 个金融数据工具，覆盖美股、美国宏观、加密现货、期权、SEC 文件与财务数据和预测市场，数据来自 OKX、Deribit、SEC EDGAR、FMP、FRED、Polymarket、Tiingo 和 Finnhub。支持 OAuth 或 API key 接入。从不收费，每个账号送 1,000 免费积分。
+- [DC Hub](https://github.com/azmartone67/dchub-mcp-server) - 面向数据中心选址与电网/电力市场的远程 MCP：每日 Data Center Power Index (DCPI) 覆盖 300+ 市场，含美国 ISO 实时数据；https://dchub.cloud/mcp（94 tools，free to start）。
 
 ### 官方券商与交易所 agent 工具包
 
