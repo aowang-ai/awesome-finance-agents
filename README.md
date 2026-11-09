@@ -123,6 +123,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - MCP server for FRED (Federal Reserve Economic Data) macro series.
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - Free, read-only MCP server and Python SDK for money-market, bank and BTC liquidity data, with source links, dates and units on every row.
 - [Finance MCP](https://finance-mcp.com) - Hosted MCP server with 13 finance data tools for US stocks, US macro, crypto spot, options, SEC filings and fundamentals, and prediction markets, from OKX, Deribit, SEC EDGAR, FMP, FRED, Polymarket, Tiingo, and Finnhub. Connect over OAuth or an API key. Never charges money; each account gets 1,000 free credits.
+- [Firecrawl](https://github.com/firecrawl/firecrawl-mcp-server) - Official MCP server for web search, scraping, and crawling, with SEC EDGAR filings and 10-K/10-Q item sections through Firecrawl Alexandria.
 
 ### Official broker and exchange agent kits
 
