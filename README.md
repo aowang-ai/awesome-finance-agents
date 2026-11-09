@@ -314,6 +314,8 @@ Agents that mine factors, write strategy code, run backtests, and iterate. Close
 - [quantitative-signal-discovery-agent](https://github.com/NVIDIA-AI-Blueprints/quantitative-signal-discovery-agent) - NVIDIA blueprint: closed-loop LLM workflow that generates, codes, and evaluates alpha signals.
 - [AlphaQuanter](https://github.com/horizon-llm/AlphaQuanter) - Tool-orchestrated agentic RL framework for stock trading (ACL 2026). (paper)
 
+- [AgonAlpha](https://github.com/AutoResearch-Factory/AgonAlpha) - Multi-agent LLM alpha miner with adversarial review and parallel budget allocation; 17 SPECTACULAR of 60 WorldQuant BRAIN submissions (Fitness 9.50, Sharpe 3.48). (paper)
+
 ### Pitfall Tip
 
 Factor factories overfit fast. Demand walk-forward or purged CV, and keep a holdout the agent never sees.
