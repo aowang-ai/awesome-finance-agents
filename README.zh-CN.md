@@ -94,6 +94,7 @@ flowchart TB
 - [FQGate-agent](https://github.com/fqgate/FQGate-agent) - 🇨🇳 把同花顺客户端的本机 A 股行情、K 线、Level-2 与资讯开放给 Codex、Claude Code 等 agent。
 - [dartlab](https://github.com/eddmpython/dartlab) - 🇰🇷 把韩国 DART 与 SEC EDGAR 披露文件整理成结构化 Python 数据，用于公司分析。
 - [idx](https://github.com/fzn0x/idx) - 🇮🇩 印尼股市（IDX/IHSG）命令行、网页终端与 MCP：行情、基本面与选股，无需 API key。
+- [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) - 指导编码 Agent 使用 Siebly 开源（MIT）SDK 构建 Node.js / TypeScript 加密货币交易所 REST 与 WebSocket API 集成（Binance、Bybit、OKX、Kraken、Hyperliquid 等）。
 
 ### MCP 服务器
 
