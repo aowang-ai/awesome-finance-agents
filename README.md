@@ -97,6 +97,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [FQGate-agent](https://github.com/fqgate/FQGate-agent) - 🇨🇳 Local A-share quotes, K-lines, Level-2 and news from the Tonghuashun client, exposed to Codex/Claude Code-style agents.
 - [dartlab](https://github.com/eddmpython/dartlab) - 🇰🇷 Korean DART and SEC EDGAR filings as structured Python data for company analysis.
 - [idx](https://github.com/fzn0x/idx) - 🇮🇩 Indonesian stock market (IDX/IHSG) CLI, web terminal, and MCP: prices, fundamentals, and screening with no API key.
+- [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) - Agent skill that teaches coding agents to build Node.js and TypeScript integrations with crypto exchange REST and WebSocket APIs (Binance, Bybit, OKX, Kraken, Hyperliquid and more) using Siebly's MIT-licensed SDKs.
 
 ### MCP servers
 
