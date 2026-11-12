@@ -148,6 +148,7 @@ flowchart TB
 - [agentii-investment-intelligence](https://github.com/agentii-ai/agentii-investment-intelligence) - 25 个股票研究 Skill，基于 SEC 文件、XBRL 财报与行情数据。
 - [JoelLewis/finance_skills](https://github.com/JoelLewis/finance_skills) - 81 个 Claude Code 金融服务 Skill，分 7 个插件（财富管理、合规、运营等）。
 - [quant-buddy-skills](https://github.com/pseudo-longinus/quant-buddy-skills) - 🇨🇳 覆盖 A/港/美股、期货、宏观与 ETF 的量化分析 Skill 集。
+- [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) - 指导编码 Agent 使用 Siebly 开源（MIT）SDK 构建 Node.js / TypeScript 加密货币交易所 REST 与 WebSocket API 集成（Binance、Bybit、OKX、Kraken、Hyperliquid 等）。
 
 ### 踩坑提示
 

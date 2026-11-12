@@ -151,6 +151,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [agentii-investment-intelligence](https://github.com/agentii-ai/agentii-investment-intelligence) - 25 equity-research skills built on SEC filings, XBRL financials, and market data.
 - [JoelLewis/finance_skills](https://github.com/JoelLewis/finance_skills) - 81 Claude Code skills across 7 financial-services plugins (wealth, compliance, operations, and more).
 - [quant-buddy-skills](https://github.com/pseudo-longinus/quant-buddy-skills) - 🇨🇳 Quant analysis skills across A/HK/US equities, futures, macro, and ETFs.
+- [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) - Agent skill that teaches coding agents to build Node.js and TypeScript integrations with crypto exchange REST and WebSocket APIs (Binance, Bybit, OKX, Kraken, Hyperliquid and more) using Siebly's MIT-licensed SDKs.
 
 ### Pitfall Tip
 
