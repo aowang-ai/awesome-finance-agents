@@ -121,6 +121,7 @@ flowchart TB
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - 免费只读的 MCP 服务与 Python SDK，提供货币市场、银行与 BTC 流动性数据，每条数据附带来源链接、日期和单位。
 - [Finance MCP](https://finance-mcp.com) - 托管 MCP 服务，提供 13 个金融数据工具，覆盖美股、美国宏观、加密现货、期权、SEC 文件与财务数据和预测市场，数据来自 OKX、Deribit、SEC EDGAR、FMP、FRED、Polymarket、Tiingo 和 Finnhub。支持 OAuth 或 API key 接入。从不收费，每个账号送 1,000 免费积分。
 - [Firecrawl](https://github.com/firecrawl/firecrawl-mcp-server) - 官方 MCP 服务，支持网页搜索、抓取与爬取，还可通过 Firecrawl Alexandria 查询 SEC EDGAR 文件和按 Item 拆分的 10-K/10-Q 正文。
+- [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - 公开只读的 MCP 服务，提供美股与 ETF 的收益和风险分析。
 
 ### 官方券商与交易所 agent 工具包
 
