@@ -197,6 +197,7 @@ Research agents read filings, transcripts, news, and data rooms, then produce so
 - [vibe-astock](https://github.com/simonlin1212/vibe-astock) - 🇨🇳 A-share short-term review workbench: anomaly watch, sentiment review, AI recaps, trade journal.
 - [hunter-community](https://github.com/agentpit-io/hunter-community) - 🇨🇳 Self-hosted multi-agent research terminal for A/HK/US equities: screener, stock deep dives, watchlists, and holdings, with your own model key.
 - [folio](https://github.com/helsome/folio) - Local-first AI investment research workbench with evidence-backed theses, portfolio risk, and a Pi agent copilot.
+- [OpenAlpha](https://github.com/alex2loop/openalpha) - Self-hosted AI investment research assistant for US and Vietnam stocks, ETFs, gold, and crypto: a bull/bear council debates each suggestion, every figure cites its source, a forward track record grades past calls, and nothing trades without approval.
 
 ### Pitfall Tip
 
