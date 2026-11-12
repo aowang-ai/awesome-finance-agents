@@ -194,6 +194,7 @@ flowchart TB
 - [vibe-astock](https://github.com/simonlin1212/vibe-astock) - 🇨🇳 A 股短线复盘工作台：异动盯盘、情绪复盘、AI 复盘与交易日志。
 - [hunter-community](https://github.com/agentpit-io/hunter-community) - 🇨🇳 自托管多 agent 投研终端，覆盖 A/港/美股：选股器、个股深度分析、自选与持仓管理，使用自己的模型 key。
 - [folio](https://github.com/helsome/folio) - 本地优先的 AI 投研工作台：证据化投资论点、组合风险分析与 Pi agent 副驾驶。
+- [OpenAlpha](https://github.com/alex2loop/openalpha) - 自托管 AI 投研助手，覆盖美股、越南股票、ETF、黄金与加密货币：多空委员会在每条建议前辩论，每个数字标注来源，前瞻战绩记录评估历史判断，未经批准绝不下单。
 
 ### 踩坑提示
 
