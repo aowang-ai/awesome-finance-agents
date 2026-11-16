@@ -451,6 +451,7 @@ Measure research QA, trading decisions, safety, and live arena performance. With
 - [LLM-Trading-Lab](https://github.com/LuckyOne7777/LLM-Trading-Lab) - Public experiment where ChatGPT manages a small real-money micro-cap portfolio, with logs and code. (live)
 - [nof0](https://github.com/wquguru/nof0) - 🇨🇳 Open-source AI trading arena in the style of nof1 Alpha Arena.
 - [continuous-record-llm-trading-agents](https://github.com/ProjectDXAI/continuous-record-llm-trading-agents) - Data and artifacts from a continuous-record study of what LLM trading agents actually do. (paper)
+- [ai-stock-league](https://github.com/alphabazaar/ai-stock-league) - Daily open data (CC BY 4.0) from a forward-only AI stock-picking league: every model's call and reasoning in hash-chained logs, with no-AI baselines (random pick, SPY, momentum). (sim)
 
 ### Safety and trustworthiness
 
