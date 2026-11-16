@@ -126,6 +126,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [Firecrawl](https://github.com/firecrawl/firecrawl-mcp-server) - Official MCP server for web search, scraping, and crawling, with SEC EDGAR filings and 10-K/10-Q item sections through Firecrawl Alexandria.
 - [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - Public read-only MCP for return and risk analytics on US stocks and ETFs.
 - [Tapetide Indian Stock Market MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - 🇮🇳 Official MCP server for NSE and BSE stocks: financials, a ratio screener, technicals, FII/DII flows, end-of-day option chains, filings, and point-in-time data for backtests.
+- [exitvalue-mcp](https://github.com/nickcals/exitvalue-mcp) - Read-only MCP server for median EV/EBITDA and EV/Revenue M&A multiples by industry, deal size and year from disclosed transactions, over stdio or a hosted endpoint with no API key.
 
 ### Official broker and exchange agent kits
 
