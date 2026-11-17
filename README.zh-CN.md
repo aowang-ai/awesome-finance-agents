@@ -192,6 +192,7 @@ flowchart TB
 - [Seris](https://github.com/aowang-ai/seris) - 桌面 AI 投研助手：在实时行情图旁对话，支持价格提醒和本地回测，可接自己的模型。
 - [OpenChart](https://github.com/longsurf-ai/openchart) - 开源交易工作台：图表、提醒与 AI 投研 agent。
 - [FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) - 开源金融终端（AGPL），含行情分析、内置 AI 投研 agent、券商与回测接入。
+- [FastTrade AI](https://github.com/kingabzpro/FastTrade-AI) - 把 Alpaca IEX 或 Yahoo K 线转成 LLM 的买入/持有/卖出倾向，并做风险阈值检查；提供有预算控制的批量 API 和可复现的带校验回测，不会向券商下单。
 - [go-stock](https://github.com/ArvinLovegood/go-stock) - 🇨🇳 本地优先的桌面 AI 选股分析工具：A/港/美股行情、资讯与资金分析、选股、提醒。
 - [tick-stock-panel](https://github.com/shy3130/tick-stock-panel) - 🇨🇳 自托管 A 股工作台：LLM 辅助策略定制、盯盘、回测与复盘。
 - [PanWatch](https://github.com/TNT-Likely/PanWatch) - 🇨🇳 基于 TradingAgents 的 A/港/美股 AI 盯盘，含持仓洞察与提醒。
