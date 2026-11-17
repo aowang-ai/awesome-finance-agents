@@ -127,6 +127,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - Public read-only MCP for return and risk analytics on US stocks and ETFs.
 - [Tapetide Indian Stock Market MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - 🇮🇳 Official MCP server for NSE and BSE stocks: financials, a ratio screener, technicals, FII/DII flows, end-of-day option chains, filings, and point-in-time data for backtests.
 - [exitvalue-mcp](https://github.com/nickcals/exitvalue-mcp) - Read-only MCP server for median EV/EBITDA and EV/Revenue M&A multiples by industry, deal size and year from disclosed transactions, over stdio or a hosted endpoint with no API key.
+- [lava-mcp](https://github.com/dustinliang666-blip/lava-mcp) - 🇨🇳 Hosted remote MCP and agent skill for A-share stock and concept-sector news-heat monitoring: structured, timestamped concepts, tickers, and summary points over Streamable HTTP. Requires an API key or OAuth.
 
 ### Official broker and exchange agent kits
 
@@ -349,6 +350,7 @@ Agents for bookkeeping, reconciliation, invoices, tax, and reporting, plus MCP a
 - [shinkoku](https://github.com/kazukinagata/shinkoku) - Japanese tax-return agent plugin covering bookkeeping through e-Tax entry.
 - [mcp-fiscal-brasil](https://github.com/DeHor-Labs/mcp-fiscal-brasil) - Brazilian tax and fiscal MCP: CNPJ, NF-e, SPED, Simples Nacional, and more.
 - [opentax](https://github.com/filedcom/opentax) - Open-source US federal tax engine shipped as a single CLI with agent skills.
+- [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - Local-first CLI and stdio MCP payment runtime for agents, with transfers, x402, receipts, and owner-set limits. macOS Apple Silicon with Node 24 only; it is a payment-execution layer, not a bookkeeping ledger.
 
 ### Accounting-system MCP servers
 

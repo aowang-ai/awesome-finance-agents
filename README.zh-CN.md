@@ -124,6 +124,7 @@ flowchart TB
 - [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - 公开只读的 MCP 服务，提供美股与 ETF 的收益和风险分析。
 - [Tapetide Indian Stock Market MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - 🇮🇳 官方 MCP 服务，覆盖 NSE 与 BSE 上市股票：财报、比率选股、技术指标、FII/DII 资金流、日终期权链、公司文件，以及用于回测的时点（point-in-time）数据。
 - [exitvalue-mcp](https://github.com/nickcals/exitvalue-mcp) - 只读 MCP 服务，按行业、交易规模和年份提供已披露并购交易的 EV/EBITDA 与 EV/Revenue 中位数倍数，支持本地 stdio 或无需 API key 的托管接口。
+- [lava-mcp](https://github.com/dustinliang666-blip/lava-mcp) - 🇨🇳 A 股股票与概念板块消息面热度监测的托管远程 MCP 与 Agent Skill：按时间返回结构化的概念、标的与摘要要点，可通过 Streamable HTTP 调用。需 API Key 或 OAuth。
 
 ### 官方券商与交易所 agent 工具包
 
@@ -346,6 +347,7 @@ flowchart TB
 - [shinkoku](https://github.com/kazukinagata/shinkoku) - 日本确定申告 agent 插件，从记账到 e-Tax 填报。
 - [mcp-fiscal-brasil](https://github.com/DeHor-Labs/mcp-fiscal-brasil) - 巴西税务 MCP：CNPJ、NF-e、SPED、Simples Nacional 等。
 - [opentax](https://github.com/filedcom/opentax) - 开源美国联邦税计算引擎，单个 CLI 附 agent skills。
+- [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - 本地优先的 agent 支付运行时，提供 CLI 与 stdio MCP，支持转账、x402、收据和所有者设定的限额。仅支持 macOS Apple Silicon 与 Node 24；这是支付执行层，不是记账软件。
 
 ### 会计系统 MCP
 
