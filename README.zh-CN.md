@@ -123,6 +123,7 @@ flowchart TB
 - [Firecrawl](https://github.com/firecrawl/firecrawl-mcp-server) - 官方 MCP 服务，支持网页搜索、抓取与爬取，还可通过 Firecrawl Alexandria 查询 SEC EDGAR 文件和按 Item 拆分的 10-K/10-Q 正文。
 - [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - 公开只读的 MCP 服务，提供美股与 ETF 的收益和风险分析。
 - [Tapetide Indian Stock Market MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - 🇮🇳 官方 MCP 服务，覆盖 NSE 与 BSE 上市股票：财报、比率选股、技术指标、FII/DII 资金流、日终期权链、公司文件，以及用于回测的时点（point-in-time）数据。
+- [exitvalue-mcp](https://github.com/nickcals/exitvalue-mcp) - 只读 MCP 服务，按行业、交易规模和年份提供已披露并购交易的 EV/EBITDA 与 EV/Revenue 中位数倍数，支持本地 stdio 或无需 API key 的托管接口。
 
 ### 官方券商与交易所 agent 工具包
 
