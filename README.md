@@ -91,10 +91,12 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [edgartools](https://github.com/dgunning/edgartools) - Typed Python API for SEC EDGAR: 10-K/8-K, XBRL, 13F, Form 3/4/5.
 - [MarS](https://github.com/microsoft/MarS) - Microsoft financial market simulation engine powered by a generative foundation model.
 - [global-stock-data](https://github.com/simonlin1212/global-stock-data) - Zero-auth US market data skill for coding agents: CBOE options Greeks, FINRA short volume, SEC filings, screener.
+- [stock-screener](https://github.com/xang1234/stock-screener) - CANSLIM/Minervini screener across 12 markets with AI research chat and an MCP server.
 - [yahoo-finance2](https://github.com/gadicc/yahoo-finance2) - Unofficial Yahoo Finance API for Node with a CLI, MCP server, and agent skill.
 - [CNEquity](https://github.com/rootSunc/CNEquity) - 🇨🇳 Local Parquet data lake for China markets with point-in-time semantics, quality audits, and MCP access.
 - [FQGate-agent](https://github.com/fqgate/FQGate-agent) - 🇨🇳 Local A-share quotes, K-lines, Level-2 and news from the Tonghuashun client, exposed to Codex/Claude Code-style agents.
 - [dartlab](https://github.com/eddmpython/dartlab) - 🇰🇷 Korean DART and SEC EDGAR filings as structured Python data for company analysis.
+- [idx](https://github.com/fzn0x/idx) - 🇮🇩 Indonesian stock market (IDX/IHSG) CLI, web terminal, and MCP: prices, fundamentals, and screening with no API key.
 
 ### MCP servers
 
@@ -110,7 +112,9 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [financial-datasets/mcp-server](https://github.com/financial-datasets/mcp-server) - MCP server for the Financial Datasets stock market API (prices, statements, news).
 - [stock-api](https://github.com/zhangxiangliang/stock-api) - 🇨🇳 A-share, US, HK, and exchange-traded fund quotes via Node.js, browser, CLI, or MCP.
 - [metatrader-mcp-server](https://github.com/ariadng/metatrader-mcp-server) - MCP server that lets LLMs read data and place trades through MetaTrader 5. (live)
+- [nt8-mcp](https://github.com/tbraman-dev/nt8-mcp) - MCP + NinjaTrader 8 AddOn for compiling NinjaScript, chart/print reads, and headless backtests. (sim)
 - [maverick-mcp](https://github.com/wshobson/maverick-mcp) - Stock MCP with Yahoo Finance data, technical analysis, portfolio tracking, and Python backtests.
+- [momentum-mcp](https://github.com/mphinance/momentum-mcp) - Quant MCP server for screening, OHLCV, technicals, charts, and financial news (~100 tools).
 - [borsa-mcp](https://github.com/saidsurucu/borsa-mcp) - 🇹🇷 MCP for Borsa Istanbul, US equities, and Turkish fund data.
 - [investor-agent](https://github.com/ferdousbhai/investor-agent) - MCP server bundling market data, fundamentals, options, and sentiment for building an investor agent.
 - [interactive-brokers-mcp](https://github.com/code-rabi/interactive-brokers-mcp) - Interactive Brokers MCP server for account, market data, and order tools. (sim/live)
@@ -119,6 +123,9 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - MCP server for FRED (Federal Reserve Economic Data) macro series.
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - Free, read-only MCP server and Python SDK for money-market, bank and BTC liquidity data, with source links, dates and units on every row.
 - [Finance MCP](https://finance-mcp.com) - Hosted MCP server with 13 finance data tools for US stocks, US macro, crypto spot, options, SEC filings and fundamentals, and prediction markets, from OKX, Deribit, SEC EDGAR, FMP, FRED, Polymarket, Tiingo, and Finnhub. Connect over OAuth or an API key. Never charges money; each account gets 1,000 free credits.
+- [Firecrawl](https://github.com/firecrawl/firecrawl-mcp-server) - Official MCP server for web search, scraping, and crawling, with SEC EDGAR filings and 10-K/10-Q item sections through Firecrawl Alexandria.
+- [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - Public read-only MCP for return and risk analytics on US stocks and ETFs.
+- [Tapetide Indian Stock Market MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - 🇮🇳 Official MCP server for NSE and BSE stocks: financials, a ratio screener, technicals, FII/DII flows, end-of-day option chains, filings, and point-in-time data for backtests.
 
 ### Official broker and exchange agent kits
 
@@ -146,6 +153,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [agentii-investment-intelligence](https://github.com/agentii-ai/agentii-investment-intelligence) - 25 equity-research skills built on SEC filings, XBRL financials, and market data.
 - [JoelLewis/finance_skills](https://github.com/JoelLewis/finance_skills) - 81 Claude Code skills across 7 financial-services plugins (wealth, compliance, operations, and more).
 - [quant-buddy-skills](https://github.com/pseudo-longinus/quant-buddy-skills) - 🇨🇳 Quant analysis skills across A/HK/US equities, futures, macro, and ETFs.
+- [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) - Agent skill that teaches coding agents to build Node.js and TypeScript integrations with crypto exchange REST and WebSocket APIs (Binance, Bybit, OKX, Kraken, Hyperliquid and more) using Siebly's MIT-licensed SDKs.
 
 ### Pitfall Tip
 
@@ -176,6 +184,7 @@ Research agents read filings, transcripts, news, and data rooms, then produce so
 - [dexter-jp](https://github.com/edinetdb/dexter-jp) - Dexter-style deep research agent for Japanese listed companies on EDINET data.
 - [FinanceHarness](https://github.com/Yijia-Xiao/FinanceHarness) - Autonomous financial deep-research framework (paper code).
 - [kamathhrishi/finance-agent](https://github.com/kamathhrishi/finance-agent) - Q&A over earnings calls, SEC filings, and news using file-tool navigation rather than vector RAG.
+- [open-etf-agent](https://github.com/hpoenixf/open-etf-agent) - Build an ETF research agent module by module: runnable code and bilingual deep-dive notes.
 
 ### Self-hosted research workbenches and terminals
 
@@ -183,6 +192,7 @@ Research agents read filings, transcripts, news, and data rooms, then produce so
 - [Vibe-Research](https://github.com/simonlin1212/Vibe-Research) - 🇨🇳 A/US/HK equity research workbench with a large local data surface.
 - [easy-stock](https://github.com/jundizhou/easy-stock) - 🇨🇳 A-share analysis and AI research desktop workbench.
 - [Seris](https://github.com/aowang-ai/seris) - Desktop AI market research assistant: chat beside live charts, price alerts, and local backtests with your own model.
+- [OpenChart](https://github.com/longsurf-ai/openchart) - Open-source trading workspace with charts, alerts, and AI research agents.
 - [FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) - Open-source finance terminal (AGPL) with market analytics, built-in AI research agents, and broker/backtest hooks.
 - [FastTrade AI](https://github.com/kingabzpro/FastTrade-AI) - Web research workspace that turns Alpaca IEX or Yahoo candles into LLM BUY/HOLD/SELL preferences behind deterministic risk checks, with a budgeted batch API and reproducible checksummed backtests; never places orders.
 - [go-stock](https://github.com/ArvinLovegood/go-stock) - 🇨🇳 Local-first desktop AI stock analysis for A/HK/US: quotes, news and fund-flow analysis, screening, alerts.
@@ -191,6 +201,7 @@ Research agents read filings, transcripts, news, and data rooms, then produce so
 - [vibe-astock](https://github.com/simonlin1212/vibe-astock) - 🇨🇳 A-share short-term review workbench: anomaly watch, sentiment review, AI recaps, trade journal.
 - [hunter-community](https://github.com/agentpit-io/hunter-community) - 🇨🇳 Self-hosted multi-agent research terminal for A/HK/US equities: screener, stock deep dives, watchlists, and holdings, with your own model key.
 - [folio](https://github.com/helsome/folio) - Local-first AI investment research workbench with evidence-backed theses, portfolio risk, and a Pi agent copilot.
+- [OpenAlpha](https://github.com/alex2loop/openalpha) - Self-hosted AI investment research assistant for US and Vietnam stocks, ETFs, gold, and crypto: a bull/bear council debates each suggestion, every figure cites its source, a forward track record grades past calls, and nothing trades without approval.
 
 ### Pitfall Tip
 
@@ -309,6 +320,8 @@ Agents that mine factors, write strategy code, run backtests, and iterate. Close
 - [quantitative-signal-discovery-agent](https://github.com/NVIDIA-AI-Blueprints/quantitative-signal-discovery-agent) - NVIDIA blueprint: closed-loop LLM workflow that generates, codes, and evaluates alpha signals.
 - [AlphaQuanter](https://github.com/horizon-llm/AlphaQuanter) - Tool-orchestrated agentic RL framework for stock trading (ACL 2026). (paper)
 
+- [AgonAlpha](https://github.com/AutoResearch-Factory/AgonAlpha) - Multi-agent LLM alpha miner with adversarial review and parallel budget allocation; 17 SPECTACULAR of 60 WorldQuant BRAIN submissions (Fitness 9.50, Sharpe 3.48). (paper)
+
 ### Pitfall Tip
 
 Factor factories overfit fast. Demand walk-forward or purged CV, and keep a holdout the agent never sees.
@@ -386,6 +399,7 @@ Budgeting, spending analysis, net-worth tracking, and local-first finance apps t
 - [mcp-server-firefly-iii](https://github.com/fabianonetto/mcp-server-firefly-iii) - MCP server bridging agents to Firefly III.
 - [finance-assistant](https://github.com/googlarz/finance-assistant) - Personal finance copilot skill (FIRE planning, bank statement formats).
 - [opencoffer](https://github.com/osirishorus/opencoffer) - Self-hosted personal finance with BYO-LLM chat and MCP.
+- [open-net-worth](https://github.com/open-net-worth-ai/open-net-worth) - Self-hosted personal-finance agent for budgets, investments, and optional trade placement.
 - [BeeCount](https://github.com/TNT-Likely/BeeCount) - 🇨🇳 Local-first bookkeeping app (iOS/Android/Web) with AI capture, self-hosted sync, and MCP.
 - [aurelio-finance](https://github.com/LosaLosSantos/aurelio-finance) - Open-source personal finance app with an AI advisor for net worth, investments, and cash flow.
 - [actual-ai](https://github.com/sakowicz/actual-ai) - Categorizes Actual Budget transactions with an LLM (OpenAI-compatible or Ollama).

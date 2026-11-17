@@ -88,10 +88,12 @@ flowchart TB
 - [edgartools](https://github.com/dgunning/edgartools) - 类型友好的 SEC EDGAR Python API：10-K/8-K、XBRL、13F、Form 3/4/5。
 - [MarS](https://github.com/microsoft/MarS) - 微软的金融市场仿真引擎，由生成式基础模型驱动。
 - [global-stock-data](https://github.com/simonlin1212/global-stock-data) - 面向编码 agent 的免鉴权美股数据 Skill：CBOE 期权希腊值、FINRA 卖空量、SEC 文件、选股器。
+- [stock-screener](https://github.com/xang1234/stock-screener) - 覆盖 12 个市场的 CANSLIM/Minervini 选股器，带 AI 研究聊天与 MCP 服务。
 - [yahoo-finance2](https://github.com/gadicc/yahoo-finance2) - Node 版非官方 Yahoo Finance API，附 CLI、MCP 服务与 Agent Skill。
 - [CNEquity](https://github.com/rootSunc/CNEquity) - 🇨🇳 中国市场本地 Parquet 数据湖，带 PIT 语义、质量审计，可通过 MCP 供 agent 查询。
 - [FQGate-agent](https://github.com/fqgate/FQGate-agent) - 🇨🇳 把同花顺客户端的本机 A 股行情、K 线、Level-2 与资讯开放给 Codex、Claude Code 等 agent。
 - [dartlab](https://github.com/eddmpython/dartlab) - 🇰🇷 把韩国 DART 与 SEC EDGAR 披露文件整理成结构化 Python 数据，用于公司分析。
+- [idx](https://github.com/fzn0x/idx) - 🇮🇩 印尼股市（IDX/IHSG）命令行、网页终端与 MCP：行情、基本面与选股，无需 API key。
 
 ### MCP 服务器
 
@@ -107,7 +109,9 @@ flowchart TB
 - [financial-datasets/mcp-server](https://github.com/financial-datasets/mcp-server) - Financial Datasets 股票数据 API 的 MCP 服务（行情、财报、新闻）。
 - [stock-api](https://github.com/zhangxiangliang/stock-api) - 🇨🇳 A 股、美股、港股与场内基金行情，可经 Node.js、浏览器、CLI 或 MCP 接入。
 - [metatrader-mcp-server](https://github.com/ariadng/metatrader-mcp-server) - 让 LLM 通过 MetaTrader 5 读取数据并下单的 MCP。(live)
+- [nt8-mcp](https://github.com/tbraman-dev/nt8-mcp) - 对接 NinjaTrader 8 的 MCP 与 AddOn：编译 NinjaScript、读图与 Print、无头回测。(sim)
 - [maverick-mcp](https://github.com/wshobson/maverick-mcp) - 股票 MCP：Yahoo Finance 数据、技术分析、持仓跟踪与 Python 回测。
+- [momentum-mcp](https://github.com/mphinance/momentum-mcp) - 量化 MCP：选股、OHLCV、技术指标、图表与财经新闻（约百个工具）。
 - [borsa-mcp](https://github.com/saidsurucu/borsa-mcp) - 🇹🇷 伊斯坦布尔交易所、美股与土耳其基金数据 MCP。
 - [investor-agent](https://github.com/ferdousbhai/investor-agent) - 为投资 agent 打包行情、基本面、期权与情绪数据的 MCP 服务。
 - [interactive-brokers-mcp](https://github.com/code-rabi/interactive-brokers-mcp) - 盈透证券 MCP，提供账户、行情与下单工具。(sim/live)
@@ -116,6 +120,9 @@ flowchart TB
 - [fred-mcp-server](https://github.com/stefanoamorelli/fred-mcp-server) - FRED（美联储经济数据）宏观序列的 MCP 服务。
 - [Financial Evidence](https://github.com/beepboop2025/financial-evidence-skills) - 免费只读的 MCP 服务与 Python SDK，提供货币市场、银行与 BTC 流动性数据，每条数据附带来源链接、日期和单位。
 - [Finance MCP](https://finance-mcp.com) - 托管 MCP 服务，提供 13 个金融数据工具，覆盖美股、美国宏观、加密现货、期权、SEC 文件与财务数据和预测市场，数据来自 OKX、Deribit、SEC EDGAR、FMP、FRED、Polymarket、Tiingo 和 Finnhub。支持 OAuth 或 API key 接入。从不收费，每个账号送 1,000 免费积分。
+- [Firecrawl](https://github.com/firecrawl/firecrawl-mcp-server) - 官方 MCP 服务，支持网页搜索、抓取与爬取，还可通过 Firecrawl Alexandria 查询 SEC EDGAR 文件和按 Item 拆分的 10-K/10-Q 正文。
+- [Redstone Markets](https://github.com/mihaitv/redstone-mcp) - 公开只读的 MCP 服务，提供美股与 ETF 的收益和风险分析。
+- [Tapetide Indian Stock Market MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) - 🇮🇳 官方 MCP 服务，覆盖 NSE 与 BSE 上市股票：财报、比率选股、技术指标、FII/DII 资金流、日终期权链、公司文件，以及用于回测的时点（point-in-time）数据。
 
 ### 官方券商与交易所 agent 工具包
 
@@ -143,6 +150,7 @@ flowchart TB
 - [agentii-investment-intelligence](https://github.com/agentii-ai/agentii-investment-intelligence) - 25 个股票研究 Skill，基于 SEC 文件、XBRL 财报与行情数据。
 - [JoelLewis/finance_skills](https://github.com/JoelLewis/finance_skills) - 81 个 Claude Code 金融服务 Skill，分 7 个插件（财富管理、合规、运营等）。
 - [quant-buddy-skills](https://github.com/pseudo-longinus/quant-buddy-skills) - 🇨🇳 覆盖 A/港/美股、期货、宏观与 ETF 的量化分析 Skill 集。
+- [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) - 指导编码 Agent 使用 Siebly 开源（MIT）SDK 构建 Node.js / TypeScript 加密货币交易所 REST 与 WebSocket API 集成（Binance、Bybit、OKX、Kraken、Hyperliquid 等）。
 
 ### 踩坑提示
 
@@ -173,6 +181,7 @@ flowchart TB
 - [dexter-jp](https://github.com/edinetdb/dexter-jp) - 面向日本上市公司的 Dexter 式深度研究 agent，基于 EDINET 数据。
 - [FinanceHarness](https://github.com/Yijia-Xiao/FinanceHarness) - 自主金融深度研究框架（论文代码）。
 - [kamathhrishi/finance-agent](https://github.com/kamathhrishi/finance-agent) - 对财报电话会、SEC 文件与新闻问答，用文件工具检索而非向量 RAG。
+- [open-etf-agent](https://github.com/hpoenixf/open-etf-agent) - 逐模块构建 ETF 投研 agent：可运行代码与中英双语深度解析。
 
 ### 自托管投研工作台与终端
 
@@ -180,6 +189,7 @@ flowchart TB
 - [Vibe-Research](https://github.com/simonlin1212/Vibe-Research) - 🇨🇳 A/美/港股投研工作台，本地数据面较全。
 - [easy-stock](https://github.com/jundizhou/easy-stock) - 🇨🇳 A 股分析与 AI 投研桌面工作台。
 - [Seris](https://github.com/aowang-ai/seris) - 桌面 AI 投研助手：在实时行情图旁对话，支持价格提醒和本地回测，可接自己的模型。
+- [OpenChart](https://github.com/longsurf-ai/openchart) - 开源交易工作台：图表、提醒与 AI 投研 agent。
 - [FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) - 开源金融终端（AGPL），含行情分析、内置 AI 投研 agent、券商与回测接入。
 - [go-stock](https://github.com/ArvinLovegood/go-stock) - 🇨🇳 本地优先的桌面 AI 选股分析工具：A/港/美股行情、资讯与资金分析、选股、提醒。
 - [tick-stock-panel](https://github.com/shy3130/tick-stock-panel) - 🇨🇳 自托管 A 股工作台：LLM 辅助策略定制、盯盘、回测与复盘。
@@ -187,6 +197,7 @@ flowchart TB
 - [vibe-astock](https://github.com/simonlin1212/vibe-astock) - 🇨🇳 A 股短线复盘工作台：异动盯盘、情绪复盘、AI 复盘与交易日志。
 - [hunter-community](https://github.com/agentpit-io/hunter-community) - 🇨🇳 自托管多 agent 投研终端，覆盖 A/港/美股：选股器、个股深度分析、自选与持仓管理，使用自己的模型 key。
 - [folio](https://github.com/helsome/folio) - 本地优先的 AI 投研工作台：证据化投资论点、组合风险分析与 Pi agent 副驾驶。
+- [OpenAlpha](https://github.com/alex2loop/openalpha) - 自托管 AI 投研助手，覆盖美股、越南股票、ETF、黄金与加密货币：多空委员会在每条建议前辩论，每个数字标注来源，前瞻战绩记录评估历史判断，未经批准绝不下单。
 
 ### 踩坑提示
 
@@ -305,6 +316,8 @@ flowchart TB
 - [quantitative-signal-discovery-agent](https://github.com/NVIDIA-AI-Blueprints/quantitative-signal-discovery-agent) - NVIDIA 官方示例：LLM 闭环生成、编码并评估 alpha 信号。
 - [AlphaQuanter](https://github.com/horizon-llm/AlphaQuanter) - 工具编排的 agent 强化学习交易框架（ACL 2026）。(paper)
 
+- [AgonAlpha](https://github.com/AutoResearch-Factory/AgonAlpha) - 带对抗评审与并行预算分配的多 agent LLM 因子挖掘系统；WorldQuant BRAIN 60 次提交中 17 个 SPECTACULAR（Fitness 9.50，Sharpe 3.48）。(paper)
+
 ### 踩坑提示
 
 因子工厂很容易过拟合。要求走步向前验证或 purged CV，并留一份 agent 永远看不到的 holdout。
@@ -382,6 +395,7 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 - [mcp-server-firefly-iii](https://github.com/fabianonetto/mcp-server-firefly-iii) - 把 agent 接到 Firefly III 的 MCP 服务器。
 - [finance-assistant](https://github.com/googlarz/finance-assistant) - 个人理财副驾 skill（FIRE 规划、银行流水格式等）。
 - [opencoffer](https://github.com/osirishorus/opencoffer) - 自托管个人理财，支持自备 LLM 聊天与 MCP。
+- [open-net-worth](https://github.com/open-net-worth-ai/open-net-worth) - 自托管个人理财 agent：预算、投资，并可选择下单交易。
 - [BeeCount](https://github.com/TNT-Likely/BeeCount) - 🇨🇳 本地优先记账应用（iOS/Android/Web），支持 AI 记账、自托管同步与 MCP。
 - [aurelio-finance](https://github.com/LosaLosSantos/aurelio-finance) - 开源个人理财应用，带 AI 顾问，跟踪净资产、投资与现金流。
 - [actual-ai](https://github.com/sakowicz/actual-ai) - 用 LLM 为 Actual Budget 交易自动分类（兼容 OpenAI 或 Ollama）。
