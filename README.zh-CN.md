@@ -126,6 +126,7 @@ flowchart TB
 - [exitvalue-mcp](https://github.com/nickcals/exitvalue-mcp) - 只读 MCP 服务，按行业、交易规模和年份提供已披露并购交易的 EV/EBITDA 与 EV/Revenue 中位数倍数，支持本地 stdio 或无需 API key 的托管接口。
 - [lava-mcp](https://github.com/dustinliang666-blip/lava-mcp) - 🇨🇳 A 股股票与概念板块消息面热度监测的托管远程 MCP 与 Agent Skill：按时间返回结构化的概念、标的与摘要要点，可通过 Streamable HTTP 调用。需 API Key 或 OAuth。
 
+- [eu-nordic-open-data-mcp](https://github.com/itulo/eu-nordic-open-data-mcp) - MIT 开源 MCP 服务，含 49 个工具，提供欧盟与北欧官方公司层面开放数据（公司登记、VIES、欧盟制裁名单、TED 招标、Fingrid），每条回答均标注数据许可。
 ### 官方券商与交易所 agent 工具包
 
 - [alpaca-mcp-server](https://github.com/alpacahq/alpaca-mcp-server) - Alpaca 官方 MCP：股票/ETF/期权/加密，支持模拟盘。(sim)
