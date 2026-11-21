@@ -8,6 +8,8 @@
 
 每章固定写：要解决的问题、开源实现、踩坑提示。正文不写星数，避免过时。🇨🇳 标记 A 股 / 中文项目；其他国旗标记特定地区的数据源（如 🇹🇷、🇰🇷）。`(sim)` / `(live)` / `(paper)` 在资料明确时标注模拟盘、实盘或论文代码。
 
+**每日维护。** 我们每天审阅新申请并寻找值得收录的金融 agent 项目，通过审阅后加入清单；每周检查已收录条目的链接和维护状态。
+
 ## 目录
 
 - [全景图](#全景图)
@@ -264,6 +266,7 @@ flowchart TB
 - [hummingbot/condor](https://github.com/hummingbot/condor) - Hummingbot 官方的 Telegram 控制端，经 Hummingbot API 监控与运行 AI 交易 agent。(live)
 - [WyckoffTradingAgent](https://github.com/YoungCan-Wang/WyckoffTradingAgent) - 🇨🇳 威科夫量价交易 agent 与 A 股筛股工具，带 CLI 工作流和 MCP 工具。
 - [FriesTrader](https://github.com/YizhiSong/FriesTrader) - 通过 Robinhood 官方 agentic-trading MCP 真实下单的交易 agent，风控规则由机械规则执行，模型无法覆盖。(live)
+- [arena-starter](https://github.com/alphabazaar/arena-starter) - 模板交易 agent：每个工作日在 GitHub Actions 上自动运行（Claude、OpenAI、Gemini、Ollama 或纯规则），把纸面交易发布到价格由服务器记录的公开业绩记录。(sim)
 
 ### 预测市场 agent
 
@@ -525,6 +528,8 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 ## 贡献
 
 欢迎贡献。请先阅读 [贡献指南](CONTRIBUTING.md)。变更记录见 [changelog](CHANGELOG.md)。
+
+欢迎提交项目！如果这份清单对你有帮助，提交前也欢迎点个 Star 支持一下 ⭐
 
 ## 备注
 
