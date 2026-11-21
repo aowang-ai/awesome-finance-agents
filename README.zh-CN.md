@@ -342,6 +342,7 @@ flowchart TB
 - [Bookkeeping-Agency-Skill](https://github.com/cyhzzz/Bookkeeping-Agency-Skill) - 🇨🇳 面向中国代理记账场景的 Skills 包。
 - [accounted](https://github.com/erp-mafia/accounted) - 为 agent 操作而设计的开源 ERP。
 - [cfo-stack](https://github.com/MikeChongCan/cfo-stack) - 基于 Beancount 的 AI CFO 流程：导入、分类、对账、报表与税务 Skill。
+- [tracemodel](https://github.com/datayoga-io/tracemodel) - 供 agent 从财报和报告中填数的模型层：数值经校验并保留来源，记入版本化日志，并由勾稽检查与审阅把关。
 
 ### 税务、发票与应付
 

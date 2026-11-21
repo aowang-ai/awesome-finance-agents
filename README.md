@@ -345,6 +345,7 @@ Agents for bookkeeping, reconciliation, invoices, tax, and reporting, plus MCP a
 - [Bookkeeping-Agency-Skill](https://github.com/cyhzzz/Bookkeeping-Agency-Skill) - 🇨🇳 Skills pack for China bookkeeping-agency vertical agents.
 - [accounted](https://github.com/erp-mafia/accounted) - Open-source ERP designed to be operated by agents.
 - [cfo-stack](https://github.com/MikeChongCan/cfo-stack) - Beancount-based AI CFO workflow: import, classification, reconciliation, reports, and tax skills.
+- [tracemodel](https://github.com/datayoga-io/tracemodel) - Model layer that agents fill from filings and reports: values are validated, sourced, kept in a versioned log, and gated by tie-out checks and review.
 
 ### Tax, invoicing, and payables
 
