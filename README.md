@@ -383,7 +383,7 @@ AML/KYC, fraud triage, due diligence, ESG review, and action firewalls that sit 
 - [FinVault](https://github.com/aifinlab/FinVault) - Execution-grounded financial agent safety benchmark.
 - [ESGenius](https://github.com/ANGEL-NTU/ESGenius) - ESG knowledge benchmark for LLMs.
 - [cre-acquisition-orchestrator](https://github.com/ahacker-1/cre-acquisition-orchestrator) - Agent framework for commercial real estate acquisitions: diligence, underwriting, and financing.
-- [MexCheck](https://github.com/acrogenesis/mexcheck-mcp) - Hosted remote MCP server for Mexican KYC/KYB checks against official sources (RFC and SAT 69/69-B lists, CFDI status, CURP via RENAPO, INE); repo has MIT-licensed client configs and docs.
+- [MexCheck](https://github.com/acrogenesis/mexcheck-mcp) - Hosted remote MCP for Mexican KYC/KYB checks against official sources (RFC and SAT 69/69-B lists, CFDI status, CURP via RENAPO, INE). Requires OAuth and is billed per request; the repo has MIT-licensed client configs and docs.
 
 ### Pitfall Tip
 
