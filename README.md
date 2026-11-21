@@ -269,6 +269,7 @@ From signal to order: position sizing, risk budgets, broker/exchange connectors,
 - [hummingbot/condor](https://github.com/hummingbot/condor) - Hummingbot's Telegram harness for monitoring and running AI trading agents via the Hummingbot API. (live)
 - [WyckoffTradingAgent](https://github.com/YoungCan-Wang/WyckoffTradingAgent) - 🇨🇳 Wyckoff volume-price trading agent and A-share stock screener with CLI workflows and MCP tools.
 - [FriesTrader](https://github.com/YizhiSong/FriesTrader) - Robinhood trading agent placing real orders through Robinhood's agentic-trading MCP, under mechanical risk rules the model cannot override. (live)
+- [arena-starter](https://github.com/alphabazaar/arena-starter) - Template trading agent that runs itself every weekday on GitHub Actions (Claude, OpenAI, Gemini, Ollama or rules only) and publishes its paper trades to a public track record with server-captured prices. (sim)
 
 ### Prediction-market agents
 
