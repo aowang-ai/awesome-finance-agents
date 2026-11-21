@@ -1,5 +1,8 @@
 <!-- Thanks for contributing! Please read CONTRIBUTING.md first. 中文说明见 CONTRIBUTING.md。 -->
 
+Project submissions are welcome! If this list has been useful to you, a Star before you submit is always appreciated ⭐
+欢迎提交项目！如果这份清单对你有帮助，提交前也欢迎点个 Star 支持一下 ⭐
+
 ## What I am adding or changing
 
 - Resource: [Name](URL)

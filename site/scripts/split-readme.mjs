@@ -261,11 +261,16 @@ function buildLocale(loc, chapterSlugs) {
   const tagline = plain((preamble.find((l) => /^> /.test(l)) || '').replace(/^>\s*/, ''))
   const name = plain(preamble.find((l) => /^# /.test(l)).replace(/^# /, '').replace(/\[!\[.*$/, ''))
   // intro paragraphs: preamble minus title, tagline, language switch
-  const intro = trimBlank(
+  const introAll = trimBlank(
     preamble.filter(
       (l) => !/^# /.test(l) && !/^> /.test(l) && !/README(\.zh-CN)?\.md\)/.test(l),
     ),
   )
+  // Standalone "Daily maintenance" / "每日维护" note: show it on the home page
+  // after the lead and before the contents table (same placement as in the README).
+  const maintainAt = introAll.findIndex((l) => /^\*\*(?:Daily maintenance|每日维护)/.test(l))
+  const intro = trimBlank(maintainAt === -1 ? introAll : introAll.slice(0, maintainAt))
+  const maintenance = trimBlank(maintainAt === -1 ? [] : introAll.slice(maintainAt))
 
   // core questions from the map table ("| 1 | Chapter | Question |")
   const questions = new Map()
@@ -352,6 +357,7 @@ function buildLocale(loc, chapterSlugs) {
     '',
     `<p class="afa-meta">${allEntries} ${esc(L.projects)} · ${esc(L.chaptersMeta)} · CC0 · <a href="${REPO_URL}">GitHub</a></p>`,
     '',
+    ...(maintenance.length ? [...rewrite(maintenance), ''] : []),
     `## ${L.contents} {#${ghSlug(mapSec.title)}}`,
     '',
     '<div class="afa-toc">',
@@ -387,6 +393,7 @@ function buildLocale(loc, chapterSlugs) {
     '',
     `${allEntries} ${L.projects} · ${L.chaptersMeta} · CC0 · ${SITE_ORIGIN}${loc.prefix} · ${REPO_URL}`,
     '',
+    ...(maintenance.length ? [...abs(rewrite(maintenance)), ''] : []),
     `## ${L.contents}`,
     '',
     `| ${L.colNum} | ${L.colChapter} | ${L.colQuestion} | ${L.colEntries} |`,
