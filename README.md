@@ -8,6 +8,8 @@ This list is organized by **financial function**. Trading is one chapter; for a 
 
 Each chapter answers: what problem it solves, which open-source projects to study, and one pitfall tip. Star counts are omitted so they do not go stale. 🇨🇳 marks China A-share / Chinese-language projects; other flags mark region-specific data sources (for example 🇹🇷, 🇰🇷). `(sim)` / `(live)` / `(paper)` mark paper trading, live trading, or paper-code when known.
 
+**Daily maintenance.** We review new submissions and look for finance-agent projects worth listing every day; projects are added after they pass review. Each week we check the links and maintenance status of existing entries.
+
 ## Contents
 
 - [The Map](#the-map)
@@ -267,6 +269,7 @@ From signal to order: position sizing, risk budgets, broker/exchange connectors,
 - [hummingbot/condor](https://github.com/hummingbot/condor) - Hummingbot's Telegram harness for monitoring and running AI trading agents via the Hummingbot API. (live)
 - [WyckoffTradingAgent](https://github.com/YoungCan-Wang/WyckoffTradingAgent) - 🇨🇳 Wyckoff volume-price trading agent and A-share stock screener with CLI workflows and MCP tools.
 - [FriesTrader](https://github.com/YizhiSong/FriesTrader) - Robinhood trading agent placing real orders through Robinhood's agentic-trading MCP, under mechanical risk rules the model cannot override. (live)
+- [arena-starter](https://github.com/alphabazaar/arena-starter) - Template trading agent that runs itself every weekday on GitHub Actions (Claude, OpenAI, Gemini, Ollama or rules only) and publishes its paper trades to a public track record with server-captured prices. (sim)
 
 ### Prediction-market agents
 
@@ -529,6 +532,8 @@ Models, surveys, and neighboring lists that are useful context but not always "a
 ## Contributing
 
 Contributions are welcome. Read the [contribution guidelines](CONTRIBUTING.md) first. Changes are tracked in the [changelog](CHANGELOG.md).
+
+Project submissions are welcome! If this list has been useful to you, a Star before you submit is always appreciated ⭐
 
 ## Footnotes
 

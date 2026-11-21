@@ -4,6 +4,10 @@ Thank you for helping improve Awesome Finance Agents. This list is a **shortlist
 
 中文贡献者：可以直接用中文提 issue 或 PR。新增条目时请同时更新 `README.md`（英文）和 `README.zh-CN.md`（中文）；如果只会写一种语言，在 PR 里说明，维护者会补另一种。
 
+Project submissions are welcome! If this list has been useful to you, a Star before you submit is always appreciated ⭐
+
+欢迎提交项目！如果这份清单对你有帮助，提交前也欢迎点个 Star 支持一下 ⭐
+
 ## What Belongs Here
 
 A resource belongs here if it is **open-source** (or an open benchmark/dataset with a public repo) and clearly related to **LLM agents, MCP, skills, or agent evaluation** in finance, including:
