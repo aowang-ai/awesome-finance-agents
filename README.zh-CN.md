@@ -384,6 +384,7 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 - [ESGenius](https://github.com/ANGEL-NTU/ESGenius) - 面向 LLM 的 ESG 知识评测基准。
 - [cre-acquisition-orchestrator](https://github.com/ahacker-1/cre-acquisition-orchestrator) - 商业地产收购 agent 框架：尽调、承销与融资。
 - [MexCheck](https://github.com/acrogenesis/mexcheck-mcp) - 托管的远程 MCP，基于官方来源做墨西哥 KYC/KYB 核验（RFC 与 SAT 69/69-B 名单、CFDI 状态、RENAPO 的 CURP、INE）。需 OAuth 登录，按次计费；仓库提供 MIT 许可的客户端配置与文档。
+- [synthetic cfo](https://github.com/syntheticcfo/syntheticcfo) - MCP 服务器与 Python 客户端，用于在合成的 SAP ECC、S/4HANA 和 Oracle 账套上测试舞弊检测器，数据附带标准答案（ground-truth answer key）和无害的相似记录。客户端为 MIT 许可；托管引擎为专有，需要 API key（提供免费方案）。
 
 ### 踩坑提示
 
