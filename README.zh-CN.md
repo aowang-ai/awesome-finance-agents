@@ -354,6 +354,7 @@ flowchart TB
 - [mcp-fiscal-brasil](https://github.com/DeHor-Labs/mcp-fiscal-brasil) - 巴西税务 MCP：CNPJ、NF-e、SPED、Simples Nacional 等。
 - [opentax](https://github.com/filedcom/opentax) - 开源美国联邦税计算引擎，单个 CLI 附 agent skills。
 - [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - 本地优先的 agent 支付运行时，提供 CLI 与 stdio MCP，支持转账、x402、收据和所有者设定的限额。仅支持 macOS Apple Silicon 与 Node 24；这是支付执行层，不是记账软件。
+- [xrechnung-validator](https://github.com/wenboteng/xrechnung-validator) - 让 agent 用官方 KoSIT 规则检查德国 XRechnung（UBL/CII）和 ZUGFeRD/Factur-X 电子发票的 MCP 服务器与 CLI，返回规则编号、出错位置和修复提示。客户端为 MIT 许可；校验在 checkxrechnung.com 的免费托管 API 上运行（无需 key，每日有限额）。
 
 ### 会计系统 MCP
 
