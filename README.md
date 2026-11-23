@@ -387,6 +387,7 @@ AML/KYC, fraud triage, due diligence, ESG review, and action firewalls that sit 
 - [ESGenius](https://github.com/ANGEL-NTU/ESGenius) - ESG knowledge benchmark for LLMs.
 - [cre-acquisition-orchestrator](https://github.com/ahacker-1/cre-acquisition-orchestrator) - Agent framework for commercial real estate acquisitions: diligence, underwriting, and financing.
 - [MexCheck](https://github.com/acrogenesis/mexcheck-mcp) - Hosted remote MCP for Mexican KYC/KYB checks against official sources (RFC and SAT 69/69-B lists, CFDI status, CURP via RENAPO, INE). Requires OAuth and is billed per request; the repo has MIT-licensed client configs and docs.
+- [synthetic cfo](https://github.com/syntheticcfo/syntheticcfo) - MCP server and Python client for testing fraud detectors on synthetic SAP ECC, S/4HANA and Oracle ledgers that come with a ground-truth answer key and innocent look-alikes. The client is MIT; the hosted engine is proprietary and needs an API key (free plan available).
 
 ### Pitfall Tip
 
