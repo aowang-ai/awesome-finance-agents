@@ -357,6 +357,7 @@ Agents for bookkeeping, reconciliation, invoices, tax, and reporting, plus MCP a
 - [mcp-fiscal-brasil](https://github.com/DeHor-Labs/mcp-fiscal-brasil) - Brazilian tax and fiscal MCP: CNPJ, NF-e, SPED, Simples Nacional, and more.
 - [opentax](https://github.com/filedcom/opentax) - Open-source US federal tax engine shipped as a single CLI with agent skills.
 - [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - Local-first CLI and stdio MCP payment runtime for agents, with transfers, x402, receipts, and owner-set limits. macOS Apple Silicon with Node 24 only; it is a payment-execution layer, not a bookkeeping ledger.
+- [xrechnung-validator](https://github.com/wenboteng/xrechnung-validator) - MCP server and CLI that let an agent check German XRechnung (UBL/CII) and ZUGFeRD/Factur-X e-invoices against the official KoSIT rules and get rule IDs, locations and fix hints back. The client is MIT; validation runs on the free hosted API at checkxrechnung.com (no key, daily limit).
 
 ### Accounting-system MCP servers
 
