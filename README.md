@@ -418,7 +418,7 @@ Budgeting, spending analysis, net-worth tracking, and local-first finance apps t
 - [Finance-Guru](https://github.com/AojdevStudio/Finance-Guru) - Self-hosted family-office engine with typed calculators, a private ledger, and specialist agents.
 - [ray-finance](https://github.com/cdinnison/ray-finance) - Open-source AI financial advisor that keeps context about your situation across conversations.
 - [beancount-io](https://github.com/bex-co/beancount-io) - Plain-text double-entry bookkeeping apps for people and AI agents (iOS/Android).
-- [Moedux Agent Tools](https://github.com/jhonnysabino/moedux-agent-tools) - Open docs and MCP contract for Brazilian personal finance: from balance, income and expenses it returns a projected zero-balance date and the next expense cut to consider, without signup.
+- [Moedux Agent Tools](https://github.com/jhonnysabino/moedux-agent-tools) - Hosted remote MCP for Brazilian personal finance: you supply a balance, monthly income and fixed expenses, and it returns a projected zero-balance date and a 12-month balance forecast (no signup). The repository is an MIT-licensed docs and contract mirror, not the service implementation; the hosted service is proprietary. The full account API requires an API key, and some features are paid.
 
 ### Pitfall Tip
 
