@@ -463,6 +463,7 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 - [nof0](https://github.com/wquguru/nof0) - 🇨🇳 开源 AI 交易竞技场，仿 nof1 Alpha Arena。
 - [continuous-record-llm-trading-agents](https://github.com/ProjectDXAI/continuous-record-llm-trading-agents) - 对 LLM 交易 agent 实际行为做连续记录研究的数据与产物。(paper)
 - [ai-stock-league](https://github.com/alphabazaar/ai-stock-league) - 只向前记录的 AI 选股联赛每日开放数据（CC BY 4.0）：每个模型的决策与理由都在哈希链日志中，附无 AI 基线（随机选股、SPY、动量）。(sim)
+- [AlphaSift](https://github.com/ZhuLinsen/alphasift) - 🇨🇳 开源 7 市场选股器、STDIO MCP 服务与公开 T+5/T+10/T+20 次日开盘价纸面战绩账本，同日对照确定性 YAML 规则与 AI 重排（未消除重大利空在代码层封顶 35 分），并附零前视 H1→H2 K 线形态样本外审计。(sim)
 
 ### 安全与可信
 
