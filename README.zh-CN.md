@@ -129,6 +129,7 @@ flowchart TB
 - [lava-mcp](https://github.com/dustinliang666-blip/lava-mcp) - 🇨🇳 A 股股票与概念板块消息面热度监测的托管远程 MCP 与 Agent Skill：按时间返回结构化的概念、标的与摘要要点，可通过 Streamable HTTP 调用。需 API Key 或 OAuth。
 - [eu-nordic-open-data-mcp](https://github.com/itulo/eu-nordic-open-data-mcp) - 面向 agent 的欧盟与北欧官方开放数据 MCP，可用于 KYB、增值税、制裁名单、招标与欧洲央行汇率，每条回答均标注数据许可。
 - [SiftingIO Market Data MCP](https://github.com/SiftingIO/siftingio-mcp) - MIT 许可的只读 MCP 服务器，通过 SiftingIO API 提供行情价格、历史 OHLCV、公司基本面、SEC 文件和市场日历。需 SiftingIO API Key。
+- [Spy2Money](https://github.com/KonstantinRogozhkin/awesome-spy2money) - 托管只读 OAuth MCP：美股期权流、暗池成交、做市商 Gamma（GEX）水平、IV 期限结构与 BTC/ETH 期权，每个结果附带 `as_of` 与数据质量标记。
 
 ### 官方券商与交易所 agent 工具包
 

@@ -132,6 +132,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [lava-mcp](https://github.com/dustinliang666-blip/lava-mcp) - 🇨🇳 Hosted remote MCP and agent skill for A-share stock and concept-sector news-heat monitoring: structured, timestamped concepts, tickers, and summary points over Streamable HTTP. Requires an API key or OAuth.
 - [eu-nordic-open-data-mcp](https://github.com/itulo/eu-nordic-open-data-mcp) - MCP server for official EU and Nordic open data that agents can use for KYB, VAT, sanctions, procurement, and ECB rates, with a licence cited on every answer.
 - [SiftingIO Market Data MCP](https://github.com/SiftingIO/siftingio-mcp) - MIT-licensed read-only MCP server for market prices, historical OHLCV, company fundamentals, SEC filings and market calendars, backed by the SiftingIO API. Requires a SiftingIO API key.
+- [Spy2Money](https://github.com/KonstantinRogozhkin/awesome-spy2money) - Hosted read-only OAuth MCP for US options flow, darkpool prints, dealer gamma (GEX) levels, IV term structure and BTC/ETH options, with `as_of` and data-quality flags on every result.
 
 ### Official broker and exchange agent kits
 
