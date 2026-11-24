@@ -415,6 +415,7 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 - [Finance-Guru](https://github.com/AojdevStudio/Finance-Guru) - 自托管家族办公室引擎：类型化计算器、私有账本与专职 agent。
 - [ray-finance](https://github.com/cdinnison/ray-finance) - 开源 AI 理财顾问，跨对话记住你的财务情况。
 - [beancount-io](https://github.com/bex-co/beancount-io) - 面向人与 AI agent 的纯文本复式记账应用（iOS/Android）。
+- [Moedux Agent Tools](https://github.com/jhonnysabino/moedux-agent-tools) - 巴西个人理财 agent 的开放文档与 MCP 接口：根据余额、收入和支出给出预计资金归零日期与下一步削减建议，无需注册。
 
 ### 踩坑提示
 
