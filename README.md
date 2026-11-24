@@ -99,6 +99,7 @@ A finance agent is only as good as the data and tools it can call. This chapter 
 - [FQGate-agent](https://github.com/fqgate/FQGate-agent) - 🇨🇳 Local A-share quotes, K-lines, Level-2 and news from the Tonghuashun client, exposed to Codex/Claude Code-style agents.
 - [dartlab](https://github.com/eddmpython/dartlab) - 🇰🇷 Korean DART and SEC EDGAR filings as structured Python data for company analysis.
 - [idx](https://github.com/fzn0x/idx) - 🇮🇩 Indonesian stock market (IDX/IHSG) CLI, web terminal, and MCP: prices, fundamentals, and screening with no API key.
+- [Calibration Ledger](https://apify.com/publicrecords/calibration-ledger) - Forecast track records (IMF, OECD, Fed, ECB SPF): forecast errors and bias by organization (Apify Actor, API + MCP).
 
 ### MCP servers
 
