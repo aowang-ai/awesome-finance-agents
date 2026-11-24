@@ -535,6 +535,7 @@ Models, surveys, and neighboring lists that are useful context but not always "a
 - [Finance-LLMs](https://github.com/kennethleungty/Finance-LLMs) - Compilation of real-world LLM and agent use cases in financial services.
 - [Awesome-FinLLMs](https://github.com/DataArcTech/Awesome-FinLLMs) - Curated list of financial LLM papers, models, and datasets.
 - [awesome-finance-ai-tools](https://github.com/tradingaihub/awesome-finance-ai-tools) - Weekly re-verified list of finance MCP servers, agent skills and APIs.
+- [awesome-quant-competitions](https://github.com/KonstantinRogozhkin/awesome-quant-competitions) - Official-source directory of quantitative trading competitions, financial ML benchmarks, forecasting tournaments, student fellowships, interview prep, and quant job boards.
 
 ## Contributing
 

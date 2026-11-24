@@ -532,6 +532,7 @@ AML/KYC、反欺诈分诊、尽调、ESG 审查，以及挡在不可逆动作（
 - [Finance-LLMs](https://github.com/kennethleungty/Finance-LLMs) - 金融服务中真实 LLM 与 agent 用例汇编。
 - [Awesome-FinLLMs](https://github.com/DataArcTech/Awesome-FinLLMs) - 金融大模型论文、模型与数据集清单。
 - [awesome-finance-ai-tools](https://github.com/tradingaihub/awesome-finance-ai-tools) - 每周复核的金融 MCP 服务器、agent skills 与 API 清单。
+- [awesome-quant-competitions](https://github.com/KonstantinRogozhkin/awesome-quant-competitions) - 官方来源的量化交易竞赛、金融机器学习基准、预测锦标赛、学生 Fellowship、面试备考与量化岗位目录。
 
 ## 贡献
 
